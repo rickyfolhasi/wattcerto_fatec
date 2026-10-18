@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watt Certo: calculadora de consumo de energia residencial</title>
+  <meta name="description" content="O Watt Certo mostra quanto cada aparelho pesa na sua conta de luz, indica se a conta veio mais alta que o esperado e sugere trocas que geram economia.">
+  <meta name="theme-color" content="#11392b">
+  <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Watt Certo, página inicial">Watt Certo</a>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        Menu
+      </button>
+      <nav class="site-nav" aria-label="Principal">
+        <ul class="nav-list" id="menu-principal">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">
+            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+            Consumo consciente de energia
+          </p>
+          <h1 id="titulo-hero">Descubra para onde vai o dinheiro da sua conta de luz.</h1>
+          <p class="lead">O Watt Certo calcula o consumo de cada aparelho da sua casa a partir do que você já sabe: quais equipamentos tem, quantas pessoas moram e quanto tempo cada um fica ligado. No fim, você vê quem são os vilões da conta e quanto dá para economizar.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="calculadora.html">
+              Simular meu consumo
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="sobre.html">Como o projeto funciona</a>
+          </div>
+          <p class="selo">
+            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            Sem cadastro e sem login. Seus dados ficam no seu navegador.
+          </p>
+        </div>
+        <figure class="hero-art">
+          <img src="img/hero.svg" alt="Ilustração de uma casa ao lado de um medidor em arco, do verde ao vermelho, com o ponteiro na faixa laranja e ícones de chuveiro, geladeira e ar-condicionado." width="640" height="540">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-white" aria-labelledby="titulo-passos">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Como funciona</p>
+          <h2 id="titulo-passos">Três passos até o seu diagnóstico</h2>
+          <p>Nada de termos técnicos: o site pergunta o que qualquer pessoa sabe responder sobre a própria casa.</p>
+        </div>
+        <ol class="passos">
+          <li>
+            <span class="passo-num" aria-hidden="true">1</span>
+            <h3>Conte sobre a casa</h3>
+            <p>Cidade, número de moradores e o valor da última conta. São os dados que calibram todo o cálculo.</p>
+          </li>
+          <li>
+            <span class="passo-num" aria-hidden="true">2</span>
+            <h3>Marque os aparelhos</h3>
+            <p>Escolha os equipamentos da lista e informe quanto tempo cada um fica ligado por dia.</p>
+          </li>
+          <li>
+            <span class="passo-num" aria-hidden="true">3</span>
+            <h3>Veja o diagnóstico</h3>
+            <p>O resultado mostra o consumo de cada aparelho em kWh e em reais, e onde está a maior economia possível.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-exemplo">
+      <div class="container exemplo-grid">
+        <div>
+          <p class="kicker">Exemplo de resultado</p>
+          <h2 id="titulo-exemplo">Uma casa de 3 pessoas em São Caetano do Sul</h2>
+          <p>Veja como o sistema apresenta o consumo mensal estimado. O chuveiro aparece em destaque porque é o aparelho de maior potência, mesmo ligado por poucos minutos.</p>
+          <ul class="legenda">
+            <li><span class="ponto nivel-baixo" aria-hidden="true"></span>Consumo baixo</li>
+            <li><span class="ponto nivel-medio" aria-hidden="true"></span>Consumo médio</li>
+            <li><span class="ponto nivel-alto" aria-hidden="true"></span>Consumo alto</li>
+          </ul>
+          <p class="nota">Simulação didática feita com a fórmula do próprio sistema (potência × horas por dia × 30 ÷ 1000) e tarifa de R$ 0,86 por kWh.</p>
+        </div>
+        <div class="card tabela-card">
+          <h3>Consumo mensal estimado</h3>
+          <table class="tabela">
+            <caption class="visually-hidden">Consumo mensal estimado por aparelho, em quilowatt-hora e em reais</caption>
+            <thead>
+              <tr>
+                <th scope="col">Aparelho</th>
+                <th scope="col">kWh/mês</th>
+                <th scope="col">Custo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="nivel-alto">
+                <th scope="row">Chuveiro elétrico</th>
+                <td>124</td>
+                <td>R$ 107</td>
+              </tr>
+              <tr class="nivel-medio">
+                <th scope="row">Geladeira</th>
+                <td>44</td>
+                <td>R$ 38</td>
+              </tr>
+              <tr class="nivel-medio">
+                <th scope="row">Ar-condicionado</th>
+                <td>36</td>
+                <td>R$ 31</td>
+              </tr>
+              <tr class="nivel-baixo">
+                <th scope="row">Máquina de lavar</th>
+                <td>12</td>
+                <td>R$ 10</td>
+              </tr>
+              <tr class="nivel-baixo">
+                <th scope="row">Iluminação (LED)</th>
+                <td>9</td>
+                <td>R$ 8</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row">Total estimado</th>
+                <td>225</td>
+                <td>R$ 194</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-dark" aria-labelledby="titulo-dados">
+      <div class="container stats-grid">
+        <div>
+          <p class="kicker">Por que isso importa</p>
+          <h2 id="titulo-dados">A casa brasileira é um terço do consumo de eletricidade do país.</h2>
+          <span class="stat-number">31,4%</span>
+          <p class="stat-caption">de toda a eletricidade consumida no Brasil em 2024 foi para as residências, o equivalente a 176.519 GWh distribuídos em 82,9 milhões de unidades consumidoras.</p>
+        </div>
+        <figure class="compare">
+          <figcaption>O peso do chuveiro elétrico na conta de uma casa</figcaption>
+          <div class="bar-row">
+            <span class="bar-label">Demais aparelhos</span>
+            <span class="bar-value">65% a 75%</span>
+            <div class="bar-track" aria-hidden="true"><div class="bar bar-outros"></div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Chuveiro elétrico</span>
+            <span class="bar-value">25% a 35%</span>
+            <div class="bar-track" aria-hidden="true"><div class="bar bar-chuveiro"></div></div>
+          </div>
+          <p class="fonte">Na posição inverno, o chuveiro consome de 30% a 40% a mais do que na posição verão. Por isso ele tem uma tela de cálculo só dele no Watt Certo.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-recursos">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">O que o site entrega</p>
+          <h2 id="titulo-recursos">As frentes do projeto</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="icon-badge" aria-hidden="true">
+              <svg class="icon" width="28" height="28" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 12h3M8 16h3M15 12v5"/></svg>
+            </span>
+            <h3>Calculadora de consumo</h3>
+            <p>Estimativa mensal em kWh e em reais para cada aparelho cadastrado, com a participação de cada um no total.</p>
+          </article>
+          <article class="card">
+            <span class="icon-badge sol" aria-hidden="true">
+              <svg class="icon" width="28" height="28" viewBox="0 0 24 24"><path d="M12 3v7M7 12h10l-2 4H9z"/><path d="M9 20v-2M12 20v-3M15 20v-2"/></svg>
+            </span>
+            <h3>Modo avançado</h3>
+            <p>Aparelhos com consumo variável, como o chuveiro, ganham perguntas próprias: potência, estação do ano, tempo de banho e frequência.</p>
+          </article>
+          <article class="card">
+            <span class="icon-badge argila" aria-hidden="true">
+              <svg class="icon" width="28" height="28" viewBox="0 0 24 24"><path d="M4 19V5a1 1 0 0 1 1-1h11l4 4v11a1 1 0 0 1-1 1z"/><path d="M8 13l3 3 5-6"/></svg>
+            </span>
+            <h3>Diagnóstico da conta</h3>
+            <p>Comparação entre o valor estimado e o valor real da fatura, para mostrar se a conta veio acima do esperado.</p>
+          </article>
+          <article class="card">
+            <span class="icon-badge" aria-hidden="true">
+              <svg class="icon" width="28" height="28" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 1 4 10.5V17H8v-3.5A6 6 0 0 1 12 3z"/><path d="M9 20h6"/></svg>
+            </span>
+            <h3>Sugestão de troca</h3>
+            <p>Quanto a casa economizaria por mês ao substituir um aparelho antigo por um modelo mais eficiente.</p>
+          </article>
+          <article class="card">
+            <span class="icon-badge" aria-hidden="true">
+              <svg class="icon" width="28" height="28" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </span>
+            <h3>Privacidade por padrão</h3>
+            <p>Nenhum cadastro: os dados ficam salvos no navegador do usuário, com termo de consentimento que pode ser recusado.</p>
+          </article>
+          <article class="card">
+            <span class="icon-badge sol" aria-hidden="true">
+              <svg class="icon" width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <h3>Resultado em minutos</h3>
+            <p>O diagnóstico completo sai em poucos minutos, sem precisar entender de física ou ler a fatura inteira.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" aria-labelledby="titulo-acess">
+      <div class="container a11y-grid">
+        <div>
+          <p class="kicker">Acessibilidade em primeiro lugar</p>
+          <h2 id="titulo-acess">Um site que funciona para todo mundo</h2>
+          <p>Economizar energia interessa a qualquer família. Por isso o site é construído para ser usado por pessoas com deficiência, público prioritário do projeto.</p>
+          <ul class="checklist">
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Navegação completa pelo teclado, com foco sempre visível.</li>
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Estrutura semântica e textos alternativos para leitores de tela.</li>
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Contraste verificado: todas as combinações passam no nível AA.</li>
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Nível de consumo indicado por cor e também por texto, nunca só por cor.</li>
+          </ul>
+          <a class="btn btn-ghost" href="acessibilidade.html">Ver recursos de acessibilidade</a>
+        </div>
+        <div class="card">
+          <h3>Atalhos de teclado</h3>
+          <ul class="keys">
+            <li><kbd>Tab</kbd><span>avança entre links e botões</span></li>
+            <li><kbd>Shift + Tab</kbd><span>volta ao item anterior</span></li>
+            <li><kbd>Enter</kbd><span>abre o link ou aciona o botão</span></li>
+            <li><kbd>Esc</kbd><span>fecha o menu no celular</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-explorar">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Explore</p>
+          <h2 id="titulo-explorar">Continue pelo site</h2>
+        </div>
+        <div class="grid-3">
+          <a class="link-card" href="calculadora.html"><strong>Calculadora <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></strong><span>O passo a passo do cálculo e o modo avançado.</span></a>
+          <a class="link-card" href="impacto.html"><strong>Impacto <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></strong><span>Tabelas de consumo, tarifas e economia possível.</span></a>
+          <a class="link-card" href="noticias.html"><strong>Notícias <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></strong><span>Bandeiras tarifárias e eficiência energética.</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="titulo-cta">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="titulo-cta">Quer testar com a sua conta?</h2>
+          <p>Fale com a equipe do projeto e participe dos testes da versão em desenvolvimento.</p>
+        </div>
+        <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Watt Certo</p>
+        <p>Calculadora de consumo de energia residencial e consumo consciente.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2>Páginas</h2>
+        <ul class="footer-list">
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Fontes dos dados</h2>
+        <ul class="footer-list">
+          <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/anuario-factsheet.pdf">EPE, Anuário Estatístico de Energia Elétrica 2025 (ano-base 2024)</a></li>
+          <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-note">© 2026 Watt Certo. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
+    </div>
+  </footer>
+</body>
+</html>

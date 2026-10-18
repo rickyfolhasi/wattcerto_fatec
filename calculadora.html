@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora | Watt Certo</title>
+  <meta name="description" content="Estime o consumo mensal de energia da sua casa por aparelho, veja quem pesa mais na conta, compare com a fatura e simule uma troca.">
+  <meta name="theme-color" content="#11392b">
+  <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/calculadora.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Watt Certo, página inicial">Watt Certo</a>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        Menu
+      </button>
+      <nav class="site-nav" aria-label="Principal">
+        <ul class="nav-list" id="menu-principal">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="calculadora.html" aria-current="page">Calculadora</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="container page-hero">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <ol><li><a href="index.html">Início</a></li><li aria-current="page">Calculadora</li></ol>
+      </nav>
+      <p class="eyebrow">Estime a sua conta</p>
+      <h1>Calculadora</h1>
+      <p class="lead">Informe quantas pessoas moram na casa e quais aparelhos você usa. A calculadora mostra quanto cada um consome, quem pesa mais na conta e quanto dá para economizar com uma troca.</p>
+      <p class="nota">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou salvo.</p>
+    </div>
+
+    <section class="section calc-section" aria-labelledby="titulo-calculadora">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Passo a passo</p>
+          <h2 id="titulo-calculadora">Calcule o consumo da sua casa</h2>
+          <p>Os números que já aparecem nos campos são valores de partida. Troque pelos da etiqueta de cada aparelho e pelo seu hábito de uso.</p>
+        </div>
+
+        <noscript>
+          <div class="notice">
+            <h3>A calculadora precisa de JavaScript</h3>
+            <p>Ative o JavaScript no navegador para usar a calculadora. Enquanto isso, a seção &ldquo;Como o cálculo é feito&rdquo;, mais abaixo, mostra as fórmulas e um exemplo completo.</p>
+          </div>
+        </noscript>
+
+        <form id="form-calculadora" class="calc-app" autocomplete="off">
+          <fieldset class="bloco">
+            <legend>1. Sua casa</legend>
+            <div class="campos">
+              <div class="campo">
+                <label for="pessoas">Pessoas que moram na casa</label>
+                <input id="pessoas" type="number" inputmode="numeric" min="1" max="20" step="1" value="3" required>
+              </div>
+              <div class="campo">
+                <label for="tarifa">Tarifa em R$ por kWh</label>
+                <input id="tarifa" type="number" inputmode="decimal" min="0.01" max="5" step="0.01" value="0.86" required aria-describedby="dica-tarifa">
+                <p class="dica" id="dica-tarifa">Está na sua fatura. O valor inicial, R$ 0,86, é o do exemplo da página inicial.</p>
+              </div>
+              <div class="campo">
+                <label for="fatura">Valor da última fatura em R$ (opcional)</label>
+                <input id="fatura" type="number" inputmode="decimal" min="0" max="100000" step="0.01" aria-describedby="dica-fatura">
+                <p class="dica" id="dica-fatura">Preencha para comparar a estimativa com a conta real.</p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="bloco">
+            <legend>2. Seus aparelhos</legend>
+            <p class="dica">Marque os que existem na casa. Em cada um, informe a potência (está na etiqueta) e quantas horas por dia fica ligado.</p>
+
+            <div class="aparelhos">
+
+              <fieldset class="aparelho aparelho-destaque" id="fs-chuveiro" data-id="chuveiro">
+                <legend>Chuveiro elétrico</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-chuveiro" checked> Tenho chuveiro elétrico</label>
+                <fieldset class="modo">
+                  <legend>Modo de cálculo</legend>
+                  <label><input type="radio" name="modo-chuveiro" value="avancado" checked> Avançado: considera estação, minutos de banho e pessoas</label>
+                  <label><input type="radio" name="modo-chuveiro" value="padrao"> Padrão: potência × horas de uso por dia</label>
+                </fieldset>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-chuveiro">Potência (W)</label>
+                    <input id="pot-chuveiro" type="number" inputmode="numeric" min="1" max="10000" step="1" value="5500">
+                  </div>
+                </div>
+                <div class="campos" data-modo="avancado">
+                  <div class="campo">
+                    <label for="estacao-chuveiro">Posição da chave</label>
+                    <select id="estacao-chuveiro">
+                      <option value="inverno" selected>Inverno (fator 1,0)</option>
+                      <option value="verao">Verão (fator 0,7)</option>
+                    </select>
+                  </div>
+                  <div class="campo">
+                    <label for="min-chuveiro">Minutos de banho</label>
+                    <input id="min-chuveiro" type="number" inputmode="numeric" min="1" max="120" step="1" value="15">
+                  </div>
+                  <div class="campo">
+                    <label for="banhos-chuveiro">Banhos por pessoa por dia</label>
+                    <input id="banhos-chuveiro" type="number" inputmode="decimal" min="0.25" max="10" step="0.25" value="1">
+                  </div>
+                  <p class="dica campo-largo">Pessoas na casa: <output id="pessoas-eco" for="pessoas">3</output>. Esse número vem do passo 1 e não precisa ser informado de novo.</p>
+                </div>
+                <div class="campos" data-modo="padrao" hidden>
+                  <div class="campo">
+                    <label for="hor-chuveiro">Horas ligado por dia (soma de todos os banhos)</label>
+                    <input id="hor-chuveiro" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="0.75">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="geladeira">
+                <legend>Geladeira</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-geladeira" checked> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-geladeira">Potência (W)</label>
+                    <input id="pot-geladeira" type="number" inputmode="numeric" min="1" max="10000" step="1" value="150">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-geladeira">Horas por dia</label>
+                    <input id="hor-geladeira" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="10" aria-describedby="dica-geladeira">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-geladeira">Quantidade</label>
+                    <input id="qtd-geladeira" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                  <p class="dica campo-largo" id="dica-geladeira">A geladeira fica ligada o dia todo, mas o motor trabalha só parte do tempo. O valor de partida é uma aproximação.</p>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="ar">
+                <legend>Ar-condicionado</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-ar"> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-ar">Potência (W)</label>
+                    <input id="pot-ar" type="number" inputmode="numeric" min="1" max="10000" step="1" value="1000">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-ar">Horas por dia</label>
+                    <input id="hor-ar" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="4">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-ar">Quantidade</label>
+                    <input id="qtd-ar" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="lavadora">
+                <legend>Máquina de lavar</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-lavadora" checked> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-lavadora">Potência (W)</label>
+                    <input id="pot-lavadora" type="number" inputmode="numeric" min="1" max="10000" step="1" value="500">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-lavadora">Horas por dia</label>
+                    <input id="hor-lavadora" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="0.8">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-lavadora">Quantidade</label>
+                    <input id="qtd-lavadora" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="led">
+                <legend>Iluminação (lâmpadas LED)</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-led" checked> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-led">Potência de cada lâmpada (W)</label>
+                    <input id="pot-led" type="number" inputmode="numeric" min="1" max="10000" step="1" value="9">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-led">Horas por dia</label>
+                    <input id="hor-led" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="6">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-led">Quantidade de lâmpadas</label>
+                    <input id="qtd-led" type="number" inputmode="numeric" min="1" max="100" step="1" value="5">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="tv">
+                <legend>Televisão</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-tv"> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-tv">Potência (W)</label>
+                    <input id="pot-tv" type="number" inputmode="numeric" min="1" max="10000" step="1" value="100">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-tv">Horas por dia</label>
+                    <input id="hor-tv" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="4">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-tv">Quantidade</label>
+                    <input id="qtd-tv" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="computador">
+                <legend>Computador ou notebook</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-computador"> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-computador">Potência (W)</label>
+                    <input id="pot-computador" type="number" inputmode="numeric" min="1" max="10000" step="1" value="150">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-computador">Horas por dia</label>
+                    <input id="hor-computador" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="6">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-computador">Quantidade</label>
+                    <input id="qtd-computador" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="ventilador">
+                <legend>Ventilador</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-ventilador"> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-ventilador">Potência (W)</label>
+                    <input id="pot-ventilador" type="number" inputmode="numeric" min="1" max="10000" step="1" value="80">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-ventilador">Horas por dia</label>
+                    <input id="hor-ventilador" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="6">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-ventilador">Quantidade</label>
+                    <input id="qtd-ventilador" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="microondas">
+                <legend>Micro-ondas</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-microondas"> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-microondas">Potência (W)</label>
+                    <input id="pot-microondas" type="number" inputmode="numeric" min="1" max="10000" step="1" value="1200">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-microondas">Horas por dia</label>
+                    <input id="hor-microondas" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="0.25">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-microondas">Quantidade</label>
+                    <input id="qtd-microondas" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="ferro">
+                <legend>Ferro de passar</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-ferro"> Tenho este aparelho</label>
+                <div class="campos">
+                  <div class="campo">
+                    <label for="pot-ferro">Potência (W)</label>
+                    <input id="pot-ferro" type="number" inputmode="numeric" min="1" max="10000" step="1" value="1000">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-ferro">Horas por dia</label>
+                    <input id="hor-ferro" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="0.5">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-ferro">Quantidade</label>
+                    <input id="qtd-ferro" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="aparelho" data-id="outro">
+                <legend>Outro aparelho</legend>
+                <label class="aparelho-tem"><input type="checkbox" id="tem-outro"> Quero incluir mais um aparelho</label>
+                <div class="campos">
+                  <div class="campo campo-largo">
+                    <label for="nome-outro">Nome do aparelho</label>
+                    <input id="nome-outro" type="text" maxlength="40" placeholder="Ex.: freezer">
+                  </div>
+                  <div class="campo">
+                    <label for="pot-outro">Potência (W)</label>
+                    <input id="pot-outro" type="number" inputmode="numeric" min="1" max="10000" step="1" value="100">
+                  </div>
+                  <div class="campo">
+                    <label for="hor-outro">Horas por dia</label>
+                    <input id="hor-outro" type="number" inputmode="decimal" min="0.05" max="24" step="0.05" value="1">
+                  </div>
+                  <div class="campo">
+                    <label for="qtd-outro">Quantidade</label>
+                    <input id="qtd-outro" type="number" inputmode="numeric" min="1" max="20" step="1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+
+            </div>
+          </fieldset>
+
+          <p class="aviso-form" id="aviso-form" role="alert" hidden></p>
+
+          <div class="form-acoes">
+            <button class="btn btn-primary" type="submit">Calcular consumo</button>
+            <button class="btn btn-ghost" type="reset">Voltar aos valores iniciais</button>
+          </div>
+        </form>
+
+        <section class="resultado" id="resultado" aria-labelledby="titulo-resultado" hidden>
+          <h2 id="titulo-resultado" tabindex="-1">Resultado da estimativa</h2>
+
+          <dl class="resumo">
+            <div class="resumo-item">
+              <dt>Consumo estimado</dt>
+              <dd id="res-kwh"></dd>
+            </div>
+            <div class="resumo-item">
+              <dt>Custo estimado</dt>
+              <dd id="res-custo"></dd>
+            </div>
+            <div class="resumo-item">
+              <dt>Maior responsável</dt>
+              <dd id="res-maior"></dd>
+            </div>
+          </dl>
+
+          <div class="card tabela-card">
+            <h3>Consumo mensal por aparelho</h3>
+            <table class="tabela">
+              <caption class="visually-hidden">Consumo mensal estimado por aparelho, em quilowatt-hora, em reais e em participação no total</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Aparelho</th>
+                  <th scope="col">kWh/mês</th>
+                  <th scope="col">Custo</th>
+                  <th scope="col">Parte</th>
+                </tr>
+              </thead>
+              <tbody id="res-corpo"></tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row">Total estimado</th>
+                  <td id="res-total-kwh"></td>
+                  <td id="res-total-custo"></td>
+                  <td>100%</td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="nota" id="res-tarifa"></p>
+          </div>
+
+          <div class="card comparacao" id="comparacao" hidden>
+            <h3>Estimativa e fatura</h3>
+            <p id="comparacao-texto"></p>
+          </div>
+
+          <form class="card troca" id="form-troca" autocomplete="off">
+            <h3>Simule uma troca</h3>
+            <p>Escolha um aparelho e informe a potência de um modelo mais eficiente. O uso diário continua o mesmo.</p>
+            <div class="campos">
+              <div class="campo">
+                <label for="troca-aparelho">Aparelho a trocar</label>
+                <select id="troca-aparelho"></select>
+              </div>
+              <div class="campo">
+                <label for="troca-potencia">Potência do modelo novo (W)</label>
+                <input id="troca-potencia" type="number" inputmode="numeric" min="1" max="10000" step="1" required aria-describedby="dica-troca">
+                <p class="dica" id="dica-troca">Veja na etiqueta ou no anúncio do modelo.</p>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Calcular economia</button>
+            <p class="troca-resultado" id="troca-resultado" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="section section-white" aria-labelledby="titulo-formulas">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Transparência</p>
+          <h2 id="titulo-formulas">Como o cálculo é feito</h2>
+          <p>Cada número do resultado vem de uma das fórmulas abaixo. Não há estimativa escondida.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Modo padrão</h3>
+            <p class="formula">consumo mensal (kWh) = potência (W) × horas por dia × quantidade × 30 ÷ 1000</p>
+            <p>Vale para qualquer aparelho. Dividir por 1000 transforma watts em quilowatts.</p>
+          </article>
+          <article class="card">
+            <h3>Custo e participação</h3>
+            <p class="formula">custo (R$) = consumo (kWh) × tarifa (R$/kWh)</p>
+            <p class="formula">participação (%) = consumo do aparelho ÷ consumo total da casa × 100</p>
+          </article>
+          <article class="card">
+            <h3>Economia com uma troca</h3>
+            <p class="formula">economia (R$) = (kWh atual − kWh do modelo eficiente) × tarifa</p>
+            <p>O consumo do modelo novo é calculado com a potência que você informa e o mesmo uso diário.</p>
+          </article>
+        </div>
+
+        <div class="exemplo-chuveiro">
+          <h3>Modo avançado do chuveiro elétrico</h3>
+          <p>O chuveiro é o primeiro aparelho com consumo que muda conforme o uso: depende da estação, do tempo de banho e de quantas pessoas tomam banho. Por isso ele tem uma fórmula própria.</p>
+          <p class="formula">consumo mensal (kWh) = potência (W) × fator da estação × (minutos de banho ÷ 60) × pessoas × banhos por pessoa por dia × 30 ÷ 1000</p>
+          <p>O fator da estação é 1,0 na posição inverno e 0,7 na posição verão. É o valor adotado pelo projeto Watt Certo.</p>
+
+          <h4>Exemplo com os dados da página inicial</h4>
+          <ol class="conta-passos">
+            <li>Chuveiro de 5500 W, na posição inverno (fator 1,0).</li>
+            <li>Banho de 15 minutos: 15 ÷ 60 = 0,25 hora.</li>
+            <li>3 pessoas, 1 banho por pessoa por dia: 3 banhos por dia.</li>
+            <li>5500 × 1,0 × 0,25 × 3 × 30 ÷ 1000 = <strong>123,75 kWh por mês</strong>, que aparece arredondado como 124 kWh.</li>
+            <li>Com a tarifa de R$ 0,86 por kWh: 123,75 × 0,86 = <strong>R$ 106,43</strong>.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-limites">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Antes de confiar no número</p>
+          <h2 id="titulo-limites">O que a estimativa não sabe</h2>
+        </div>
+        <ul class="limites">
+          <li>
+            <div>
+              <h3>Níveis de consumo</h3>
+              <p>Cada aparelho é classificado pela sua participação no total: <strong>alto</strong> a partir de 30%, <strong>médio</strong> de 10% até menos de 30% e <strong>baixo</strong> abaixo de 10%. É uma regra do Watt Certo para destacar o que pesa mais, e o nível aparece sempre em texto e em cor.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Valores de partida</h3>
+              <p>Potências e horas que já vêm nos campos são pontos de partida editáveis, não médias oficiais. Quanto mais próximo da etiqueta e do seu hábito, melhor a estimativa.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Tarifa e fatura</h3>
+              <p>A tarifa varia por distribuidora e por bandeira. No MVP os dados de tarifa estão validados apenas para o estado de São Paulo, e a tarifa usada é sempre exibida no resultado. A fatura pode incluir itens que a calculadora não considera, como a contribuição de iluminação pública.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Aparelhos que ficam de fora</h3>
+              <p>Aparelhos que você não marcou, carregadores e equipamentos em espera não entram na soma. Use &ldquo;Outro aparelho&rdquo; para incluir mais um.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Watt Certo</p>
+        <p>Calculadora de consumo de energia residencial e consumo consciente.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2>Páginas</h2>
+        <ul class="footer-list">
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Fontes dos dados</h2>
+        <ul class="footer-list">
+          <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/anuario-factsheet.pdf">EPE, Anuário Estatístico de Energia Elétrica 2025 (ano-base 2024)</a></li>
+          <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-note">© 2026 Watt Certo. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
+    </div>
+  </footer>
+</body>
+</html>

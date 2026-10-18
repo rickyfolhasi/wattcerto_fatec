@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" role="img" aria-labelledby="hero-t hero-d">
+  <title id="hero-t">Medidor de consumo de energia de uma casa</title>
+  <desc id="hero-d">Ilustração de uma casa com um medidor em arco que vai do verde ao vermelho, com o ponteiro na faixa laranja, e ícones de chuveiro, geladeira e ar-condicionado.</desc>
+  <rect width="640" height="540" fill="#e6f2ea"/>
+
+  <!-- casa -->
+  <path d="M120 250 L240 160 L360 250 V430 H120 Z" fill="#ffffff"/>
+  <path d="M104 256 L240 148 L376 256" fill="none" stroke="#11392b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="120" y="250" width="240" height="180" fill="none" stroke="#11392b" stroke-width="10"/>
+  <rect x="155" y="290" width="64" height="56" rx="4" fill="#cfe9d9" stroke="#11392b" stroke-width="7"/>
+  <path d="M187 290v56M155 318h64" stroke="#11392b" stroke-width="6"/>
+  <rect x="262" y="310" width="62" height="120" rx="4" fill="#f4c04e" stroke="#11392b" stroke-width="7"/>
+  <circle cx="274" cy="372" r="5" fill="#11392b"/>
+
+  <!-- medidor -->
+  <g transform="translate(455 230)">
+    <path d="M-110 0a110 110 0 0 1 220 0" fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round"/>
+    <path d="M-110 0A110 110 0 0 1 -55 -95" fill="none" stroke="#52b788" stroke-width="30" stroke-linecap="round"/>
+    <path d="M-48 -99A110 110 0 0 1 48 -99" fill="none" stroke="#e8871e" stroke-width="30" stroke-linecap="round"/>
+    <path d="M55 -95A110 110 0 0 1 110 0" fill="none" stroke="#c1473a" stroke-width="30" stroke-linecap="round"/>
+    <path d="M0 6 L30 -86" stroke="#11392b" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="0" cy="6" r="16" fill="#11392b"/>
+    <text x="0" y="62" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#11392b">kWh</text>
+  </g>
+
+  <!-- aparelhos -->
+  <g transform="translate(400 350)">
+    <rect x="0" y="0" width="76" height="76" rx="16" fill="#ffffff" stroke="#11392b" stroke-width="6"/>
+    <path d="M38 16v14M22 34h32l-4 8H26z" fill="none" stroke="#c1473a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28 52v8M38 52v10M48 52v8" stroke="#52b788" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(492 350)">
+    <rect x="0" y="0" width="76" height="76" rx="16" fill="#ffffff" stroke="#11392b" stroke-width="6"/>
+    <rect x="24" y="16" width="30" height="46" rx="5" fill="none" stroke="#2f8f5f" stroke-width="6"/>
+    <path d="M24 34h30M46 24v6M46 42v6" stroke="#2f8f5f" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(400 442)">
+    <rect x="0" y="0" width="168" height="62" rx="16" fill="#ffffff" stroke="#11392b" stroke-width="6"/>
+    <rect x="18" y="16" width="132" height="20" rx="6" fill="none" stroke="#e8871e" stroke-width="6"/>
+    <path d="M44 44c6 6 12 6 18 0M86 44c6 6 12 6 18 0" fill="none" stroke="#e8871e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- chão -->
+  <rect x="60" y="430" width="320" height="12" rx="6" fill="#11392b"/>
+</svg>

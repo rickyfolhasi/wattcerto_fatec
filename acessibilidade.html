@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acessibilidade | Watt Certo</title>
+  <meta name="description" content="Recursos de acessibilidade e compromissos de inclusão do site.">
+  <meta name="theme-color" content="#11392b">
+  <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Watt Certo, página inicial">Watt Certo</a>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        Menu
+      </button>
+      <nav class="site-nav" aria-label="Principal">
+        <ul class="nav-list" id="menu-principal">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="container page-hero">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <ol><li><a href="index.html">Início</a></li><li aria-current="page">Acessibilidade</li></ol>
+      </nav>
+      <p class="eyebrow">Página em construção</p>
+      <h1>Acessibilidade</h1>
+      <p class="lead">Recursos de acessibilidade e compromissos de inclusão do site.</p>
+      <div class="notice">
+        <h2>Entrega parcial (MVP)</h2>
+        <p>Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto.</p>
+        <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Watt Certo</p>
+        <p>Calculadora de consumo de energia residencial e consumo consciente.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2>Páginas</h2>
+        <ul class="footer-list">
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Fontes dos dados</h2>
+        <ul class="footer-list">
+          <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/anuario-factsheet.pdf">EPE, Anuário Estatístico de Energia Elétrica 2025 (ano-base 2024)</a></li>
+          <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-note">© 2026 Watt Certo. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
+    </div>
+  </footer>
+</body>
+</html>
