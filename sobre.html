@@ -3,82 +3,424 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sobre o projeto | Watt Certo</title>
-  <meta name="description" content="Origem, missão e objetivos do Watt Certo, projeto acadêmico da Fatec São Caetano do Sul.">
+  <title>Sobre o projeto | WattCerto</title>
+  <meta name="description" content="Origem, missão e objetivos do WattCerto, projeto acadêmico da Fatec São Caetano do Sul.">
   <meta name="theme-color" content="#11392b">
   <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <script src="js/menu.js" defer></script>
+  <script src="js/reel.js" defer></script>
+  <script src="js/animacoes.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Watt Certo, página inicial">Watt Certo</a>
+      <a class="brand" href="index.html" aria-label="WattCerto, página inicial">Watt<span class="brand-certo">Certo</span></a>
       <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
-        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        Menu
+        <span class="menu-texto">Menu</span>
+        <span class="menu-circulo"><svg class="icon icone-menu" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path class="linha-1" d="M4 9h16"/><path class="linha-2" d="M4 15h11"/></svg></span>
       </button>
       <nav class="site-nav" aria-label="Principal">
         <ul class="nav-list" id="menu-principal">
           <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html" aria-current="page">Sobre</a></li>
           <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
           <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="conteudo">
-    <div class="container page-hero">
-      <nav class="breadcrumb" aria-label="Você está em">
-        <ol><li><a href="index.html">Início</a></li><li aria-current="page">Sobre o projeto</li></ol>
-      </nav>
-      <p class="eyebrow">Página em construção</p>
-      <h1>Sobre o projeto</h1>
-      <p class="lead">Origem, missão e objetivos do Watt Certo, projeto acadêmico da Fatec São Caetano do Sul.</p>
-      <div class="notice">
-        <h2>Entrega parcial (MVP)</h2>
-        <p>Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto.</p>
-        <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+    <div class="page-topo">
+      <div class="container page-hero">
+        <div class="page-hero-texto">
+          <h1>Sobre o projeto</h1>
+          <p class="lead">Origem, missão e objetivos do WattCerto, projeto acadêmico da Fatec São Caetano do Sul.</p>
+          <nav class="nesta-pagina" aria-label="Nesta página">
+            <p>Nesta página</p>
+            <ul>
+              <li><a href="#frentes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>As frentes do projeto</a></li>
+              <li><a href="#como-calcula"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Como o cálculo é feito</a></li>
+              <li><a href="#limites"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>O que a estimativa não sabe</a></li>
+              <li><a href="#hospedagem"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Orçamento e hospedagem</a></li>
+              <li><a href="#ficha"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Equipe e instituição</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
+
+    <section class="section" id="frentes" aria-labelledby="titulo-recursos">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">O que o site entrega</p>
+          <h2 id="titulo-recursos">As frentes do projeto</h2>
+        </div>
+        <div class="frentes">
+          <article class="frente-destaque">
+            <h3>Calculadora de consumo</h3>
+            <p>Estimativa mensal em kWh e em reais para cada aparelho cadastrado, com a participação de cada um no total da casa.</p>
+            <a class="btn btn-primary" href="calculadora.html">Abrir a calculadora <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <ol class="frentes-lista">
+            <li>
+              <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle class="fi-bola fi-bola-1" cx="15" cy="7" r="2"/><circle class="fi-bola fi-bola-2" cx="9" cy="17" r="2"/></svg></span>
+              <h3>Modo avançado</h3>
+              <p>Aparelhos com consumo variável, como o chuveiro, ganham perguntas próprias: potência, estação do ano, tempo de banho e frequência.</p>
+            </li>
+            <li>
+              <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path class="fi-pulso" pathLength="1" d="M3 12h4l3-7 4 14 3-7h4"/></svg></span>
+              <h3>Diagnóstico da conta</h3>
+              <p>Comparação entre o valor estimado e o valor real da fatura, para mostrar se a conta veio acima do esperado.</p>
+            </li>
+            <li>
+              <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path class="fi-seta fi-seta-1" d="M4 8h13l-3-3"/><path class="fi-seta fi-seta-2" d="M20 16H7l3 3"/></svg></span>
+              <h3>Sugestão de troca</h3>
+              <p>Quanto a casa economizaria por mês ao substituir um aparelho antigo por um modelo mais eficiente.</p>
+            </li>
+            <li>
+              <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path class="fi-escudo" pathLength="1" d="M12 3l8 3v6c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V6z"/><path class="fi-ok" pathLength="1" d="M9 12l2 2 4-4"/></svg></span>
+              <h3>Privacidade por padrão</h3>
+              <p>Nenhum cadastro: os dados ficam salvos no navegador do usuário, com termo de consentimento que pode ser recusado.</p>
+            </li>
+            <li>
+              <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path class="fi-ponteiro" d="M12 9v4l2.5 2"/><path d="M9.5 3h5"/></svg></span>
+              <h3>Resultado em minutos</h3>
+              <p>O diagnóstico completo sai em poucos minutos, sem precisar entender de física ou ler a fatura inteira.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="como-calcula" aria-labelledby="titulo-formulas">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Transparência</p>
+          <h2 id="titulo-formulas">Como o cálculo é feito</h2>
+          <p>Cada número do resultado vem de uma das fórmulas abaixo. Não há estimativa escondida.</p>
+          <p>A conta potência × horas só vale para quem fica ligado na potência cheia. Uma geladeira de 200 W contada como &ldquo;ligada 24 horas&rdquo; daria 144 kWh por mês, mas uma de 2 portas frost free gasta 56,9 kWh (Procel). Por isso cada aparelho usa a regra do seu tipo.</p>
+        </div>
+
+        <p class="regras-dica">Toque em uma regra para ver a fórmula.</p>
+        <div class="regras">
+          <details class="regra">
+            <summary>
+              <span class="regra-nome">
+                <h3>Por hora</h3>
+                <span class="regra-desc">Lâmpadas, computador, notebook, bomba d&rsquo;água e o que você incluir como outro aparelho.</span>
+              </span>
+              <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="regra-formulas">
+              <p class="formula">kWh = potência (W) × horas por dia × quantidade × 30 ÷ 1000</p>
+            </div>
+          </details>
+          <details class="regra">
+            <summary>
+              <span class="regra-nome">
+                <h3>Por hora, com espera</h3>
+                <span class="regra-desc">Televisão, roteador e videogame ficam na tomada o dia todo. As horas paradas entram com a potência em espera.</span>
+              </span>
+              <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="regra-formulas">
+              <p class="formula">kWh = (potência × horas de uso + potência em espera × horas paradas) × quantidade × 30 ÷ 1000</p>
+            </div>
+          </details>
+          <details class="regra">
+            <summary>
+              <span class="regra-nome">
+                <h3>Por uso</h3>
+                <span class="regra-desc">Máquina de lavar, lava-louças, micro-ondas, air fryer, ferro e secador. O que conta é cada uso, não as horas do dia.</span>
+              </span>
+              <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="regra-formulas">
+              <p class="formula">kWh = potência (W) × (minutos por uso ÷ 60) × usos no mês ÷ 1000</p>
+            </div>
+          </details>
+          <details class="regra">
+            <summary>
+              <span class="regra-nome">
+                <h3>Por hora e meses de uso</h3>
+                <span class="regra-desc">Ar-condicionado e ventilador. A potência é a média de funcionamento, não a de pico. Quem só liga no calor informa quantos meses usa, e o resultado vira a média de um mês do ano.</span>
+              </span>
+              <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="regra-formulas">
+              <p class="formula">kWh = potência média × horas por dia × quantidade × 30 ÷ 1000 × (meses de uso ÷ 12)</p>
+            </div>
+          </details>
+          <details class="regra">
+            <summary>
+              <span class="regra-nome">
+                <h3>Pela etiqueta</h3>
+                <span class="regra-desc">Geladeira, freezer e bebedouro ligam e desligam sozinhos. Perguntar as horas daria sempre 24 e a conta sairia errada.</span>
+              </span>
+              <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="regra-formulas">
+              <p class="formula">kWh = consumo do selo Inmetro (kWh/mês) × quantidade</p>
+            </div>
+          </details>
+          <details class="regra">
+            <summary>
+              <span class="regra-nome">
+                <h3>Custo, parte e economia</h3>
+              </span>
+              <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="regra-formulas">
+              <p class="formula">custo (R$) = kWh × tarifa</p>
+              <p class="formula">parte (%) = kWh do aparelho ÷ kWh da casa × 100</p>
+              <p class="formula">economia (R$) = (kWh atual − kWh do modelo eficiente) × tarifa</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="exemplo-chuveiro">
+          <div class="exemplo-chuveiro-regra">
+            <h3>Modo avançado do chuveiro elétrico</h3>
+            <p>O chuveiro é o primeiro aparelho com consumo que muda conforme o uso: depende da estação, do tempo de banho e de quantas pessoas tomam banho. Por isso ele tem uma fórmula própria.</p>
+            <p class="formula">consumo mensal (kWh) = potência (W) × fator da estação × (minutos de banho ÷ 60) × pessoas × banhos por pessoa por dia × 30 ÷ 1000</p>
+            <p>O fator da estação é 1,0 na posição inverno e 0,7 na posição verão. É o valor adotado pelo projeto WattCerto.</p>
+          </div>
+
+          <div class="exemplo-chuveiro-conta">
+            <h4>Exemplo com os dados da página inicial</h4>
+            <ol class="conta-passos">
+              <li>Chuveiro de 5500 W, na posição inverno (fator 1,0).</li>
+              <li>Banho de 15 minutos: 15 ÷ 60 = 0,25 hora.</li>
+              <li>3 pessoas, 1 banho por pessoa por dia: 3 banhos por dia.</li>
+              <li>5500 × 1,0 × 0,25 × 3 × 30 ÷ 1000 = <strong>123,75 kWh por mês</strong>, que aparece arredondado como 124 kWh.</li>
+              <li>Com a tarifa de R$ 0,86 por kWh: 123,75 × 0,86 = <strong>R$ 106,43</strong>.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="limites" aria-labelledby="titulo-limites">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Antes de confiar no número</p>
+          <h2 id="titulo-limites">O que a estimativa não sabe</h2>
+        </div>
+        <ul class="limites">
+          <li>
+            <div>
+              <h3>Níveis de consumo</h3>
+              <p>Cada aparelho é classificado pela sua participação no total: <strong>alto</strong> a partir de 30%, <strong>médio</strong> de 10% até menos de 30% e <strong>baixo</strong> abaixo de 10%. É uma regra do WattCerto para destacar o que pesa mais, e o nível aparece sempre em texto e em cor.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Valores de partida</h3>
+              <p>Os números que já vêm nos campos são pontos de partida editáveis. Alguns são da tabela de consumo da Procel; os outros são potências típicas de mercado, e cada aparelho diz de onde veio o seu. Quanto mais próximo da etiqueta e do seu hábito, melhor a estimativa.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Tarifa e fatura</h3>
+              <p>A tarifa varia por distribuidora e por bandeira. No MVP os dados de tarifa estão validados apenas para o estado de São Paulo, e a tarifa usada é sempre exibida no resultado. A fatura pode incluir itens que a calculadora não considera, como a contribuição de iluminação pública.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Aparelhos que ficam de fora</h3>
+              <p>Só entram na soma os aparelhos que estão na lista. Na <a href="calculadora.html">calculadora</a>, use &ldquo;Adicionar aparelho&rdquo; para incluir os que faltam, inclusive um com o nome escrito por você. Carregadores e aparelhos pequenos ficam de fora.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-white" id="hospedagem" aria-labelledby="titulo-hospedagem">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Publicação do site</p>
+          <h2 id="titulo-hospedagem">Orçamento e hospedagem</h2>
+          <p>Comparativo de hospedagens e domínios para publicar o site.</p>
+        </div>
+
+        <h3 class="tabela-titulo">Hospedagem</h3>
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Comparativo de três hospedagens">
+          <table class="tabela-simples">
+            <caption class="visually-hidden">Comparativo de três hospedagens</caption>
+            <thead>
+              <tr>
+                <th scope="col">Serviço</th>
+                <th scope="col">Custo</th>
+                <th scope="col">O que inclui</th>
+                <th scope="col">Ponto de atenção</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Railway</th>
+                <td>Teste grátis com US$ 5 de crédito; plano Hobby a US$ 5 por mês</td>
+                <td>US$ 5 de uso incluídos por mês no Hobby; publica direto do GitHub</td>
+                <td>Cobra pelo uso que passar do incluído</td>
+              </tr>
+              <tr>
+                <th scope="row">GitHub Pages</th>
+                <td>Grátis em repositório público</td>
+                <td>Site de até 1 GB e 100 GB de tráfego por mês</td>
+                <td>Só serve sites estáticos, como o nosso</td>
+              </tr>
+              <tr>
+                <th scope="row">Netlify</th>
+                <td>Plano Free grátis; Pro a US$ 20 por mês</td>
+                <td>300 créditos por mês no plano Free</td>
+                <td>Se os créditos acabam, o site fica fora do ar até o mês virar</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="tabela-titulo">Domínio</h3>
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Comparativo de três domínios">
+          <table class="tabela-simples">
+            <caption class="visually-hidden">Comparativo de três domínios</caption>
+            <thead>
+              <tr>
+                <th scope="col">Domínio</th>
+                <th scope="col">Onde</th>
+                <th scope="col">Custo por ano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">wattcerto.com.br</th>
+                <td>Registro.br (oficial)</td>
+                <td>R$ 40,00</td>
+              </tr>
+              <tr>
+                <th scope="row">wattcerto.com.br</th>
+                <td>GoDaddy</td>
+                <td>R$ 30,00</td>
+              </tr>
+              <tr>
+                <th scope="row">wattcerto.com</th>
+                <td>Hostinger</td>
+                <td>R$ 0,01 no primeiro ano; R$ 94,99 na renovação</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="fonte-tabela">Preços consultados em novembro de 2026 e cobrados em dólar quando indicado: <a href="https://thesoftwarescout.com/railway-pricing-2026-plans-costs-is-it-worth-it/">Railway (The Software Scout, maio 2026)</a>, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">limites do GitHub Pages</a>, <a href="https://netli.fyi/blog/netlify-free-plan-limits-2026">plano Free da Netlify (jul. 2026)</a>, <a href="https://www.netlify.com/changelog/2026-04-14-pricing-updates-april-2026/">plano Pro da Netlify</a>, <a href="https://www.homehost.com.br/blog/dominio/registro-de-dominio-br/">Registro.br (HomeHost, nov. 2026)</a>, <a href="https://www.nuvemshop.com.br/blog/quanto-custa-dominio-de-site/">GoDaddy (Nuvemshop, jun. 2026)</a> e <a href="https://www.hostinger.com/br/tld/dominio-com">Hostinger</a>. Os preços mudam; confira antes de contratar.</p>
+
+        <div class="justificativa">
+          <h3>Nossa escolha</h3>
+          <p>A equipe vai publicar o site no Railway, como está no escopo do projeto: ele publica direto do repositório no GitHub. Para o domínio, a sugestão é o .com.br no Registro.br, que é o registro oficial dos domínios brasileiros e não tem preço promocional que sobe na renovação.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section secao-ficha" id="ficha" aria-labelledby="titulo-ficha">
+      <div class="container">
+        <div class="ficha-projeto">
+          <h2 id="titulo-ficha">Sobre o projeto</h2>
+          <dl>
+            <div>
+              <dt>Instituição</dt>
+              <dd>Fatec Antônio Russo, São Caetano do Sul (SP)</dd>
+            </div>
+            <div>
+              <dt>Curso e disciplina</dt>
+              <dd>Análise e Desenvolvimento de Sistemas, Desenvolvimento Web</dd>
+            </div>
+            <div>
+              <dt>Professor</dt>
+              <dd>Paulo Fratta</dd>
+            </div>
+            <div>
+              <dt>Equipe</dt>
+              <dd>Henrique Folhasi, Guilherme Cerqueira, João Pedro, Miguel Essien e Pedro Accorsi</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-explorar">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker kicker-laranja">Explore</p>
+          <h2 id="titulo-explorar">Continue pelo site</h2>
+        </div>
+        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+          <ul class="reel-lista">
+            <li><a class="reel-item" href="calculadora.html">
+              <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Calculadora</span>
+              <span class="reel-legenda"><strong>Calculadora</strong><span>O passo a passo do cálculo e o modo avançado.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" data-proxima href="impacto.html">
+              <img src="img/reel-impacto.webp" srcset="img/reel-impacto-480.webp 480w, img/reel-impacto.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Impacto</span>
+              <span class="reel-legenda"><span class="reel-tag">Veja mais</span><strong>Impacto</strong><span>Tabelas de consumo, tarifas e economia possível.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="galeria.html">
+              <img src="img/reel-galeria.webp" srcset="img/reel-galeria-480.webp 480w, img/reel-galeria.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Galeria</span>
+              <span class="reel-legenda"><strong>Galeria</strong><span>Telas do sistema e imagens dos aparelhos analisados.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="noticias.html">
+              <img src="img/reel-noticias.webp" srcset="img/reel-noticias-480.webp 480w, img/reel-noticias.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Notícias</span>
+              <span class="reel-legenda"><strong>Notícias</strong><span>Bandeiras tarifárias e eficiência energética.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="acessibilidade.html">
+              <img src="img/reel-acessibilidade.webp" srcset="img/reel-acessibilidade-480.webp 480w, img/reel-acessibilidade.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Acessibilidade</span>
+              <span class="reel-legenda"><strong>Acessibilidade</strong><span>Recursos e compromissos de inclusão do site.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-brand">Watt Certo</p>
-        <p>Calculadora de consumo de energia residencial e consumo consciente.</p>
+    <div class="container rodape">
+      <div class="rodape-topo">
+        <div class="rodape-marca">
+          <p class="footer-brand">Watt<span class="brand-certo">Certo</span></p>
+        </div>
+        <div class="rodape-colunas">
+          <nav class="rodape-links" aria-label="Rodapé">
+            <ul>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="impacto.html">Impacto</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+          <div class="rodape-fontes">
+            <h2>Fontes dos dados</h2>
+            <ul>
+              <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/Anuario_Sumario%20Executivo_2026_V1.pdf">EPE, Anuário Estatístico de Energia Elétrica 2026 (ano-base 2025)</a></li>
+              <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <nav aria-label="Rodapé">
-        <h2>Páginas</h2>
-        <ul class="footer-list">
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="calculadora.html">Calculadora</a></li>
-          <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>Fontes dos dados</h2>
-        <ul class="footer-list">
-          <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/anuario-factsheet.pdf">EPE, Anuário Estatístico de Energia Elétrica 2025 (ano-base 2024)</a></li>
-          <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <p class="footer-note">© 2026 Watt Certo. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
+
+      <p class="footer-note">© 2026 WattCerto. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
     </div>
   </footer>
 </body>

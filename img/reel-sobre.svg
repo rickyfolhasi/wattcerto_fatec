@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Ilustração de uma casa com uma lâmpada acesa">
+<rect width="640" height="800" fill="#bfddc9"/>
+<circle cx="500" cy="150" r="64" fill="#fdf1d6"/>
+<path d="M0 650c110-30 230-30 340 0s210 20 300-20v170H0z" fill="#2f8f5f"/>
+<path d="M130 640V360L320 200l190 160v280z" fill="#ffffff"/>
+<path d="M100 380L320 190l220 190" stroke="#11392b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="272" y="500" width="96" height="140" rx="14" fill="#11392b"/>
+<circle cx="350" cy="574" r="7" fill="#f4c04e"/>
+<circle cx="320" cy="360" r="46" fill="#f4c04e"/>
+<path d="M300 400h40v20h-40z" fill="#e9a21b"/>
+<g stroke="#e9a21b" stroke-width="8" stroke-linecap="round"><path d="M320 286v-16M252 314l-12-12M388 314l12-12M220 366h-18M438 366h18"/></g>
+<rect x="165" y="440" width="70" height="70" rx="10" fill="#bfddc9"/>
+<rect x="405" y="440" width="70" height="70" rx="10" fill="#bfddc9"/>
+</svg>

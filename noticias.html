@@ -3,82 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Notícias | Watt Certo</title>
+  <title>Notícias | WattCerto</title>
   <meta name="description" content="Bandeiras tarifárias, reajustes e eficiência energética.">
   <meta name="theme-color" content="#11392b">
   <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <script src="js/menu.js" defer></script>
+  <script src="js/noticias.js" defer></script>
+  <script src="js/reel.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Watt Certo, página inicial">Watt Certo</a>
+      <a class="brand" href="index.html" aria-label="WattCerto, página inicial">Watt<span class="brand-certo">Certo</span></a>
       <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
-        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        Menu
+        <span class="menu-texto">Menu</span>
+        <span class="menu-circulo"><svg class="icon icone-menu" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path class="linha-1" d="M4 9h16"/><path class="linha-2" d="M4 15h11"/></svg></span>
       </button>
       <nav class="site-nav" aria-label="Principal">
         <ul class="nav-list" id="menu-principal">
           <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
           <li><a href="noticias.html" aria-current="page">Notícias</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="conteudo">
-    <div class="container page-hero">
-      <nav class="breadcrumb" aria-label="Você está em">
-        <ol><li><a href="index.html">Início</a></li><li aria-current="page">Notícias</li></ol>
-      </nav>
-      <p class="eyebrow">Página em construção</p>
-      <h1>Notícias</h1>
-      <p class="lead">Bandeiras tarifárias, reajustes e eficiência energética.</p>
-      <div class="notice">
-        <h2>Entrega parcial (MVP)</h2>
-        <p>Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto.</p>
-        <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+    <section class="section section-white noticias-secao" aria-labelledby="titulo-ultimas">
+      <div class="container">
+        <div class="section-head centro">
+          <p class="kicker">Últimas notícias</p>
+          <h1 id="titulo-ultimas">O que mudou na sua conta de luz</h1>
+        </div>
+        <div class="noticias-grade">
+          <article class="noticia noticia-destaque">
+            <div class="noticia-capa">
+              <img class="noticia-capa-foto" src="img/noticias/bandeira-verde-novembro.webp" srcset="img/noticias/bandeira-verde-novembro-400.webp 400w, img/noticias/bandeira-verde-novembro-800.webp 800w, img/noticias/bandeira-verde-novembro.webp 1200w" sizes="(max-width: 36rem) 7rem, (max-width: 52rem) 26rem, 30rem" alt="" width="1200" height="600" decoding="async" fetchpriority="high">
+              <span class="noticia-tag">Bandeira tarifária</span>
+            </div>
+            <div class="noticia-corpo">
+              <h2>Novembro segue com bandeira verde</h2>
+              <time class="noticia-data" datetime="2026-10-30">30 out. 2026</time>
+              <div class="noticia-acoes"><button class="noticia-abrir" type="button" aria-haspopup="dialog">Leia mais<svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              <div class="noticia-texto">
+                <p>A Aneel decidiu manter a <strong>bandeira verde</strong> na conta de luz em novembro de 2026. O anúncio saiu na sexta-feira, 30 de outubro. Na bandeira verde não há cobrança extra: você paga só a tarifa normal, sem acréscimo pelo custo de gerar energia naquele mês.</p>
+                <p>O motivo é a chuva. Voltou a chover mais nas regiões das grandes hidrelétricas, os reservatórios estão se recuperando e o país precisa de menos energia das usinas termelétricas, que custam mais para gerar. A bandeira é justamente o aviso mensal desse custo: quando gerar energia fica mais caro, a bandeira muda de cor e a conta sobe.</p>
+                <p>Veja como foi o ano. Nos quatro primeiros meses de 2026 a bandeira foi verde. De maio a setembro ficou amarela, cinco meses seguidos. Em outubro voltou a ser verde, e agora segue assim em novembro.</p>
+                <p>Para você entender o que está em jogo, estes são os acréscimos de cada bandeira a cada 100 kWh consumidos: amarela, R$&nbsp;1,885; vermelha patamar 1, R$&nbsp;4,463; vermelha patamar 2, R$&nbsp;7,877. Um exemplo com 200 kWh no mês (conta feita aqui, a partir desses valores): na amarela seriam R$&nbsp;3,77 a mais; na vermelha patamar 1, R$&nbsp;8,93; na vermelha patamar 2, R$&nbsp;15,75. Em novembro, o acréscimo é zero.</p>
+                <p class="noticia-fonte">Fonte: <a href="https://sbtnews.sbt.com.br/noticia/economia/aneel-mantem-bandeira-verde-na-conta-de-luz-em-novembro">SBT News</a>. Veja quanto cada bandeira soma na conta na página <a href="impacto.html">Impacto</a>. Foto: jplenio, <a href="https://pixabay.com/photos/sunset-countryside-power-lines-3442835/">Pixabay</a>.</p>
+              </div>
+            </div>
+          </article>
+          <article class="noticia">
+            <div class="noticia-capa">
+              <img class="noticia-capa-foto noticia-capa-foto-torre" src="img/noticias/torre-energia-enel.webp" srcset="img/noticias/torre-energia-enel-400.webp 400w, img/noticias/torre-energia-enel-800.webp 800w, img/noticias/torre-energia-enel.webp 1200w" sizes="(max-width: 36rem) 7rem, (max-width: 52rem) 26rem, 15rem" alt="" width="1200" height="800" loading="lazy" decoding="async">
+              <span class="noticia-tag">Reajuste</span>
+            </div>
+            <div class="noticia-corpo">
+              <h2>Conta da Enel SP ficou 10,18% mais cara</h2>
+              <time class="noticia-data" datetime="2026-06-30">30 jun. 2026</time>
+              <div class="noticia-acoes"><button class="noticia-abrir" type="button" aria-haspopup="dialog">Leia mais<svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              <div class="noticia-texto">
+                <p>A diretoria da Aneel aprovou, na terça-feira, 30 de junho de 2026, o reajuste anual das tarifas da Enel São Paulo, a distribuidora que atende o ABC. O aumento médio é de <strong>10,18%</strong> e vale a partir de 4 de julho de 2026. A relatora do processo foi a diretora Agnes Costa.</p>
+                <p>O reajuste alcança cerca de 8,9 milhões de unidades consumidoras em 24 municípios da Região Metropolitana de São Paulo. O tamanho da alta depende de quem consome: para as residências (classe B1) é de 9,02%; para a baixa tensão, em média, de 8,97%; e para a alta tensão, usada por indústrias e grandes consumidores, de 15,00%.</p>
+                <p>O reajuste cobre custos que a distribuidora não controla, ajustes financeiros de períodos anteriores, custos de transmissão e encargos do setor elétrico. Na alta tensão pesam ainda o uso da rede básica de transmissão e o peso dos subsídios da CDE, um encargo do setor.</p>
+                <p>Um ponto de atenção: as fontes que consultamos informam o percentual da tarifa, mas não trazem o valor em reais para uma casa típica. Por isso, não dá para dizer só com esse número quanto a sua conta vai subir. A conta final ainda leva em conta o seu consumo no mês e a bandeira tarifária.</p>
+                <p>Há também um contexto à parte: a Enel SP é a segunda maior distribuidora do país em número de clientes e responde a um processo de caducidade na Aneel, que pode levar à recomendação de encerrar antes do prazo o contrato de concessão.</p>
+                <p class="noticia-fonte">Fontes: <a href="https://cenarioenergia.com.br/2026/06/30/aneel-aprova-reajuste-da-enel-sao-paulo-com-efeito-medio-de-1018/">Cenário Energia</a> e <a href="https://agenciainfra.com/blog/aneel-aprova-reajuste-de-1018-nas-tarifas-da-enel-sp/">Agência Infra</a>. Foto: <a href="https://www.pexels.com/photo/1868352/">Pexels</a>.</p>
+              </div>
+            </div>
+          </article>
+          <article class="noticia">
+            <div class="noticia-capa">
+              <img class="noticia-capa-foto noticia-capa-foto-centro" src="img/noticias/lampadas-led-eficiencia.webp" srcset="img/noticias/lampadas-led-eficiencia-400.webp 400w, img/noticias/lampadas-led-eficiencia-800.webp 800w, img/noticias/lampadas-led-eficiencia.webp 1200w" sizes="(max-width: 36rem) 7rem, (max-width: 52rem) 26rem, 15rem" alt="" width="1200" height="800" loading="lazy" decoding="async">
+              <span class="noticia-tag">Eficiência energética</span>
+            </div>
+            <div class="noticia-corpo">
+              <h2>Lâmpada LED vai ter eficiência mínima</h2>
+              <time class="noticia-data" datetime="2026-06-29">29 jun. 2026</time>
+              <div class="noticia-acoes"><button class="noticia-abrir" type="button" aria-haspopup="dialog">Leia mais<svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              <div class="noticia-texto">
+                <p>O governo federal criou a <strong>primeira regra nacional de eficiência</strong> para lâmpadas e luminárias de LED. A norma é do Comitê Gestor de Indicadores e Níveis de Eficiência Energética (CGIEE), que é presidido pelo Ministério de Minas e Energia (MME), e foi divulgada em 29 de junho de 2026. Ela vale para fabricar, importar e vender esses produtos no Brasil.</p>
+                <p>A regra mede a eficácia luminosa, em lúmens por watt (lm/W): quanta luz sai para cada watt de energia gasto. Quanto maior o número, mais luz com menos energia. O mínimo será de 120 lm/W em 2028 e de 140 lm/W em 2030, em duas etapas, e a norma define como calcular o índice mínimo de cada produto conforme suas características técnicas.</p>
+                <p>Quem não cumprir não poderá mais vender. Há um prazo de transição de 3 a 5 anos e, depois dele, os produtos abaixo do mínimo saem do comércio. O MME considera esse prazo suficiente para as lojas venderem ou retirarem o estoque. A notícia não fala em multas.</p>
+                <p>O governo estima uma economia acumulada de 283 a 432 TWh até 2040, energia suficiente para abastecer cerca de 14 milhões de residências no mesmo período.</p>
+                <p>E o preço? Segundo o MME, não há uma relação clara entre maior eficácia luminosa e preço mais alto, e a economia ao longo da vida útil compensa um possível aumento na compra. O LED já gasta menos energia e dura mais, o que pode reduzir os custos de reposição e de descarte.</p>
+                <p class="noticia-fonte">Fonte: <a href="https://www.dgabc.com.br/Noticia/4332067/mme-lampadas-sem-criterio-de-eficiencia-nao-poderao-ser-vendidas-apos-prazo-de-ate-5-anos">Diário do Grande ABC</a>. Foto: analogicus, <a href="https://pixabay.com/photos/lightbulb-energy-saving-lights-7432190/">Pixabay</a>.</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-explorar">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker kicker-laranja">Explore</p>
+          <h2 id="titulo-explorar">Continue pelo site</h2>
+        </div>
+        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+          <ul class="reel-lista">
+            <li><a class="reel-item" href="calculadora.html">
+              <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Calculadora</span>
+              <span class="reel-legenda"><strong>Calculadora</strong><span>O passo a passo do cálculo e o modo avançado.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="sobre.html">
+              <img src="img/reel-sobre.webp" srcset="img/reel-sobre-480.webp 480w, img/reel-sobre.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Sobre</span>
+              <span class="reel-legenda"><strong>Sobre</strong><span>Origem, missão e objetivos do projeto.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="impacto.html">
+              <img src="img/reel-impacto.webp" srcset="img/reel-impacto-480.webp 480w, img/reel-impacto.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Impacto</span>
+              <span class="reel-legenda"><strong>Impacto</strong><span>Tabelas de consumo, tarifas e economia possível.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="galeria.html">
+              <img src="img/reel-galeria.webp" srcset="img/reel-galeria-480.webp 480w, img/reel-galeria.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Galeria</span>
+              <span class="reel-legenda"><strong>Galeria</strong><span>Telas do sistema e imagens dos aparelhos analisados.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" data-proxima href="acessibilidade.html">
+              <img src="img/reel-acessibilidade.webp" srcset="img/reel-acessibilidade-480.webp 480w, img/reel-acessibilidade.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Acessibilidade</span>
+              <span class="reel-legenda"><span class="reel-tag">Veja mais</span><strong>Acessibilidade</strong><span>Recursos e compromissos de inclusão do site.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-brand">Watt Certo</p>
-        <p>Calculadora de consumo de energia residencial e consumo consciente.</p>
+    <div class="container rodape">
+      <div class="rodape-topo">
+        <div class="rodape-marca">
+          <p class="footer-brand">Watt<span class="brand-certo">Certo</span></p>
+        </div>
+        <div class="rodape-colunas">
+          <nav class="rodape-links" aria-label="Rodapé">
+            <ul>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="impacto.html">Impacto</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+          <div class="rodape-fontes">
+            <h2>Fontes dos dados</h2>
+            <ul>
+              <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/Anuario_Sumario%20Executivo_2026_V1.pdf">EPE, Anuário Estatístico de Energia Elétrica 2026 (ano-base 2025)</a></li>
+              <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <nav aria-label="Rodapé">
-        <h2>Páginas</h2>
-        <ul class="footer-list">
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="calculadora.html">Calculadora</a></li>
-          <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>Fontes dos dados</h2>
-        <ul class="footer-list">
-          <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/anuario-factsheet.pdf">EPE, Anuário Estatístico de Energia Elétrica 2025 (ano-base 2024)</a></li>
-          <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <p class="footer-note">© 2026 Watt Certo. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
+
+      <p class="footer-note">© 2026 WattCerto. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
     </div>
   </footer>
 </body>

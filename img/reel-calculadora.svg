@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Ilustração de uma calculadora com visor e teclas">
+<rect width="640" height="800" fill="#fdf1d6"/>
+<circle cx="520" cy="130" r="70" fill="#f4c04e"/>
+<g stroke="#e9a21b" stroke-width="8" stroke-linecap="round"><path d="M520 28v-16M520 248v-16M418 130h-16M638 130h-16M448 58l-12-12M604 214l-12-12M592 58l12-12M436 214l12-12" transform="translate(0 0)"/></g>
+<rect x="150" y="190" width="340" height="470" rx="40" fill="#11392b"/>
+<rect x="182" y="224" width="276" height="110" rx="20" fill="#bfddc9"/>
+<path d="M214 300h40M274 300h40" stroke="#11392b" stroke-width="10" stroke-linecap="round" opacity=".25"/>
+<path d="M412 306l-22 0 12-44 22 0-12 44zM404 262l22-26" stroke="#11392b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<g fill="#2f8f5f"><rect x="182" y="370" width="76" height="62" rx="16"/><rect x="282" y="370" width="76" height="62" rx="16"/><rect x="382" y="370" width="76" height="62" rx="16"/></g>
+<g fill="#1b5e43"><rect x="182" y="454" width="76" height="62" rx="16"/><rect x="282" y="454" width="76" height="62" rx="16"/><rect x="382" y="454" width="76" height="62" rx="16"/></g>
+<g fill="#1b5e43"><rect x="182" y="538" width="76" height="62" rx="16"/><rect x="282" y="538" width="76" height="62" rx="16"/></g>
+<rect x="382" y="538" width="76" height="62" rx="16" fill="#e9a21b"/>
+</svg>

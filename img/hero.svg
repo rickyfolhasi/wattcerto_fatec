@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" role="img" aria-labelledby="hero-t hero-d">
   <title id="hero-t">Medidor de consumo de energia de uma casa</title>
   <desc id="hero-d">Ilustração de uma casa com um medidor em arco que vai do verde ao vermelho, com o ponteiro na faixa laranja, e ícones de chuveiro, geladeira e ar-condicionado.</desc>
-  <rect width="640" height="540" fill="#e6f2ea"/>
+  <rect width="640" height="540" fill="#fdf1d6"/>
 
   <!-- casa -->
   <path d="M120 250 L240 160 L360 250 V430 H120 Z" fill="#ffffff"/>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Ilustração de um gráfico de barras que diminui, com uma folha">
+<rect width="640" height="800" fill="#e6f2ea"/>
+<path d="M0 640c120-60 220-40 320-10s220 40 320-20v190H0z" fill="#bfddc9"/>
+<g fill="#11392b"><rect x="110" y="250" width="80" height="360" rx="14"/></g>
+<rect x="230" y="330" width="80" height="280" rx="14" fill="#1b5e43"/>
+<rect x="350" y="420" width="80" height="190" rx="14" fill="#2f8f5f"/>
+<rect x="470" y="500" width="80" height="110" rx="14" fill="#7fc39b"/>
+<path d="M150 210l120 60 120 90 120 90" stroke="#c1473a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="2 22"/>
+<path d="M512 438l38 52-62 0z" fill="#c1473a" transform="rotate(8 512 470)"/>
+<path d="M500 150c60 0 100 40 100 100-60 0-100-40-100-100z" fill="#2f8f5f"/>
+<path d="M500 150c30 30 60 60 100 100" stroke="#e6f2ea" stroke-width="6" stroke-linecap="round" fill="none"/>
+<path d="M90 650h460" stroke="#11392b" stroke-width="8" stroke-linecap="round"/>
+</svg>

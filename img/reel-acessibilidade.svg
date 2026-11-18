@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Ilustração de um círculo com contraste claro e escuro, um cursor e teclas">
+<rect width="640" height="800" fill="#092419"/>
+<circle cx="320" cy="300" r="170" fill="#faf6ee"/>
+<path d="M320 130a170 170 0 0 1 0 340z" fill="#11392b"/>
+<circle cx="320" cy="300" r="170" fill="none" stroke="#f4c04e" stroke-width="10"/>
+<circle cx="320" cy="238" r="28" fill="#2f8f5f"/>
+<path d="M250 296h140M320 296v90M320 346l-46 78M320 346l46 78" stroke="#2f8f5f" stroke-width="16" stroke-linecap="round" fill="none"/>
+<g fill="#1b5e43" stroke="#bfddc9" stroke-width="6"><rect x="130" y="560" width="110" height="90" rx="18"/><rect x="265" y="560" width="110" height="90" rx="18"/><rect x="400" y="560" width="110" height="90" rx="18"/></g>
+<path d="M170 612l-14 0M320 610v-16m0 0l-14 14m14-14l14 14" stroke="#bfddc9" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M452 590l24 24-24 24" stroke="#f4c04e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

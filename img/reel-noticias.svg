@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Ilustração de uma folha de jornal com um raio">
+<rect width="640" height="800" fill="#f7e5da"/>
+<rect x="120" y="150" width="400" height="500" rx="28" fill="#ffffff" transform="rotate(-4 320 400)"/>
+<g transform="rotate(-4 320 400)">
+<rect x="160" y="196" width="320" height="22" rx="6" fill="#11392b"/>
+<rect x="160" y="244" width="140" height="120" rx="14" fill="#fdf1d6"/>
+<path d="M240 266l-34 56h30l-12 30 46-62h-30z" fill="#e9a21b"/>
+<g fill="#bfddc9"><rect x="326" y="244" width="154" height="14" rx="7"/><rect x="326" y="272" width="154" height="14" rx="7"/><rect x="326" y="300" width="110" height="14" rx="7"/><rect x="326" y="328" width="154" height="14" rx="7"/></g>
+<g fill="#e3dccb"><rect x="160" y="400" width="320" height="14" rx="7"/><rect x="160" y="430" width="320" height="14" rx="7"/><rect x="160" y="460" width="240" height="14" rx="7"/><rect x="160" y="508" width="320" height="14" rx="7"/><rect x="160" y="538" width="290" height="14" rx="7"/><rect x="160" y="568" width="200" height="14" rx="7"/></g>
+</g>
+<circle cx="500" cy="170" r="46" fill="#9a4a24"/>
+<path d="M512 140l-30 36h26l-10 34 38-44h-26z" fill="#f7e5da"/>
+</svg>

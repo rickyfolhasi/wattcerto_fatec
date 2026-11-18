@@ -3,82 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Impacto | Watt Certo</title>
+  <title>Impacto | WattCerto</title>
   <meta name="description" content="Tabelas de consumo, tarifas e economia possível com a troca de aparelhos.">
   <meta name="theme-color" content="#11392b">
   <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <script src="js/menu.js" defer></script>
+  <script src="js/reel.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Watt Certo, página inicial">Watt Certo</a>
+      <a class="brand" href="index.html" aria-label="WattCerto, página inicial">Watt<span class="brand-certo">Certo</span></a>
       <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
-        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        Menu
+        <span class="menu-texto">Menu</span>
+        <span class="menu-circulo"><svg class="icon icone-menu" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path class="linha-1" d="M4 9h16"/><path class="linha-2" d="M4 15h11"/></svg></span>
       </button>
       <nav class="site-nav" aria-label="Principal">
         <ul class="nav-list" id="menu-principal">
           <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="impacto.html" aria-current="page">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
           <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="conteudo">
-    <div class="container page-hero">
-      <nav class="breadcrumb" aria-label="Você está em">
-        <ol><li><a href="index.html">Início</a></li><li aria-current="page">Impacto</li></ol>
-      </nav>
-      <p class="eyebrow">Página em construção</p>
-      <h1>Impacto</h1>
-      <p class="lead">Tabelas de consumo, tarifas e economia possível com a troca de aparelhos.</p>
-      <div class="notice">
-        <h2>Entrega parcial (MVP)</h2>
-        <p>Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto.</p>
-        <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+    <div class="page-topo">
+      <div class="container page-hero">
+        <div class="page-hero-texto">
+          <h1>Impacto</h1>
+          <p class="lead">Tabelas de consumo, tarifas e economia possível com a troca de aparelhos.</p>
+        </div>
       </div>
     </div>
+
+    <section class="section band-dark" aria-labelledby="titulo-brasil">
+      <div class="container stats-grid">
+        <div>
+          <p class="kicker">A casa brasileira em números</p>
+          <h2 id="titulo-brasil">As residências respondem por quase um terço de toda a eletricidade do país.</h2>
+          <span class="stat-number">31,7%</span>
+          <p class="stat-caption">da eletricidade consumida no Brasil em 2025 foi para residências como a sua: 179.648 GWh em 84,5 milhões de unidades residenciais.</p>
+        </div>
+        <figure class="compare">
+          <figcaption>De cada 100 kWh consumidos no Brasil</figcaption>
+          <div class="bar-row">
+            <span class="bar-label">Indústria, comércio e outros setores</span>
+            <span class="bar-value">68,3 kWh</span>
+            <div class="bar-track" aria-hidden="true"><div class="bar bar-brasil-outros"></div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Residências</span>
+            <span class="bar-value">31,7 kWh</span>
+            <div class="bar-track" aria-hidden="true"><div class="bar bar-brasil-casa"></div></div>
+          </div>
+          <p class="fonte">O consumo total do país em 2025 foi de 567 TWh. Por residência, dá cerca de 177 kWh por mês, conta nossa: 179.648 GWh ÷ 84,5 milhões ÷ 12 meses. Fonte: EPE, Anuário Estatístico de Energia Elétrica 2026 (ano-base 2025).</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-bandeiras">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Tarifas</p>
+          <h2 id="titulo-bandeiras">Quanto cada bandeira soma na conta</h2>
+          <p>A cor da bandeira muda todo mês e mostra quanto está custando gerar energia no país. Na verde não há nada a mais. Nas outras, cada 100 kWh consumidos ficam mais caros.</p>
+        </div>
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Acréscimo de cada bandeira tarifária na conta de luz">
+          <table class="tabela-simples">
+            <caption class="visually-hidden">Acréscimo de cada bandeira tarifária na conta de luz</caption>
+            <thead>
+              <tr>
+                <th scope="col">Bandeira</th>
+                <th scope="col">A mais a cada 100 kWh</th>
+                <th scope="col">Numa casa que gasta 177 kWh por mês</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="bandeira bandeira-verde" aria-hidden="true"></span>Verde</th>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="bandeira bandeira-amarela" aria-hidden="true"></span>Amarela</th>
+                <td>R$ 1,885</td>
+                <td>R$ 3,34</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="bandeira bandeira-vermelha" aria-hidden="true"></span>Vermelha, patamar 1</th>
+                <td>R$ 4,463</td>
+                <td>R$ 7,90</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="bandeira bandeira-vermelha-2" aria-hidden="true"></span>Vermelha, patamar 2</th>
+                <td>R$ 7,877</td>
+                <td>R$ 13,94</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fonte-tabela">Valores por 100 kWh: <a href="https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias">ANEEL, bandeiras tarifárias</a>. A última coluna é conta nossa: 177 kWh ÷ 100 × o valor da bandeira. Os 177 kWh por mês são a média das residências do país, calculada com dados da EPE (veja acima). Em novembro de 2026 a bandeira é verde (<a href="https://sbtnews.sbt.com.br/noticia/economia/aneel-mantem-bandeira-verde-na-conta-de-luz-em-novembro">SBT News, 30 out. 2026</a>).</p>
+      </div>
+    </section>
+
+    <section class="section section-white" aria-labelledby="titulo-consumo">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Consumo</p>
+          <h2 id="titulo-consumo">Onde vai a energia de uma casa típica</h2>
+          <p>Resultado da calculadora com os valores que já vêm nos campos: casa de 3 pessoas, com chuveiro, geladeira, máquina de lavar e lâmpadas LED, e tarifa de R$ 0,86 por kWh.</p>
+        </div>
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Consumo e custo mensal por aparelho numa casa de 3 pessoas">
+          <table class="tabela-simples">
+            <caption class="visually-hidden">Consumo e custo mensal por aparelho numa casa de 3 pessoas</caption>
+            <thead>
+              <tr>
+                <th scope="col">Aparelho</th>
+                <th scope="col">kWh por mês</th>
+                <th scope="col">Custo por mês</th>
+                <th scope="col">Parte da conta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Chuveiro elétrico</th>
+                <td>124</td>
+                <td>R$ 106,43</td>
+                <td><span class="nivel-texto nivel-alto">63%, alto</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Geladeira</th>
+                <td>57</td>
+                <td>R$ 48,93</td>
+                <td><span class="nivel-texto nivel-medio">29%, médio</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Iluminação (lâmpadas LED)</th>
+                <td>14</td>
+                <td>R$ 11,61</td>
+                <td><span class="nivel-texto nivel-baixo">7%, baixo</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Máquina de lavar</th>
+                <td>2</td>
+                <td>R$ 1,55</td>
+                <td><span class="nivel-texto nivel-baixo">1%, baixo</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row">Total</th>
+                <td>196</td>
+                <td>R$ 168,52</td>
+                <td>100%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <p class="fonte-tabela">Cálculo do próprio WattCerto, com as fórmulas da página <a href="sobre.html#como-calcula">Sobre</a>. A geladeira usa o consumo do selo Procel de um modelo 2 portas frost free (56,9 kWh por mês). Quer ver quanto dá para economizar trocando hábitos e aparelhos? Veja o exemplo na <a href="index.html">página inicial</a> ou <a href="calculadora.html">faça a conta da sua casa</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-explorar">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker kicker-laranja">Explore</p>
+          <h2 id="titulo-explorar">Continue pelo site</h2>
+        </div>
+        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+          <ul class="reel-lista">
+            <li><a class="reel-item" href="calculadora.html">
+              <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Calculadora</span>
+              <span class="reel-legenda"><strong>Calculadora</strong><span>O passo a passo do cálculo e o modo avançado.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="sobre.html">
+              <img src="img/reel-sobre.webp" srcset="img/reel-sobre-480.webp 480w, img/reel-sobre.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Sobre</span>
+              <span class="reel-legenda"><strong>Sobre</strong><span>Origem, missão e objetivos do projeto.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" data-proxima href="galeria.html">
+              <img src="img/reel-galeria.webp" srcset="img/reel-galeria-480.webp 480w, img/reel-galeria.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Galeria</span>
+              <span class="reel-legenda"><span class="reel-tag">Veja mais</span><strong>Galeria</strong><span>Telas do sistema e imagens dos aparelhos analisados.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="noticias.html">
+              <img src="img/reel-noticias.webp" srcset="img/reel-noticias-480.webp 480w, img/reel-noticias.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Notícias</span>
+              <span class="reel-legenda"><strong>Notícias</strong><span>Bandeiras tarifárias e eficiência energética.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="acessibilidade.html">
+              <img src="img/reel-acessibilidade.webp" srcset="img/reel-acessibilidade-480.webp 480w, img/reel-acessibilidade.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Acessibilidade</span>
+              <span class="reel-legenda"><strong>Acessibilidade</strong><span>Recursos e compromissos de inclusão do site.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-brand">Watt Certo</p>
-        <p>Calculadora de consumo de energia residencial e consumo consciente.</p>
+    <div class="container rodape">
+      <div class="rodape-topo">
+        <div class="rodape-marca">
+          <p class="footer-brand">Watt<span class="brand-certo">Certo</span></p>
+        </div>
+        <div class="rodape-colunas">
+          <nav class="rodape-links" aria-label="Rodapé">
+            <ul>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="impacto.html">Impacto</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+          <div class="rodape-fontes">
+            <h2>Fontes dos dados</h2>
+            <ul>
+              <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/Anuario_Sumario%20Executivo_2026_V1.pdf">EPE, Anuário Estatístico de Energia Elétrica 2026 (ano-base 2025)</a></li>
+              <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <nav aria-label="Rodapé">
-        <h2>Páginas</h2>
-        <ul class="footer-list">
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="calculadora.html">Calculadora</a></li>
-          <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>Fontes dos dados</h2>
-        <ul class="footer-list">
-          <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/anuario-factsheet.pdf">EPE, Anuário Estatístico de Energia Elétrica 2025 (ano-base 2024)</a></li>
-          <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <p class="footer-note">© 2026 Watt Certo. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
+
+      <p class="footer-note">© 2026 WattCerto. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
     </div>
   </footer>
 </body>

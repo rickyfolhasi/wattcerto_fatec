@@ -3,82 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Acessibilidade | Watt Certo</title>
+  <title>Acessibilidade | WattCerto</title>
   <meta name="description" content="Recursos de acessibilidade e compromissos de inclusão do site.">
   <meta name="theme-color" content="#11392b">
   <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <script src="js/menu.js" defer></script>
+  <script src="js/reel.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Watt Certo, página inicial">Watt Certo</a>
+      <a class="brand" href="index.html" aria-label="WattCerto, página inicial">Watt<span class="brand-certo">Certo</span></a>
       <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
-        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        Menu
+        <span class="menu-texto">Menu</span>
+        <span class="menu-circulo"><svg class="icon icone-menu" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path class="linha-1" d="M4 9h16"/><path class="linha-2" d="M4 15h11"/></svg></span>
       </button>
       <nav class="site-nav" aria-label="Principal">
         <ul class="nav-list" id="menu-principal">
           <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
           <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
           <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="conteudo">
-    <div class="container page-hero">
-      <nav class="breadcrumb" aria-label="Você está em">
-        <ol><li><a href="index.html">Início</a></li><li aria-current="page">Acessibilidade</li></ol>
-      </nav>
-      <p class="eyebrow">Página em construção</p>
-      <h1>Acessibilidade</h1>
-      <p class="lead">Recursos de acessibilidade e compromissos de inclusão do site.</p>
-      <div class="notice">
-        <h2>Entrega parcial (MVP)</h2>
-        <p>Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto.</p>
-        <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+    <section class="section section-white" aria-labelledby="titulo-acess">
+      <div class="container a11y-grid">
+        <div>
+          <p class="kicker">Em primeiro lugar</p>
+          <h1 id="titulo-acess">Um site que funciona para todo mundo</h1>
+          <p>Economizar energia interessa a qualquer pessoa, por isso o site é construído pensado para ser usado por todos!</p>
+          <ul class="checklist">
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Navegação completa pelo teclado, com foco sempre visível.</li>
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Estrutura semântica e textos alternativos para leitores de tela.</li>
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Contraste verificado: todas as combinações passam no nível AA.</li>
+            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Nível de consumo indicado por cor e também por texto.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Atalhos de teclado</h2>
+          <ul class="keys">
+            <li><kbd>Tab</kbd><span>avança entre links e botões</span></li>
+            <li><kbd>Shift + Tab</kbd><span>volta ao item anterior</span></li>
+            <li><kbd>Enter</kbd><span>abre o link ou aciona o botão</span></li>
+            <li><kbd>Esc</kbd><span>fecha o menu no celular</span></li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-pessoas">
+      <div class="container">
+        <div class="section-head centro">
+          <p class="kicker kicker-laranja">Para cada pessoa</p>
+          <h2 id="titulo-pessoas">O que fizemos por quem usa o site de outro jeito</h2>
+        </div>
+        <ul class="a11y-cards">
+          <li class="card">
+            <h3>Baixa visão</h3>
+            <p>A letra é a Atkinson Hyperlegible, criada para ser fácil de ler por quem enxerga pouco. O texto acompanha o tamanho de letra do navegador, e a página aguenta ampliação de 400% sem rolar para o lado.</p>
+          </li>
+          <li class="card">
+            <h3>Daltonismo</h3>
+            <p>A cor nunca é a única informação. As bandeiras tarifárias têm o nome escrito ao lado da cor, e o nível de consumo vem em texto. Os contrastes entre texto e fundo passam no nível AA do WCAG.</p>
+          </li>
+          <li class="card">
+            <h3>Cegueira</h3>
+            <p>As páginas têm títulos em ordem, um link para pular direto ao conteúdo e tabelas com legenda. Imagens que só enfeitam ficam de fora da leitura, e os avisos da calculadora e do formulário são lidos em voz alta pelo leitor de tela.</p>
+          </li>
+          <li class="card">
+            <h3>Surdez e baixa audição</h3>
+            <p>Nada no site depende de som. O único vídeo, na Galeria, é sem som e vem com a descrição escrita do que acontece nele. Por isso não precisa de legenda.</p>
+          </li>
+          <li class="card">
+            <h3>Fala</h3>
+            <p>O site não pede para falar nem para ligar. O contato é por um formulário escrito, e todas as respostas aparecem em texto na tela.</p>
+          </li>
+          <li class="card">
+            <h3>Movimento e coordenação</h3>
+            <p>Tudo funciona só com o teclado, sem precisar de mouse. Não há nada com tempo limite e nenhuma ação exige arrastar ou fazer gestos complicados.</p>
+          </li>
+          <li class="card">
+            <h3>Sensibilidade a movimento</h3>
+            <p>As animações são suaves e nada pisca. Se o seu aparelho está configurado para reduzir movimento, o site desliga as animações.</p>
+          </li>
+          <li class="card">
+            <h3>Leitura simples</h3>
+            <p>Escrevemos de forma direta e próxima, sem jargão, e explicamos os termos de energia quando eles aparecem. Quem não é da área entende na primeira leitura.</p>
+          </li>
+          <li class="card">
+            <h3>O que ainda falta</h3>
+            <p>Tradução em Libras (como a do VLibras, do governo federal) e testes com pessoas que usam leitor de tela no dia a dia. São os próximos passos do projeto.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-explorar">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker kicker-laranja">Explore</p>
+          <h2 id="titulo-explorar">Continue pelo site</h2>
+        </div>
+        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+          <ul class="reel-lista">
+            <li><a class="reel-item" data-proxima href="calculadora.html">
+              <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Calculadora</span>
+              <span class="reel-legenda"><span class="reel-tag">Veja mais</span><strong>Calculadora</strong><span>O passo a passo do cálculo e o modo avançado.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="sobre.html">
+              <img src="img/reel-sobre.webp" srcset="img/reel-sobre-480.webp 480w, img/reel-sobre.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Sobre</span>
+              <span class="reel-legenda"><strong>Sobre</strong><span>Origem, missão e objetivos do projeto.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="impacto.html">
+              <img src="img/reel-impacto.webp" srcset="img/reel-impacto-480.webp 480w, img/reel-impacto.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Impacto</span>
+              <span class="reel-legenda"><strong>Impacto</strong><span>Tabelas de consumo, tarifas e economia possível.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="galeria.html">
+              <img src="img/reel-galeria.webp" srcset="img/reel-galeria-480.webp 480w, img/reel-galeria.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Galeria</span>
+              <span class="reel-legenda"><strong>Galeria</strong><span>Telas do sistema e imagens dos aparelhos analisados.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+            <li><a class="reel-item" href="noticias.html">
+              <img src="img/reel-noticias.webp" srcset="img/reel-noticias-480.webp 480w, img/reel-noticias.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">
+              <span class="reel-rotulo">Notícias</span>
+              <span class="reel-legenda"><strong>Notícias</strong><span>Bandeiras tarifárias e eficiência energética.</span><svg class="reel-seta" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-brand">Watt Certo</p>
-        <p>Calculadora de consumo de energia residencial e consumo consciente.</p>
+    <div class="container rodape">
+      <div class="rodape-topo">
+        <div class="rodape-marca">
+          <p class="footer-brand">Watt<span class="brand-certo">Certo</span></p>
+        </div>
+        <div class="rodape-colunas">
+          <nav class="rodape-links" aria-label="Rodapé">
+            <ul>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="impacto.html">Impacto</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+          <div class="rodape-fontes">
+            <h2>Fontes dos dados</h2>
+            <ul>
+              <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/Anuario_Sumario%20Executivo_2026_V1.pdf">EPE, Anuário Estatístico de Energia Elétrica 2026 (ano-base 2025)</a></li>
+              <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <nav aria-label="Rodapé">
-        <h2>Páginas</h2>
-        <ul class="footer-list">
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="calculadora.html">Calculadora</a></li>
-          <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>Fontes dos dados</h2>
-        <ul class="footer-list">
-          <li><a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-160/topico-168/anuario-factsheet.pdf">EPE, Anuário Estatístico de Energia Elétrica 2025 (ano-base 2024)</a></li>
-          <li><a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <p class="footer-note">© 2026 Watt Certo. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
+
+      <p class="footer-note">© 2026 WattCerto. Projeto acadêmico da Fatec Antônio Russo, São Caetano do Sul (SP). Disciplina de Desenvolvimento Web, curso de Análise e Desenvolvimento de Sistemas. Sem fins comerciais.</p>
     </div>
   </footer>
 </body>

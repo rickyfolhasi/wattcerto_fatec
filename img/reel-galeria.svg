@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Ilustração de molduras de quadros com paisagem e lâmpada">
+<rect width="640" height="800" fill="#fdf1d6"/>
+<rect x="90" y="110" width="270" height="340" rx="22" fill="#ffffff" stroke="#11392b" stroke-width="10"/>
+<rect x="116" y="136" width="218" height="288" rx="10" fill="#bfddc9"/>
+<circle cx="260" cy="206" r="30" fill="#f4c04e"/>
+<path d="M116 424V330l70-70 60 56 40-34 48 52v90z" fill="#2f8f5f"/>
+<rect x="390" y="190" width="170" height="210" rx="18" fill="#ffffff" stroke="#9a4a24" stroke-width="10"/>
+<rect x="412" y="212" width="126" height="166" rx="8" fill="#f7e5da"/>
+<circle cx="475" cy="268" r="30" fill="none" stroke="#9a4a24" stroke-width="10"/>
+<path d="M456 300h38l-6 36h-26z" fill="#e9a21b"/>
+<rect x="150" y="500" width="400" height="180" rx="22" fill="#ffffff" stroke="#1b5e43" stroke-width="10"/>
+<rect x="176" y="526" width="348" height="128" rx="10" fill="#e6f2ea"/>
+<path d="M176 654v-50l52-30 44 22 60-44 72 36 40-20v86z" fill="#7fc39b"/>
+<circle cx="236" cy="566" r="14" fill="#e9a21b"/>
+</svg>
