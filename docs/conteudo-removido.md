@@ -348,3 +348,30 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 ## 22/11/2026 | Contato | mensagem depois de enviar (site fora do Netlify)
 - Novo texto, só quando o site não está no Netlify (Railway): "Tudo certo com os dados. Esta versão do site confere o formulário, mas não envia a mensagem para um servidor."
 - No Netlify, nada mudou: a mensagem continua sendo enviada e o texto de sucesso é o mesmo.
+
+## 22/11/2026 | Menu e rodapé | 10 páginas interligadas (A06)
+- Menu principal e rodapé de todas as páginas ganharam "Mídia" e "Orçamento". Antes o menu tinha 8 itens e o rodapé 7; a Mídia e o Orçamento só eram alcançados por link direto.
+
+## 22/11/2026 | Orçamento e Sobre | orçamento completo na página própria (A06)
+- A comparação de hospedagens e domínios saiu da Sobre (seção "Orçamento e hospedagem" e o item "Orçamento e hospedagem" do "Nesta página") e foi para a página orcamento_hospedagem.html, que antes era só um aviso com link para a Sobre.
+- Texto que saiu da página Orçamento: "O comparativo de três hospedagens e três domínios, com preços e a escolha da equipe, fica na página Sobre." e "O site está no Netlify, no plano Free, porque é feito só de páginas prontas e não precisa de servidor. Para o domínio, a sugestão é o .com.br no Registro.br." e o botão "Ver o orçamento completo".
+- Linha do Railway na tabela, antes: "Teste grátis com US$ 5 de crédito; plano Hobby a US$ 5 por mês" / "US$ 5 de uso incluídos por mês no Hobby; publica direto do GitHub" / "Cobra pelo uso que passar do incluído". Agora: "Plano Free: US$ 1 de uso por mês. Teste: US$ 5 de crédito, uma vez só. Hobby: US$ 5 por mês" / "Publica sozinho a cada mudança no GitHub; endereço com HTTPS" / "Cobra pelo uso; quando o crédito acaba, o site para" (fonte: docs.railway.com, planos).
+- "Nossa escolha" saiu (texto do Netlify, os três parágrafos) e entrou "Por que o Railway": Railway como hospedagem final, custo, Netlify como plano B e domínio. A frase do Registro.br foi mantida.
+
+## 22/11/2026 | Contato | equipe, dados fictícios e novos campos (A06)
+- Nada saiu. Entrou na coluna da esquerda: "Quem responde" (os cinco integrantes e a parte de cada um, conforme a divisão de funções do README), e-mail "contato@wattcerto.example", telefone "(11) 0000-0000", endereço da Fatec São Caetano do Sul e o aviso "E-mail e telefone são fictícios: o projeto é acadêmico. Para falar com a equipe, use o formulário."
+- Entraram no formulário três campos opcionais: Telefone (tel, com pattern), Pessoas na casa (number, 1 a 20) e Data da última conta de luz (date, não aceita data futura).
+- Meta description, antes: "Formulário para falar com a equipe do projeto." Agora: "Fale com a equipe do WattCerto: formulário de contato e quem cuida de cada parte do site."
+
+## 22/11/2026 | Mídia | página completa (A06)
+- Saiu o aviso de página em construção: "Página em construção", "Entrega parcial (MVP)", "Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto." e o botão "Voltar ao início".
+- Entrou: abertura "Para ver e ouvir"; o vídeo da calculadora (o mesmo da Galeria, que continua lá); um áudio de 45 segundos com três dicas de economia (voz gerada pelo Piper, voz "faber", licença CC0), com o texto completo; e a lista oficial de vídeos da ANEEL sobre consumo consciente num iframe do YouTube sem cookies.
+- _headers: a Content-Security-Policy passou a permitir quadros só de www.youtube-nocookie.com (antes nenhum quadro de fora era permitido).
+
+## 22/11/2026 | Acessibilidade | cartão "Surdez e baixa audição"
+- Antes: "Nada no site depende de som. O único vídeo, na Galeria, é sem som e vem com a descrição escrita do que acontece nele. Por isso não precisa de legenda."
+- Agora: "Nada no site depende só de som. O vídeo da calculadora, na Galeria e na Mídia, é sem som e vem com a descrição escrita do que acontece nele. O áudio de dicas, na Mídia, tem o texto completo logo abaixo." (o texto antigo deixou de ser verdade quando entrou o áudio)
+
+## 22/11/2026 | Projetos | página nova (A06, lista de páginas)
+- Nada saiu. Página nova projetos.html, "Projetos que ajudam a pagar menos luz": Tarifa Social de Energia Elétrica (Lei nº 15.235/2025), troca de geladeira de graça da Enel São Paulo (Programa de Eficiência Energética da ANEEL), Procel e Selo Procel (23,91 bilhões de kWh evitados em 2023, MME) e o próprio WattCerto. Cada um com fonte.
+- Menu e rodapé de todas as páginas ganharam "Projetos", depois de "Sobre". O site passou a ter 11 páginas.

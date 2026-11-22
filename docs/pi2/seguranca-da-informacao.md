@@ -58,7 +58,7 @@ Quem escreveu pode pedir, pelo formulário de contato, para ver, corrigir ou apa
 | Nº | Requisito |
 |---|---|
 | RS1 | Todo acesso ao site deve ser por HTTPS (garantido pelo Netlify). |
-| RS2 | O site só pode carregar scripts, estilos, fontes e imagens dele mesmo (Content-Security-Policy no arquivo `_headers`). |
+| RS2 | O site só pode carregar scripts, estilos, fontes e imagens dele mesmo (Content-Security-Policy no arquivo `_headers`). A única exceção é o quadro (iframe) da página Mídia, liberado só para `www.youtube-nocookie.com`, a versão do YouTube que não grava cookies até a pessoa dar play. Os cabeçalhos do `_headers` valem no Netlify; no Railway eles precisam ser configurados no servidor. |
 | RS3 | Todo comando SQL deve usar parâmetros; nenhum valor digitado pode ser colado no texto do SQL. |
 | RS4 | Todo dado que entra no banco deve ser validado antes (tipo, tamanho, faixa, formato de e-mail). |
 | RS5 | Senhas e dados de acesso ao banco nunca podem ficar no código nem no GitHub. |

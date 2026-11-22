@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Orçamento e hospedagem | WattCerto</title>
-  <meta name="description" content="Comparativo de hospedagens e domínios para publicar o site.">
+  <meta name="description" content="Três hospedagens e três domínios comparados, com preços e o motivo de o WattCerto estar no Railway.">
   <meta name="theme-color" content="#11392b">
   <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
@@ -26,28 +26,134 @@
           <li><a href="index.html">Início</a></li>
           <li><a href="calculadora.html">Calculadora</a></li>
           <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
           <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Mídia</a></li>
           <li><a href="noticias.html">Notícias</a></li>
           <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="orcamento_hospedagem.html" aria-current="page">Orçamento</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html" aria-current="page">Hospedagem</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
-    <div class="container page-hero">
-      <p class="eyebrow">Publicação do site</p>
-      <h1>Orçamento e hospedagem</h1>
-      <p class="lead">O comparativo de três hospedagens e três domínios, com preços e a escolha da equipe, fica na página Sobre.</p>
-      <div class="notice">
-        <h2>Em resumo</h2>
-        <p>O site está no Netlify, no plano Free, porque é feito só de páginas prontas e não precisa de servidor. Para o domínio, a sugestão é o .com.br no Registro.br.</p>
-        <a class="btn btn-primary" href="sobre.html#hospedagem">Ver o orçamento completo</a>
+  <main id="conteudo" class="pagina-continua">
+
+    <section class="section secao-abertura" aria-labelledby="titulo-orcamento">
+      <div class="container">
+        <div class="section-head centro">
+          <p class="kicker kicker-laranja">Publicação do site</p>
+          <h1 id="titulo-orcamento">Orçamento e hospedagem</h1>
+          <p>Onde o WattCerto fica publicado, quanto isso custa e por que escolhemos o Railway.</p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section section-white secao-trilho" aria-labelledby="titulo-hospedagens">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Hospedagem</p>
+          <h2 id="titulo-hospedagens">Três hospedagens comparadas</h2>
+          <p>Hospedagem é o computador que deixa o site no ar o tempo todo. O WattCerto é feito só de páginas prontas, então qualquer uma das três dá conta.</p>
+        </div>
+        <div class="trilho-conteudo">
+          <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Comparativo de três hospedagens">
+            <table class="tabela-simples">
+              <caption class="visually-hidden">Comparativo de três hospedagens</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Serviço</th>
+                  <th scope="col">Custo</th>
+                  <th scope="col">O que inclui</th>
+                  <th scope="col">Ponto de atenção</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Railway</th>
+                  <td>Plano Free: US$ 1 de uso por mês. Teste: US$ 5 de crédito, uma vez só. Hobby: US$ 5 por mês</td>
+                  <td>Publica sozinho a cada mudança no GitHub; endereço com HTTPS</td>
+                  <td>Cobra pelo uso; quando o crédito acaba, o site para</td>
+                </tr>
+                <tr>
+                  <th scope="row">GitHub Pages</th>
+                  <td>Grátis em repositório público</td>
+                  <td>Site de até 1 GB e 100 GB de tráfego por mês</td>
+                  <td>Só serve sites de páginas prontas, como o nosso</td>
+                </tr>
+                <tr>
+                  <th scope="row">Netlify</th>
+                  <td>Plano Free grátis; Pro a US$ 20 por mês</td>
+                  <td>300 créditos por mês no plano Free; cada publicação gasta 15; formulário de contato não gasta</td>
+                  <td>Se os créditos acabam, o site fica fora do ar até o mês virar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fonte-tabela">Preços consultados em novembro de 2026: <a href="https://docs.railway.com/pricing/plans">planos do Railway</a>, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">limites do GitHub Pages</a>, <a href="https://netli.fyi/blog/netlify-free-plan-limits-2026">plano Free da Netlify (jul. 2026)</a> e <a href="https://www.netlify.com/changelog/2026-04-14-pricing-updates-april-2026/">plano Pro e formulários da Netlify (abr. 2026)</a>. Os preços mudam; confira antes de contratar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section secao-trilho" aria-labelledby="titulo-dominios">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Domínio</p>
+          <h2 id="titulo-dominios">Três domínios comparados</h2>
+          <p>Domínio é o nome que a pessoa digita para chegar ao site, como wattcerto.com.br.</p>
+        </div>
+        <div class="trilho-conteudo">
+          <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Comparativo de três domínios">
+          <table class="tabela-simples">
+            <caption class="visually-hidden">Comparativo de três domínios</caption>
+            <thead>
+              <tr>
+                <th scope="col">Domínio</th>
+                <th scope="col">Onde</th>
+                <th scope="col">Custo por ano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">wattcerto.com.br</th>
+                <td>Registro.br (oficial)</td>
+                <td>R$ 40,00</td>
+              </tr>
+              <tr>
+                <th scope="row">wattcerto.com.br</th>
+                <td>GoDaddy</td>
+                <td>R$ 30,00</td>
+              </tr>
+              <tr>
+                <th scope="row">wattcerto.com</th>
+                <td>Hostinger</td>
+                <td>R$ 0,01 no primeiro ano; R$ 94,99 na renovação</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+          <p class="fonte-tabela">Preços consultados em novembro de 2026: <a href="https://www.homehost.com.br/blog/dominio/registro-de-dominio-br/">Registro.br (HomeHost, nov. 2026)</a>, <a href="https://www.nuvemshop.com.br/blog/quanto-custa-dominio-de-site/">GoDaddy (Nuvemshop, jun. 2026)</a> e <a href="https://www.hostinger.com/br/tld/dominio-com">Hostinger</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-dark secao-trilho" aria-labelledby="titulo-escolha">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker">Nossa escolha</p>
+          <h2 id="titulo-escolha">Por que o Railway</h2>
+          <p>E o que fazemos se ele sair do ar.</p>
+        </div>
+        <div class="trilho-conteudo escolha-texto">
+          <p><strong>O site fica no Railway.</strong> Ele publica sozinho cada mudança que a equipe envia ao GitHub, então ninguém precisa subir arquivo à mão, e o endereço já vem com HTTPS (o cadeado do navegador), que protege quem usa o formulário de contato.</p>
+          <p><strong>Custo.</strong> Para um projeto acadêmico, o crédito grátis do Railway cobre a fase de apresentação. Se o site continuar no ar depois, o plano Hobby custa US$ 5 por mês, e só cobra a mais se o uso passar disso.</p>
+          <p><strong>Plano B.</strong> Antes da versão final, testamos o site no Netlify, no plano Free. Ele continua pronto: se o Railway falhar no dia da apresentação, o mesmo site abre por lá.</p>
+          <p><strong>Domínio.</strong> Por enquanto o site usa o endereço gratuito que o Railway gera. Se o projeto ganhar um nome próprio, a sugestão é o .com.br no Registro.br, que é o registro oficial dos domínios brasileiros e não tem preço promocional que sobe na renovação.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -61,10 +167,13 @@
             <ul>
               <li><a href="calculadora.html">Calculadora</a></li>
               <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
               <li><a href="impacto.html">Impacto</a></li>
               <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Mídia</a></li>
               <li><a href="noticias.html">Notícias</a></li>
               <li><a href="acessibilidade.html">Acessibilidade</a></li>
+              <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
               <li><a href="contato.html">Contato</a></li>
             </ul>
           </nav>

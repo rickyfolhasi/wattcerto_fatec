@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mídia | WattCerto</title>
-  <meta name="description" content="Vídeo e áudio explicando como reduzir o consumo de energia em casa.">
+  <meta name="description" content="A calculadora do WattCerto em vídeo, três dicas de economia de energia em áudio e os vídeos da ANEEL sobre consumo consciente.">
   <meta name="theme-color" content="#11392b">
   <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
@@ -26,28 +26,93 @@
           <li><a href="index.html">Início</a></li>
           <li><a href="calculadora.html">Calculadora</a></li>
           <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
           <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html" aria-current="page">Mídia</a></li>
           <li><a href="noticias.html">Notícias</a></li>
           <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="midia.html" aria-current="page">Mídia</a></li>
+          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
-    <div class="container page-hero">
-      <p class="eyebrow">Página em construção</p>
-      <h1>Mídia</h1>
-      <p class="lead">Vídeo e áudio explicando como reduzir o consumo de energia em casa.</p>
-      <div class="notice">
-        <h2>Entrega parcial (MVP)</h2>
-        <p>Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto.</p>
-        <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+  <main id="conteudo" class="pagina-continua">
+
+    <section class="section secao-abertura" aria-labelledby="titulo-midia">
+      <div class="container">
+        <div class="section-head centro">
+          <p class="kicker kicker-laranja">Mídia</p>
+          <h1 id="titulo-midia">Para ver e ouvir</h1>
+          <p>A calculadora em uso, três dicas de economia em áudio e os vídeos da ANEEL sobre consumo consciente.</p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section section-white secao-trilho" aria-labelledby="titulo-video">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Vídeo</p>
+          <h2 id="titulo-video">A calculadora em 18 segundos</h2>
+          <p>Vídeo curto, sem som, gravado na própria calculadora.</p>
+        </div>
+        <div class="trilho-conteudo">
+          <figure class="midia-video">
+            <video controls muted playsinline preload="none" poster="video/uso-calculadora-poster.webp" width="1280" height="720">
+              <source src="video/uso-calculadora.mp4" type="video/mp4">
+              Seu navegador não toca vídeo. <a href="video/uso-calculadora.mp4">Baixe o vídeo</a>.
+            </video>
+            <figcaption class="midia-legenda">O que acontece no vídeo: a casa passa de 3 para 4 pessoas, o banho cai de 15 para 8 minutos e o resultado mostra 160 kWh e R$ 137,77 por mês, com o chuveiro ainda como o maior responsável (55% da conta).</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section secao-trilho" aria-labelledby="titulo-audio">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Áudio</p>
+          <h2 id="titulo-audio">Três dicas em menos de um minuto</h2>
+          <p>Para ouvir no caminho ou mandar para a família. O texto completo está logo abaixo do áudio.</p>
+        </div>
+        <div class="trilho-conteudo">
+          <figure class="midia-audio">
+            <audio controls preload="metadata">
+              <source src="audio/dicas-economia.mp3" type="audio/mpeg">
+              Seu navegador não toca áudio. <a href="audio/dicas-economia.mp3">Baixe o áudio</a>.
+            </audio>
+            <figcaption>Dicas de economia de energia, 45 segundos. Voz gerada por computador (Piper, voz "faber", licença CC0).</figcaption>
+          </figure>
+          <details class="transcricao">
+            <summary>Ler o texto do áudio</summary>
+            <p>Olá! Aqui é o WattCerto, um projeto de estudantes da Fatec São Caetano do Sul. Três dicas rápidas para gastar menos energia em casa.</p>
+            <p>Primeira: o chuveiro elétrico. Ele pode ficar com 25% a 35% da conta de luz. Banho mais curto faz diferença. E a posição inverno gasta de 30% a 40% a mais que a posição verão.</p>
+            <p>Segunda: a geladeira. Não deixe a porta aberta à toa, e espere a comida esfriar antes de guardar.</p>
+            <p>Terceira: aparelhos que ficam com a luz acesa sem uso. Tire da tomada o que não está sendo usado.</p>
+            <p>Quer saber quanto cada aparelho pesa na sua conta? Use a <a href="calculadora.html">calculadora do WattCerto</a>. É grátis, sem cadastro, e nada do que você digita sai do seu navegador.</p>
+          </details>
+          <p class="fonte-tabela">Fonte dos números do chuveiro: <a href="https://www.agems.ms.gov.br/chuveiro-eletrico-e-o-maior-consumidor-de-energia-em-uma-residencia/">AGEMS, o chuveiro elétrico na conta de luz</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-dark secao-trilho" aria-labelledby="titulo-aneel">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker">Direto da fonte</p>
+          <h2 id="titulo-aneel">Vídeos da ANEEL sobre consumo consciente</h2>
+          <p>A ANEEL é a agência do governo federal que regula a energia elétrica e define as bandeiras tarifárias. Esta é a lista oficial de vídeos dela sobre o tema.</p>
+        </div>
+        <div class="trilho-conteudo">
+          <div class="midia-iframe">
+            <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL83dxI5zonT6S42SA1hWv6Px1_I9qLSFc" title="Vídeos da ANEEL sobre consumo consciente de energia (YouTube)" width="1280" height="720" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+          </div>
+          <p class="fonte-tabela">Se o vídeo não abrir aqui, <a href="https://www.youtube.com/playlist?list=PL83dxI5zonT6S42SA1hWv6Px1_I9qLSFc">veja a lista no YouTube</a>. Fonte: <a href="https://www.gov.br/aneel/pt-br/assuntos/campanhas/consumo-consciente">ANEEL, campanha Consumo Consciente</a>.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -61,10 +126,13 @@
             <ul>
               <li><a href="calculadora.html">Calculadora</a></li>
               <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
               <li><a href="impacto.html">Impacto</a></li>
               <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Mídia</a></li>
               <li><a href="noticias.html">Notícias</a></li>
               <li><a href="acessibilidade.html">Acessibilidade</a></li>
+              <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
               <li><a href="contato.html">Contato</a></li>
             </ul>
           </nav>
