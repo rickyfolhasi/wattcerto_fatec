@@ -915,49 +915,78 @@ a:hover {
   gap: 1.25rem;
 }
 
-/* Acessibilidade: uma caixa para cada situação (visão, audição, fala, movimento...) e, no fim,
-   uma caixa com o que ainda falta. 9 caixas: 3 por linha, centralizadas na página. */
-.a11y-cards {
+/* Acessibilidade: lista "O que fizemos para quem usa o site", centralizada.
+   Cada situação é uma caixa branca (como os cartões do site), uma embaixo da outra. */
+.a11y-lista {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.1rem;
-  max-width: 64rem;
+  gap: 0.85rem;
+  max-width: 46rem;
   margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
-@media (max-width: 52rem) {
-  .a11y-cards {
+.a11y-lista .card {
+  padding: 1.3rem 1.5rem;
+  background: #fff;
+}
+
+.a11y-lista .card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.a11y-lista .card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.a11y-secao .a11y-subtitulo {
+  max-width: 46rem;
+  margin: 0 auto 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  margin-top: 2.5rem;
+}
+
+.a11y-atalhos {
+  max-width: 46rem;
+  margin: 2rem auto 0;
+  background: #fff;
+}
+
+.a11y-secao .section-head p {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+/* Tela deitada (computador, tablet ou celular na horizontal): as caixas ficam
+   lado a lado. Tela em pé: uma embaixo da outra, em lista. */
+@media (orientation: landscape) and (min-width: 40rem) {
+  .a11y-lista,
+  .a11y-secao .a11y-subtitulo,
+  .a11y-atalhos {
+    max-width: 66rem;
+  }
+
+  .a11y-lista {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Com 2 colunas a última caixa ocuparia só metade da linha: ela passa a ocupar a linha toda. */
-  .a11y-cards .card:last-child {
+  /* Com 2 colunas, a 9ª caixa ocupa a linha toda para não ficar sozinha pela metade. */
+  .a11y-lista .card:last-child {
     grid-column: 1 / -1;
   }
 }
 
-@media (max-width: 36rem) {
-  .a11y-cards {
-    grid-template-columns: minmax(0, 1fr);
-    max-width: 26rem;
+@media (orientation: landscape) and (min-width: 64rem) {
+  .a11y-lista {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
 
-.a11y-cards .card {
-  padding: 1.4rem;
-}
-
-.a11y-cards .card h3 {
-  margin-bottom: 0.6rem;
-  font-size: 1.2rem;
-}
-
-.a11y-cards .card p {
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+  .a11y-lista .card:last-child {
+    grid-column: auto;
+  }
 }
 
 .card {
@@ -1673,12 +1702,6 @@ kbd {
   border-radius: 50%;
   background: var(--sol-100);
   color: var(--sol-texto);
-  transition: transform 0.25s ease, background-color 0.25s ease;
-}
-
-.frentes-lista li:hover .frente-icone {
-  background: var(--sol-400);
-  transform: rotate(-6deg) scale(1.06);
 }
 
 .frentes-lista h3 {
@@ -2658,7 +2681,7 @@ output {
   gap: 0.25rem;
 }
 
-.regra-nome h3 {
+.regra-nome .regra-titulo {
   margin: 0;
   font-size: 1.25rem;
 }
@@ -3318,146 +3341,13 @@ address {
   }
 }
 
-/* As frentes do projeto: cada ícone se mexe de um jeito que combina com ele.
-   Ao rolar até a lista (js/animacoes.js liga a classe "animar"), os ícones
-   entram um depois do outro; ao passar o mouse, o ícone repete o movimento. */
+/* As frentes do projeto: os ícones ficam parados (a pedido). */
 .frente-icone {
   --fi-fundo: var(--sol-100);
 }
 
-.frentes-lista li:hover .frente-icone {
-  --fi-fundo: var(--sol-400);
-}
-
 .fi-bola {
   fill: var(--fi-fundo);
-  transition: fill 0.25s ease;
-}
-
-.frentes-lista li:nth-child(1) { --atraso-fi: 0.1s; }
-.frentes-lista li:nth-child(2) { --atraso-fi: 0.3s; }
-.frentes-lista li:nth-child(3) { --atraso-fi: 0.5s; }
-.frentes-lista li:nth-child(4) { --atraso-fi: 0.7s; }
-.frentes-lista li:nth-child(5) { --atraso-fi: 0.9s; }
-
-/* entrada, quando a lista aparece na tela */
-.frentes-lista.animar .fi-bola-1 { animation: fi-bola-1-entra 0.7s ease-out var(--atraso-fi) backwards; }
-.frentes-lista.animar .fi-bola-2 { animation: fi-bola-2-entra 0.7s ease-out var(--atraso-fi) backwards; }
-.frentes-lista.animar .fi-pulso { animation: fi-desenha 0.9s ease-out var(--atraso-fi) backwards; }
-.frentes-lista.animar .fi-seta-1 { animation: fi-seta-1-entra 0.6s ease-out var(--atraso-fi) backwards; }
-.frentes-lista.animar .fi-seta-2 { animation: fi-seta-2-entra 0.6s ease-out var(--atraso-fi) backwards; }
-.frentes-lista.animar .fi-escudo { animation: fi-desenha 0.7s ease-out var(--atraso-fi) backwards; }
-.frentes-lista.animar .fi-ok { animation: fi-desenha 0.4s ease-out calc(var(--atraso-fi) + 0.6s) backwards; }
-.frentes-lista.animar .fi-ponteiro { animation: fi-gira-entra 0.9s ease-out var(--atraso-fi) backwards; }
-
-/* repetição, ao passar o mouse */
-.frentes-lista li:hover .fi-bola-1 { animation: fi-bola-1-vai 0.8s ease-in-out; }
-.frentes-lista li:hover .fi-bola-2 { animation: fi-bola-2-vai 0.8s ease-in-out; }
-.frentes-lista li:hover .fi-pulso { animation: fi-desenha-de-novo 0.8s ease-out; }
-.frentes-lista li:hover .fi-seta-1 { animation: fi-seta-1-vai 0.6s ease-in-out; }
-.frentes-lista li:hover .fi-seta-2 { animation: fi-seta-2-vai 0.6s ease-in-out; }
-.frentes-lista li:hover .fi-ok { animation: fi-desenha-de-novo 0.5s ease-out; }
-.frentes-lista li:hover .fi-ponteiro { animation: fi-gira-vai 0.9s ease-in-out; }
-
-.fi-ponteiro {
-  transform-origin: 12px 13px;
-}
-
-@keyframes fi-desenha {
-  from {
-    opacity: 0;
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 1;
-    stroke-dasharray: 1;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fi-desenha-de-novo {
-  from {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-  }
-
-  to {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fi-bola-1-entra {
-  from {
-    transform: translateX(-6px);
-  }
-}
-
-@keyframes fi-bola-2-entra {
-  from {
-    transform: translateX(6px);
-  }
-}
-
-@keyframes fi-bola-1-vai {
-  50% {
-    transform: translateX(-6px);
-  }
-}
-
-@keyframes fi-bola-2-vai {
-  50% {
-    transform: translateX(6px);
-  }
-}
-
-@keyframes fi-seta-1-entra {
-  from {
-    opacity: 0;
-    transform: translateX(-8px);
-  }
-}
-
-@keyframes fi-seta-2-entra {
-  from {
-    opacity: 0;
-    transform: translateX(8px);
-  }
-}
-
-@keyframes fi-seta-1-vai {
-  50% {
-    transform: translateX(3px);
-  }
-}
-
-@keyframes fi-seta-2-vai {
-  50% {
-    transform: translateX(-3px);
-  }
-}
-
-@keyframes fi-gira-entra {
-  from {
-    opacity: 0;
-    transform: rotate(-300deg);
-  }
-
-  30% {
-    opacity: 1;
-  }
-}
-
-@keyframes fi-gira-vai {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3792,6 +3682,13 @@ address {
   border-radius: 0.75rem;
   background: var(--nivel-baixo-bg);
   color: var(--verde-900);
+}
+
+.contato-form .form-status.erro {
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.75rem;
+  background: var(--nivel-alto-bg);
+  color: var(--nivel-alto-texto);
 }
 
 /* ---------- Navegação em pílula ---------- */
@@ -5544,4 +5441,371 @@ body:has(.noticia-dialogo[open]) {
   .compare-col .fonte-fora {
     margin-inline: auto;
   }
+}
+
+/* Acessibilidade: ícone ao lado do título de cada caixa */
+.a11y-lista .card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  align-content: start;
+  column-gap: 0.9rem;
+}
+.a11y-lista .card .icon-badge {
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0;
+}
+.a11y-lista .card h3 { margin: 0; }
+.a11y-lista .card p { grid-column: 1 / -1; margin-top: 0.8rem; }
+
+/* Acessibilidade: mesmo espaço acima e abaixo de "O que fizemos para quem usa o site:" */
+.a11y-secao .section-head { margin-bottom: 2.25rem; }
+.a11y-secao .a11y-subtitulo { margin-top: 0; margin-bottom: 1.75rem; }
+
+/* Acessibilidade: "Em primeiro lugar" mais perto da barra do topo */
+.a11y-secao { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+
+/* Acessibilidade: os 3 textos do topo ficam juntos; espaço até "O que fizemos" */
+.a11y-secao .section-head { margin-bottom: 3rem; }
+.a11y-secao .a11y-subtitulo { margin-bottom: 1.5rem; }
+
+/* Galeria: mesmo padrão de Notícias e Acessibilidade (cabeçalho centralizado, sem faixa) */
+.galeria-secao { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+
+/* Abertura das páginas internas (padrão de Notícias, Acessibilidade e Galeria):
+   cabeçalho centralizado direto na seção, sem a faixa branca antiga. */
+.secao-abertura { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+.section-head.centro .nesta-pagina ul { justify-content: center; }
+.section-head.centro .nota { margin-top: 0.9rem; }
+.section-head.centro h1 { text-wrap: balance; }
+
+.regra-nota {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Trilho: o esqueleto de todas as seções de Sobre e Impacto ----------
+   Mesma lógica da Home: abertura centralizada e, depois dela, cada seção com o
+   título à esquerda (linha pequena, título e uma frase) e o conteúdo à direita.
+   Uma linha fina separa uma seção da outra; o fundo é o creme da página.
+   O título não acompanha a rolagem (fica parado no lugar dele).
+   A cor forte aparece só com propósito: a faixa verde dos números (Impacto) e o
+   painel amarelo do exemplo (Sobre). */
+.pagina-continua .secao-abertura {
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.pagina-continua .band-dark {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.secao-trilho {
+  padding-block: 0;
+}
+
+.trilho {
+  display: grid;
+  grid-template-columns: minmax(0, 19rem) minmax(0, 1fr);
+  gap: 1.75rem clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--line);
+}
+
+.band-dark + .secao-trilho .trilho {
+  border-top: 0;
+}
+
+.secao-trilho:last-of-type .trilho,
+.secao-trilho:has(+ section[aria-labelledby="titulo-explorar"]) .trilho {
+  padding-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.trilho-cabeca .kicker {
+  margin-bottom: 0.6rem;
+}
+
+.section .trilho-cabeca h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+  text-wrap: balance;
+}
+
+.trilho-cabeca p:not(.kicker) {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+}
+
+.trilho-cabeca .btn {
+  margin-top: 1.5rem;
+}
+
+.trilho-conteudo {
+  min-width: 0;
+}
+
+/* Listas dentro do trilho: itens separados por linha fina, como o "Como funciona" da Home. */
+.trilho .frentes-lista li:last-child,
+.trilho .limites li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.trilho .limites {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
+.trilho .limites li:first-child {
+  padding-top: 0;
+}
+
+.trilho .limites h3 {
+  font-size: 1.25rem;
+}
+
+/* Exemplo do chuveiro: dentro do trilho, uma coluna só (regra em cima, conta embaixo). */
+.trilho .exemplo-chuveiro {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+/* "Nossa escolha": painel claro inteiro, sem a tarja lateral. */
+.justificativa.painel-claro {
+  max-width: none;
+  margin-top: 2rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid #f0dca8;
+  border-radius: var(--raio);
+  background: var(--sol-100);
+}
+
+.justificativa.painel-claro p + p {
+  margin-top: 0.75rem;
+}
+
+.trilho .tabela-titulo:first-child {
+  margin-top: 0;
+}
+
+/* Equipe e instituição: duas colunas de dados, mesmo rótulo pequeno das tabelas. */
+.ficha-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1.5rem 2.5rem;
+  margin: 0;
+}
+
+.ficha-lista dt {
+  color: var(--verde-700);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ficha-lista dd {
+  margin: 0.3rem 0 0;
+  color: var(--verde-900);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 52rem) {
+  .trilho {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+}
+
+/* ---------- Sobre: as outras cores da marca, no mesmo papel que têm na Home ----------
+   Laranja: palavras e números que merecem destaque (texto, nunca grifo).
+   Vermelho: bolinha antes de cada limite da estimativa.
+   Amarelo, terracota e verde: ícones, alternados.
+   Faixa branca (como o "Como funciona") e faixa amarela clara (como "Alguma dúvida?"). */
+.palavra-destaque {
+  color: #b34c08; /* laranja da marca escurecido: 4,9:1 sobre o creme e 5,3:1 sobre o branco */
+  font-weight: 700;
+}
+
+.palavra-alerta {
+  color: var(--nivel-alto-texto);
+  font-weight: 700;
+}
+
+.frente-icone.frente-icone-argila {
+  --fi-fundo: var(--argila-100);
+  background: var(--argila-100);
+  color: var(--argila-700);
+}
+
+.frente-icone.frente-icone-verde {
+  --fi-fundo: var(--verde-100);
+  background: var(--verde-100);
+  color: var(--verde-700);
+}
+
+.trilho .limites-numerados li {
+  display: grid;
+  grid-template-columns: 0.75rem minmax(0, 1fr);
+  column-gap: 0.9rem;
+  align-items: start;
+}
+
+/* Bolinha vermelha antes de cada limite (a pedido, no lugar do 1, 2, 3). */
+.limite-ponto {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  background: var(--nivel-alto);
+}
+
+/* Faixas: sem a linha fina de separação, a cor já separa. */
+.section-white.secao-trilho .trilho,
+.section-white.secao-trilho + .secao-trilho .trilho,
+.faixa-sol.secao-trilho .trilho,
+.faixa-verde.secao-trilho .trilho {
+  border-top: 0;
+}
+
+.secao-trilho.faixa-sol {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--sol-100);
+}
+
+.secao-trilho.faixa-sol .trilho {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.secao-trilho.faixa-sol .ficha-lista dt {
+  color: var(--sol-texto);
+}
+
+/* "Quem fez": faixa verde escura (a pedido), a mesma da Home e do Impacto. */
+.secao-trilho.faixa-verde,
+.pagina-continua .band-dark.faixa-verde {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-block: 0;
+}
+
+.secao-trilho.faixa-verde .trilho {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.faixa-verde .ficha-lista dt {
+  color: var(--sol-400);
+}
+
+.faixa-verde .ficha-lista dd {
+  color: #fff;
+}
+
+/* Sobre: "Nesta página" dentro de "O que o site entrega", em coluna, abaixo do botão. */
+.nesta-pagina.nesta-pagina-coluna {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.nesta-pagina-coluna ul {
+  flex-direction: column;
+  gap: 0;
+}
+
+.nesta-pagina-coluna a {
+  min-height: 2.5rem;
+}
+
+/* Frentes (Sobre), opção B: só o desenho do ícone, pequeno, verde e sem círculo,
+   alinhado à primeira linha do título. */
+.trilho .frentes-lista li {
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  column-gap: 0.85rem;
+}
+
+.trilho .frente-icone,
+.trilho .frente-icone.frente-icone-argila,
+.trilho .frente-icone.frente-icone-verde {
+  --fi-fundo: var(--bg);
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 0;
+  background: none;
+  color: var(--verde-700);
+}
+
+.section-white .trilho .frente-icone {
+  --fi-fundo: #fff;
+}
+
+.trilho .frente-icone .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+
+
+/* Impacto: as seções se alternam, fundo claro com cartão escuro e fundo verde escuro com
+   cartão claro, todas no mesmo esqueleto (título à esquerda, conteúdo à direita). */
+.secao-numeros .trilho-cabeca .stat-number {
+  margin-top: 1.5rem;
+  color: #b34c08; /* laranja escurecido, o mesmo das palavras em destaque */
+}
+
+.secao-numeros .trilho-cabeca .stat-caption {
+  max-width: none;
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* cartão verde escuro do gráfico (a pedido, como era) */
+.secao-numeros .compare {
+  margin: 0;
+  background: var(--verde-900);
+  border-color: var(--verde-900);
+  color: #eaf4ee;
+}
+
+.secao-numeros .compare .fonte {
+  color: #cfe3d6;
+}
+
+/* faixa verde escura no esqueleto das seções */
+.pagina-continua .band-dark.secao-trilho {
+  padding-block: 0;
+}
+
+.band-dark.secao-trilho .trilho {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  border-top: 0;
+}
+
+.band-dark.secao-trilho .trilho-cabeca p:not(.kicker) {
+  color: #cfe3d6;
+}
+
+.band-dark.secao-trilho .tabela-rolagem {
+  color: var(--verde-900);
+}
+
+.band-dark.secao-trilho .fonte-tabela {
+  color: #cfe3d6;
+}
+
+/* Impacto: o título do topo fica em uma linha até onde couber, e só quebra quando a tela é estreita. */
+.section-head.centro.largo {
+  max-width: none;
+}
+
+.section-head.centro.largo h1 {
+  text-wrap: wrap;
+}
+
+.section-head.centro.largo > p:not(.kicker) {
+  max-width: 46rem;
+  margin-inline: auto;
 }

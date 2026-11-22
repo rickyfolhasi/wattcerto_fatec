@@ -11,7 +11,6 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <script src="js/menu.js" defer></script>
   <script src="js/reel.js" defer></script>
-  <script src="js/aparelhos.js" defer></script>
   <script src="js/calculadora.js" defer></script>
 </head>
 <body>
@@ -40,28 +39,18 @@
   </header>
 
   <main id="conteudo">
-    <div class="page-topo">
-      <div class="container page-hero">
-        <div class="page-hero-texto">
-          <p class="kicker">Estime a sua conta</p>
-          <h1>Calculadora</h1>
-          <p class="lead">Informe quantas pessoas moram na casa e quais aparelhos você usa. A calculadora mostra quanto cada um consome, quem pesa mais na conta e quanto dá para economizar com uma troca.</p>
-          <p class="nota">Tudo é calculado no seu navegador. Nada do que você digita é enviado ou salvo.</p>
-        </div>
-      </div>
-    </div>
-
-    <section class="section calc-section" id="calcular" aria-labelledby="titulo-calculadora">
+    <section class="section calc-section secao-abertura" id="calcular" aria-labelledby="titulo-calculadora">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker">Passo a passo</p>
-          <h2 id="titulo-calculadora">Calcule o consumo da sua casa</h2>
-          <p>Os números que já aparecem nos campos são valores de partida. Troque pelos da etiqueta de cada aparelho e pelo seu hábito de uso. Para ver de onde vem cada número, leia <a href="sobre.html#como-calcula">como o cálculo é feito</a>.</p>
+        <div class="section-head centro">
+          <p class="kicker kicker-laranja">Calculadora</p>
+          <h1 id="titulo-calculadora">Calcule o consumo da sua casa</h1>
+          <p>Diga quantas pessoas moram na casa e quais aparelhos você usa. Você vê quanto cada um gasta, quem pesa mais na conta e quanto economiza trocando um aparelho.</p>
+          <p class="nota">Os campos já vêm com valores de partida: troque pelos da etiqueta e pelo seu uso (<a href="sobre.html#como-calcula">de onde vem cada número</a>). Tudo é calculado no seu navegador, nada é enviado.</p>
         </div>
 
         <noscript>
           <div class="notice">
-            <h3>A calculadora precisa de JavaScript</h3>
+            <h2>A calculadora precisa de JavaScript</h2>
             <p>Ative o JavaScript no navegador para usar a calculadora. Enquanto isso, a página <a href="sobre.html#como-calcula">Sobre</a> mostra as fórmulas e um exemplo completo.</p>
           </div>
         </noscript>
@@ -328,7 +317,7 @@
           <p class="kicker kicker-laranja">Explore</p>
           <h2 id="titulo-explorar">Continue pelo site</h2>
         </div>
-        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+        <div class="reel" role="group" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
           <ul class="reel-lista">
             <li><a class="reel-item" data-proxima href="sobre.html">
               <img src="img/reel-sobre.webp" srcset="img/reel-sobre-480.webp 480w, img/reel-sobre.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">

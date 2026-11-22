@@ -38,20 +38,62 @@
   </header>
 
   <main id="conteudo">
-    <section class="section section-white" aria-labelledby="titulo-acess">
-      <div class="container a11y-grid">
-        <div>
-          <p class="kicker">Em primeiro lugar</p>
+    <section class="section a11y-secao" aria-labelledby="titulo-acess">
+      <div class="container">
+        <div class="section-head centro">
+          <p class="kicker kicker-laranja">Acessibilidade</p>
           <h1 id="titulo-acess">Um site que funciona para todo mundo</h1>
           <p>Economizar energia interessa a qualquer pessoa, por isso o site é construído pensado para ser usado por todos!</p>
-          <ul class="checklist">
-            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Navegação completa pelo teclado, com foco sempre visível.</li>
-            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Estrutura semântica e textos alternativos para leitores de tela.</li>
-            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Contraste verificado: todas as combinações passam no nível AA.</li>
-            <li><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Nível de consumo indicado por cor e também por texto.</li>
-          </ul>
         </div>
-        <div class="card">
+        <h2 class="a11y-subtitulo">O que fizemos para quem usa o site:</h2>
+        <ul class="a11y-lista">
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <h3>Baixa visão</h3>
+            <p>A letra é a Atkinson Hyperlegible, criada para ser fácil de ler por quem enxerga pouco. O texto acompanha o tamanho de letra do navegador, e a página aguenta ampliação de 400% sem rolar para o lado.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 8h5M12 12h6M12 16h5"/></svg></span>
+            <h3>Daltonismo</h3>
+            <p>A cor nunca é a única informação. As bandeiras tarifárias têm o nome escrito ao lado da cor, e o nível de consumo vem em texto. Os contrastes entre texto e fundo passam no nível AA do WCAG.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M3 3l18 18"/><path d="M10.6 5.1A10 10 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.2 4M6.5 6.6C3.7 8.4 2 12 2 12s3.6 7 10 7a9.6 9.6 0 0 0 4.2-1"/></svg></span>
+            <h3>Cegueira</h3>
+            <p>As páginas têm títulos em ordem, um link para pular direto ao conteúdo e tabelas com legenda. Imagens que informam têm descrição em texto, as que só enfeitam ficam de fora da leitura, e os avisos da calculadora e do formulário são lidos em voz alta pelo leitor de tela.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M16 9l5 6M21 9l-5 6"/></svg></span>
+            <h3>Surdez e baixa audição</h3>
+            <p>Nada no site depende de som. O único vídeo, na Galeria, é sem som e vem com a descrição escrita do que acontece nele. Por isso não precisa de legenda.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span>
+            <h3>Fala</h3>
+            <p>O site não pede para falar nem para ligar. O contato é por um formulário escrito, e todas as respostas aparecem em texto na tela.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></span>
+            <h3>Movimento e coordenação</h3>
+            <p>Tudo funciona só com o teclado, sem precisar de mouse, e o item em foco fica sempre marcado na tela. Não há nada com tempo limite e nenhuma ação exige arrastar ou fazer gestos complicados.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg></span>
+            <h3>Sensibilidade a movimento</h3>
+            <p>As animações são suaves e nada pisca. Se o seu aparelho está configurado para reduzir movimento, o site desliga as animações.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg></span>
+            <h3>Leitura simples</h3>
+            <p>Escrevemos de forma direta, próxima e simples. Explicamos os termos técnicos de energia quando eles aparecem.</p>
+          </li>
+          <li class="card">
+            <span class="icon-badge sol" aria-hidden="true"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></svg></span>
+            <h3>O que ainda falta</h3>
+            <p>Tradução em Libras (como a do VLibras, do governo federal) e testes com pessoas que usam leitor de tela no dia a dia. São os próximos passos do projeto.</p>
+          </li>
+        </ul>
+        <div class="card a11y-atalhos">
           <h2>Atalhos de teclado</h2>
           <ul class="keys">
             <li><kbd>Tab</kbd><span>avança entre links e botões</span></li>
@@ -63,60 +105,13 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="titulo-pessoas">
-      <div class="container">
-        <div class="section-head centro">
-          <p class="kicker kicker-laranja">Para cada pessoa</p>
-          <h2 id="titulo-pessoas">O que fizemos por quem usa o site de outro jeito</h2>
-        </div>
-        <ul class="a11y-cards">
-          <li class="card">
-            <h3>Baixa visão</h3>
-            <p>A letra é a Atkinson Hyperlegible, criada para ser fácil de ler por quem enxerga pouco. O texto acompanha o tamanho de letra do navegador, e a página aguenta ampliação de 400% sem rolar para o lado.</p>
-          </li>
-          <li class="card">
-            <h3>Daltonismo</h3>
-            <p>A cor nunca é a única informação. As bandeiras tarifárias têm o nome escrito ao lado da cor, e o nível de consumo vem em texto. Os contrastes entre texto e fundo passam no nível AA do WCAG.</p>
-          </li>
-          <li class="card">
-            <h3>Cegueira</h3>
-            <p>As páginas têm títulos em ordem, um link para pular direto ao conteúdo e tabelas com legenda. Imagens que só enfeitam ficam de fora da leitura, e os avisos da calculadora e do formulário são lidos em voz alta pelo leitor de tela.</p>
-          </li>
-          <li class="card">
-            <h3>Surdez e baixa audição</h3>
-            <p>Nada no site depende de som. O único vídeo, na Galeria, é sem som e vem com a descrição escrita do que acontece nele. Por isso não precisa de legenda.</p>
-          </li>
-          <li class="card">
-            <h3>Fala</h3>
-            <p>O site não pede para falar nem para ligar. O contato é por um formulário escrito, e todas as respostas aparecem em texto na tela.</p>
-          </li>
-          <li class="card">
-            <h3>Movimento e coordenação</h3>
-            <p>Tudo funciona só com o teclado, sem precisar de mouse. Não há nada com tempo limite e nenhuma ação exige arrastar ou fazer gestos complicados.</p>
-          </li>
-          <li class="card">
-            <h3>Sensibilidade a movimento</h3>
-            <p>As animações são suaves e nada pisca. Se o seu aparelho está configurado para reduzir movimento, o site desliga as animações.</p>
-          </li>
-          <li class="card">
-            <h3>Leitura simples</h3>
-            <p>Escrevemos de forma direta e próxima, sem jargão, e explicamos os termos de energia quando eles aparecem. Quem não é da área entende na primeira leitura.</p>
-          </li>
-          <li class="card">
-            <h3>O que ainda falta</h3>
-            <p>Tradução em Libras (como a do VLibras, do governo federal) e testes com pessoas que usam leitor de tela no dia a dia. São os próximos passos do projeto.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <section class="section" aria-labelledby="titulo-explorar">
       <div class="container">
         <div class="section-head">
           <p class="kicker kicker-laranja">Explore</p>
           <h2 id="titulo-explorar">Continue pelo site</h2>
         </div>
-        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+        <div class="reel" role="group" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
           <ul class="reel-lista">
             <li><a class="reel-item" data-proxima href="calculadora.html">
               <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">

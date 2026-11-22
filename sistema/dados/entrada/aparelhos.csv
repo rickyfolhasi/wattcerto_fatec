@@ -1,0 +1,26 @@
+codigo;nome;grupo;cod_tipo;potencia_w;horas_dia;minutos_uso;usos_mes;usos_pessoa_dia;espera_w;meses_ano;etiqueta_kwh_mes;quantidade_padrao;origem_valor;fonte;nota;rotulo_potencia;rotulo_quantidade;na_lista_adicionar
+chuveiro;Chuveiro elétrico;Essenciais;banho;5500;;15;;1;;;;1;tipico;;"Fator da estação: inverno 1,0; verão 0,7.";;;0
+geladeira_1p;Geladeira 1 porta;Essenciais;ciclo;120;;;;;;;25.2;1;procel;procel;;;;0
+geladeira_1p_ff;Geladeira 1 porta frost free;Essenciais;ciclo;150;;;;;;;39.6;1;procel;procel;;;;0
+geladeira_2p;Geladeira 2 portas;Essenciais;ciclo;180;;;;;;;48.2;1;procel;procel;;;;0
+geladeira_2p_ff;Geladeira 2 portas frost free;Essenciais;ciclo;200;;;;;;;56.9;1;procel;procel;;;;0
+lavadora;Máquina de lavar;Essenciais;evento;150;;60;12;;;;;1;procel;procel;Procel: 12 lavagens de 1 hora dão 1,8 kWh/mês.;;;0
+led;Lâmpadas LED;Essenciais;tempo;9;5;;;;;;;10;tipico;;;Potência de cada lâmpada (W);Quantidade de lâmpadas;0
+ar_janela_9000;Ar-condicionado de janela 9.000 BTU;Climatização;climatizacao;537;8;;;;;12;;1;derivado;procel;Procel: 128,8 kWh/mês com 8 h por dia. 128,8 ÷ 240 h = 537 W médios.;;;1
+ar_split_9000;Ar-condicionado split 9.000 BTU;Climatização;climatizacao;593;8;;;;;12;;1;derivado;procel;Procel: 142,3 kWh/mês com 8 h por dia. 142,3 ÷ 240 h = 593 W médios.;;;1
+ar_split_12000;Ar-condicionado split 12.000 BTU;Climatização;climatizacao;790;8;;;;;12;;1;tipico;;;;;1
+ventilador;Ventilador;Climatização;climatizacao;100;8;;;;;12;;1;tipico;;;;;1
+micro_ondas;Micro-ondas;Cozinha;evento;1200;;8;30;;;;;1;tipico;;;;;1
+air_fryer;Air fryer;Cozinha;evento;1500;;20;16;;;;;1;tipico;;;;;1
+lava_loucas;Lava-louças;Cozinha;evento;1200;;90;12;;;;;1;tipico;;;;;1
+freezer;Freezer horizontal;Cozinha;ciclo;220;;;;;;;62;1;tipico;;;;;1
+bebedouro;Bebedouro elétrico;Cozinha;ciclo;100;;;;;;;25;1;tipico;;;;;1
+tv;Televisão;Eletrônicos;standby;80;5;;;;0.5;;;1;tipico;;;;;1
+computador;Computador de mesa;Eletrônicos;tempo;150;4;;;;;;;1;tipico;;;;;1
+notebook;Notebook;Eletrônicos;tempo;60;4;;;;;;;1;tipico;;;;;1
+roteador;Roteador de internet;Eletrônicos;standby;10;24;;;;10;;;1;tipico;;Fica ligado o mês inteiro: 10 W por 24 h dão 7,2 kWh/mês.;;;1
+videogame;Videogame;Eletrônicos;standby;160;2;;;;1;;;1;tipico;;;;;1
+ferro;Ferro de passar;Casa e cuidados;evento;1000;;60;8;;;;;1;tipico;;;;;1
+secador;Secador de cabelo;Casa e cuidados;evento;1500;;10;30;;;;;1;tipico;;;;;1
+bomba_agua;Bomba d'água;Casa e cuidados;tempo;370;0.5;;;;;;;1;tipico;;;;;1
+lampada_incandescente;Lâmpadas incandescentes;Casa e cuidados;tempo;60;5;;;;;;;10;procel;procel;Procel: uma lâmpada de 60 W acesa 5 h por dia gasta 9 kWh/mês.;Potência de cada lâmpada (W);Quantidade de lâmpadas;1

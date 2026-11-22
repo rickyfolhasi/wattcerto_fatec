@@ -1,0 +1,242 @@
+{
+  "gerado_em": "2026-11-18 14:37",
+  "grupos": [
+    "Climatização",
+    "Cozinha",
+    "Eletrônicos",
+    "Casa e cuidados"
+  ],
+  "aparelhos": [
+    {
+      "id": "ar_janela_9000",
+      "nome": "Ar-condicionado de janela 9.000 BTU",
+      "grupo": "Climatização",
+      "tipo": "climatizacao",
+      "valores": {
+        "potencia": 537,
+        "horas": 8,
+        "meses": 12,
+        "quantidade": 1
+      },
+      "fonte": "derivado",
+      "nota": "Procel: 128,8 kWh/mês com 8 h por dia. 128,8 ÷ 240 h = 537 W médios."
+    },
+    {
+      "id": "ar_split_9000",
+      "nome": "Ar-condicionado split 9.000 BTU",
+      "grupo": "Climatização",
+      "tipo": "climatizacao",
+      "valores": {
+        "potencia": 593,
+        "horas": 8,
+        "meses": 12,
+        "quantidade": 1
+      },
+      "fonte": "derivado",
+      "nota": "Procel: 142,3 kWh/mês com 8 h por dia. 142,3 ÷ 240 h = 593 W médios."
+    },
+    {
+      "id": "ar_split_12000",
+      "nome": "Ar-condicionado split 12.000 BTU",
+      "grupo": "Climatização",
+      "tipo": "climatizacao",
+      "valores": {
+        "potencia": 790,
+        "horas": 8,
+        "meses": 12,
+        "quantidade": 1
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "ventilador",
+      "nome": "Ventilador",
+      "grupo": "Climatização",
+      "tipo": "climatizacao",
+      "valores": {
+        "potencia": 100,
+        "horas": 8,
+        "meses": 12,
+        "quantidade": 1
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "micro_ondas",
+      "nome": "Micro-ondas",
+      "grupo": "Cozinha",
+      "tipo": "evento",
+      "valores": {
+        "potencia": 1200,
+        "minutos": 8,
+        "usos": 30
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "air_fryer",
+      "nome": "Air fryer",
+      "grupo": "Cozinha",
+      "tipo": "evento",
+      "valores": {
+        "potencia": 1500,
+        "minutos": 20,
+        "usos": 16
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "lava_loucas",
+      "nome": "Lava-louças",
+      "grupo": "Cozinha",
+      "tipo": "evento",
+      "valores": {
+        "potencia": 1200,
+        "minutos": 90,
+        "usos": 12
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "freezer",
+      "nome": "Freezer horizontal",
+      "grupo": "Cozinha",
+      "tipo": "ciclo",
+      "valores": {
+        "etiqueta": 62,
+        "quantidade": 1
+      },
+      "fonte": "tipico",
+      "potenciaW": 220
+    },
+    {
+      "id": "bebedouro",
+      "nome": "Bebedouro elétrico",
+      "grupo": "Cozinha",
+      "tipo": "ciclo",
+      "valores": {
+        "etiqueta": 25,
+        "quantidade": 1
+      },
+      "fonte": "tipico",
+      "potenciaW": 100
+    },
+    {
+      "id": "tv",
+      "nome": "Televisão",
+      "grupo": "Eletrônicos",
+      "tipo": "standby",
+      "valores": {
+        "potencia": 80,
+        "horas": 5,
+        "espera": 0.5,
+        "quantidade": 1
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "computador",
+      "nome": "Computador de mesa",
+      "grupo": "Eletrônicos",
+      "tipo": "tempo",
+      "valores": {
+        "potencia": 150,
+        "horas": 4,
+        "quantidade": 1
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "grupo": "Eletrônicos",
+      "tipo": "tempo",
+      "valores": {
+        "potencia": 60,
+        "horas": 4,
+        "quantidade": 1
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "roteador",
+      "nome": "Roteador de internet",
+      "grupo": "Eletrônicos",
+      "tipo": "standby",
+      "valores": {
+        "potencia": 10,
+        "horas": 24,
+        "espera": 10,
+        "quantidade": 1
+      },
+      "fonte": "tipico",
+      "nota": "Fica ligado o mês inteiro: 10 W por 24 h dão 7,2 kWh/mês."
+    },
+    {
+      "id": "videogame",
+      "nome": "Videogame",
+      "grupo": "Eletrônicos",
+      "tipo": "standby",
+      "valores": {
+        "potencia": 160,
+        "horas": 2,
+        "espera": 1,
+        "quantidade": 1
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "ferro",
+      "nome": "Ferro de passar",
+      "grupo": "Casa e cuidados",
+      "tipo": "evento",
+      "valores": {
+        "potencia": 1000,
+        "minutos": 60,
+        "usos": 8
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "secador",
+      "nome": "Secador de cabelo",
+      "grupo": "Casa e cuidados",
+      "tipo": "evento",
+      "valores": {
+        "potencia": 1500,
+        "minutos": 10,
+        "usos": 30
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "bomba_agua",
+      "nome": "Bomba d'água",
+      "grupo": "Casa e cuidados",
+      "tipo": "tempo",
+      "valores": {
+        "potencia": 370,
+        "horas": 0.5,
+        "quantidade": 1
+      },
+      "fonte": "tipico"
+    },
+    {
+      "id": "lampada_incandescente",
+      "nome": "Lâmpadas incandescentes",
+      "grupo": "Casa e cuidados",
+      "tipo": "tempo",
+      "valores": {
+        "potencia": 60,
+        "horas": 5,
+        "quantidade": 10
+      },
+      "fonte": "procel",
+      "nota": "Procel: uma lâmpada de 60 W acesa 5 h por dia gasta 9 kWh/mês.",
+      "rotulos": {
+        "potencia": "Potência de cada lâmpada (W)",
+        "quantidade": "Quantidade de lâmpadas"
+      }
+    }
+  ]
+}

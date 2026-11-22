@@ -114,3 +114,237 @@ Seção nova entre a abertura e o "Explore", com 8 cartões: Baixa visão, Dalto
 ## 2026-11-18 | Contato | Caixa do formulário mais baixa (a pedido)
 - Nenhum texto mudou. Altura da caixa no computador: de ~783 px para ~581 px (celular de 390 px: de ~900 px para ~677 px).
 - Nome completo e E-mail ficam lado a lado (empilham no celular); campo Mensagem de 5 para 4 linhas; campos de 3 rem para 2,75 rem de altura; espaços entre campos e margem interna da caixa menores.
+
+## 2026-11-18 | Calculadora | Catálogo de aparelhos saiu do js/aparelhos.js (PI2)
+- O arquivo js/aparelhos.js foi removido. O catálogo (18 aparelhos da lista "Adicionar aparelho", com notas e fontes) agora vive no banco de dados e é exportado pelo Python para dados/catalogo.json, que a calculadora lê. O conteúdo é idêntico (conferido campo a campo).
+- Os dados de origem ficam em sistema/dados/entrada/aparelhos.csv. Cópia do arquivo antigo guardada fora do site (pasta de rascunho da sessão) e no histórico do Git (commit 0cff784).
+- Se o catálogo não carregar (arquivo aberto direto do computador, sem servidor), a área "Adicionar aparelho" fica escondida e a calculadora segue com os quatro aparelhos fixos.
+
+## 2026-11-18 | Sobre | Escolha da hospedagem (a pedido: Netlify, orçamento na Sobre)
+- Antes, em "Nossa escolha": "A equipe vai publicar o site no Railway, como está no escopo do projeto: ele publica direto do repositório no GitHub. Para o domínio, a sugestão é o .com.br no Registro.br, que é o registro oficial dos domínios brasileiros e não tem preço promocional que sobe na renovação."
+- Agora: três parágrafos explicando o Netlify Free (crédito do Railway acabou; site sem servidor; 300 créditos = 20 publicações de 15; formulário não gasta crédito; testar no computador e publicar de uma vez), mantendo a frase do domínio.
+- Tabela de hospedagem, linha Netlify, coluna "O que inclui": antes "300 créditos por mês no plano Free"; agora "300 créditos por mês no plano Free; cada publicação gasta 15; formulário de contato não gasta".
+- Nome do link de fonte: antes "plano Pro da Netlify"; agora "plano Pro e formulários da Netlify (abr. 2026)".
+
+## 2026-11-18 | Orçamento e hospedagem (orcamento_hospedagem.html)
+- Antes: "Página em construção" / "Comparativo de hospedagens e domínios para publicar o site." / "Entrega parcial (MVP)" / "Esta página já faz parte do mapa do site e do menu principal. O conteúdo completo será desenvolvido na entrega final do projeto." / botão "Voltar ao início".
+- Agora: resumo da escolha (Netlify Free e .com.br no Registro.br) e botão "Ver o orçamento completo", que leva para sobre.html#hospedagem.
+
+## 2026-11-18 | Contato | Envio pelo Netlify Forms (PI2)
+- Mensagem que saiu (aparecia ao enviar): "Dados validados. O envio será ativado quando o site for publicado no Railway."
+- Agora o formulário é recebido pelo Netlify Forms (atributo data-netlify, campo armadilha contra robôs). Mensagens novas: "Enviando...", "Mensagem enviada. Vamos responder no e-mail que você informou." e, em caso de falha, "Não foi possível enviar agora. Confira sua internet e tente de novo em alguns minutos."
+
+## 2026-11-19 | Acessibilidade | Seção das pessoas vira lista (a pedido)
+- Selo (kicker): antes "Para cada pessoa"; agora "Por cada pessoa".
+- Título: antes "O que fizemos por quem usa o site de outro jeito"; agora "O que fizemos para quem usa o site:".
+- As 9 caixas (3 por linha) viraram uma lista centralizada: nome da situação à esquerda e texto à direita, com linha fina entre os itens. Textos sem mudança. "O que ainda falta" continua como último item.
+- Depois (a pedido): cada item da lista voltou a ser uma caixa, agora branca e uma embaixo da outra (largura máxima de 46rem, centralizada). Textos sem mudança.
+
+## 2026-11-19 | Acessibilidade | "Em primeiro lugar" juntou com a lista das pessoas (a pedido: menos repetição)
+- Agora é uma seção só: selo "Em primeiro lugar", título "Um site que funciona para todo mundo", frase de abertura, subtítulo "O que fizemos para quem usa o site:", as 9 caixas e, no fim, o cartão "Atalhos de teclado".
+- Saiu o selo "Por cada pessoa" (o selo "Em primeiro lugar" ficou).
+- Saiu a lista com ✓ (cada item já estava dito numa caixa):
+  - "Navegação completa pelo teclado, com foco sempre visível." (foi para a caixa Movimento e coordenação)
+  - "Estrutura semântica e textos alternativos para leitores de tela." (foi para a caixa Cegueira)
+  - "Contraste verificado: todas as combinações passam no nível AA." (já estava na caixa Daltonismo)
+  - "Nível de consumo indicado por cor e também por texto." (já estava na caixa Daltonismo)
+- Caixa Movimento e coordenação: antes "Tudo funciona só com o teclado, sem precisar de mouse. Não há nada com tempo limite e nenhuma ação exige arrastar ou fazer gestos complicados."; agora "Tudo funciona só com o teclado, sem precisar de mouse, e o item em foco fica sempre marcado na tela. Não há nada com tempo limite e nenhuma ação exige arrastar ou fazer gestos complicados."
+- Caixa Cegueira: antes "... Imagens que só enfeitam ficam de fora da leitura, e os avisos da calculadora..."; agora "... Imagens que informam têm descrição em texto, as que só enfeitam ficam de fora da leitura, e os avisos da calculadora..."
+- Depois (a pedido): com a tela deitada, as caixas ficam lado a lado (3 por linha no computador, 2 em telas deitadas menores); com a tela em pé, continuam em lista, uma embaixo da outra.
+
+## 19/11/2026 | Acessibilidade | caixas "O que fizemos para quem usa o site"
+- Depois (a pedido): cada caixa ganhou um ícone ao lado do título, no mesmo estilo dos ícones do site (traço de 2 px, círculo verde-claro; "O que ainda falta" em amarelo). Ícones: olho (Baixa visão), círculo dividido (Daltonismo), olho cortado (Cegueira), alto-falante mudo (Surdez e baixa audição), balão de conversa (Fala), teclado (Movimento e coordenação), pausa (Sensibilidade a movimento), documento (Leitura simples), bandeira (O que ainda falta). Os ícones são decorativos e escondidos do leitor de tela. Nenhum texto foi alterado.
+
+## 19/11/2026 | Acessibilidade | caixa "Leitura simples"
+- Antes: "Escrevemos de forma direta e próxima, sem jargão, e explicamos os termos de energia quando eles aparecem. Quem não é da área entende na primeira leitura."
+- Depois (texto do usuário): "Escrevemos de forma direta, próxima e simples. Explicamos os termos técnicos de energia quando eles aparecem."
+
+## 19/11/2026 | Acessibilidade | espaçamento
+- Depois (a pedido): o espaço entre o texto de abertura e "O que fizemos para quem usa o site:" passou de 40 px para 28 px, igual ao espaço entre esse título e as caixas (testado antes com 20 px, que ficou apertado). Nenhum texto alterado.
+
+## 19/11/2026 | Acessibilidade | espaço no topo
+- Depois (a pedido): "Em primeiro lugar" ficou mais perto da barra do topo (espaço de 88 px para 40 px no computador, 48 px para 24 px no celular). Nenhum texto alterado.
+
+## 19/11/2026 | Acessibilidade | espaço acima de "O que fizemos"
+- Depois (a pedido): "O que fizemos para quem usa o site:" desceu um pouco; o espaço acima dele passou de 28 px para 36 px (abaixo continua 28 px). Nenhum texto alterado.
+
+## 19/11/2026 | Acessibilidade | respiro do topo
+- Depois (a pedido): mais espaço entre "Em primeiro lugar", o título, o texto de abertura e "O que fizemos para quem usa o site:" (kicker 10 para 16 px do título; título para texto 14 para 22 px; texto para "O que fizemos" 36 para 48 px; "O que fizemos" para as caixas 28 para 24 px). Nenhum texto alterado.
+- Depois (a pedido, "mais"): respiro aumentado de novo no topo da Acessibilidade: "Em primeiro lugar" a 22 px do título; título a 30 px do texto; texto a 68 px de "O que fizemos"; "O que fizemos" a 28 px das caixas. Nenhum texto alterado.
+- Depois (a pedido): espaço entre o texto de abertura e "O que fizemos para quem usa o site:" aumentado para 96 px (antes 68 px). Nenhum texto alterado.
+- Depois (a pedido): os três textos do topo da Acessibilidade ("Em primeiro lugar", título e texto de abertura) voltaram a ficar juntos, com o espaçamento original (10 px e 14 px). Só o espaço entre eles e "O que fizemos para quem usa o site:" foi ajustado, para 48 px; "O que fizemos" a 24 px das caixas. Nenhum texto alterado.
+
+## 19/11/2026 | Galeria | topo da página
+- Antes: faixa de abertura (`page-topo`) com título "Galeria" e o texto "Telas do sistema e imagens dos aparelhos analisados, com legendas e fontes."
+- Depois (a pedido, para seguir o padrão de Notícias e Acessibilidade): cabeçalho centralizado direto na seção, com a linha pequena "Telas e aparelhos" (texto novo), o título "Galeria" e o mesmo texto de abertura, sem alteração. Espaço do topo igual ao da Acessibilidade.
+
+## 19/11/2026 | Calculadora, Sobre, Impacto e Galeria | abertura das páginas no padrão do site
+Padrão seguido (o mesmo de Notícias e Acessibilidade): sem a faixa branca de abertura (`page-topo`); cabeçalho centralizado direto na seção, com linha pequena (kicker), título em frase e texto de abertura; título com quebra equilibrada.
+
+### Galeria
+- Antes: linha pequena "Telas e aparelhos" e título "Galeria".
+- Depois: linha pequena "Galeria" e título "O WattCerto em imagens" (texto novo, para o título ter a mesma proporção dos outros). Texto de abertura sem alteração.
+
+### Calculadora
+- Removido: título "Calculadora" (era o h1) e a linha pequena "Passo a passo".
+- Depois: linha pequena "Estime a sua conta" (mantida), título "Calcule o consumo da sua casa" (era o subtítulo da seção e virou o título da página), seguido dos textos que já existiam: "Informe quantas pessoas moram na casa e quais aparelhos você usa. A calculadora mostra quanto cada um consome, quem pesa mais na conta e quanto dá para economizar com uma troca." e "Tudo é calculado no seu navegador. Nada do que você digita é enviado ou salvo." O parágrafo "Os números que já aparecem nos campos são valores de partida..." continua, logo acima do formulário. Assim a página não repete dois títulos seguidos.
+
+### Sobre
+- Antes: título "Sobre o projeto".
+- Depois: linha pequena "Sobre o projeto" e título "Por que criamos o WattCerto" (texto novo). Texto "Origem, missão e objetivos do WattCerto, projeto acadêmico da Fatec São Caetano do Sul." e o índice "Nesta página" mantidos, agora centralizados.
+
+### Impacto
+- Antes: título "Impacto".
+- Depois: linha pequena "Impacto" e título "Quanto a energia pesa e quanto dá para economizar" (texto novo). Texto "Tabelas de consumo, tarifas e economia possível com a troca de aparelhos." mantido.
+
+## 19/11/2026 | Páginas internas | laranja da marca nos títulos
+- Depois (a pedido, "cadê o laranja"): o título principal de cada página interna ganhou o grifo laranja da marca (o mesmo traço laranja de "economizar?" da Home), desenhado da esquerda para a direita ao abrir a página; com "reduzir movimento" ligado aparece parado. Palavras grifadas: Acessibilidade "todo mundo", Notícias "conta de luz", Galeria "imagens", Calculadora "sua casa", Sobre "WattCerto", Impacto "economizar", Contato "Contato". Nenhum texto alterado.
+- Depois (a pedido): na Sobre, o botão "Abrir a calculadora" (caixa "Calculadora de consumo") passou a usar o mesmo botão da Home: laranja da marca com contorno e sombra verdes e a seta num círculo verde. Texto sem alteração.
+- Desfeito (a pedido): o grifo laranja nos títulos das páginas internas foi removido de todas as páginas (Acessibilidade, Notícias, Galeria, Calculadora, Sobre, Impacto e Contato). Os títulos voltaram a ficar só em verde.
+
+## 19/11/2026 | Calculadora, Sobre e Impacto | textos sem repetição e páginas contínuas
+Cópias das páginas antes da mudança: pasta de trabalho do Claude (`removidos/*-antes-19-11.html`), além do histórico do Git (commit 0cff784 e o próximo).
+
+### Calculadora (começo da página)
+- Linha pequena: antes "Estime a sua conta" (repetia o título); depois "Calculadora".
+- Texto de abertura, antes: "Informe quantas pessoas moram na casa e quais aparelhos você usa. A calculadora mostra quanto cada um consome, quem pesa mais na conta e quanto dá para economizar com uma troca."
+- Depois: "Diga quantas pessoas moram na casa e quais aparelhos você usa. Você vê quanto cada um gasta, quem pesa mais na conta e quanto economiza trocando um aparelho."
+- Dois textos juntados em um. Antes: "Tudo é calculado no seu navegador. Nada do que você digita é enviado ou salvo." e "Os números que já aparecem nos campos são valores de partida. Troque pelos da etiqueta de cada aparelho e pelo seu hábito de uso. Para ver de onde vem cada número, leia como o cálculo é feito."
+- Depois: "Os campos já vêm com valores de partida: troque pelos da etiqueta e pelo seu uso (de onde vem cada número). Tudo é calculado no seu navegador, nada é enviado."
+
+### Sobre
+- Cor e separação: a página inteira ficou no mesmo fundo creme (antes alternava creme e branco em faixas) e com menos espaço entre as seções. A abertura e "As frentes do projeto" viraram uma seção só. Os destaques continuam em painéis (calculadora em amarelo, chuveiro em amarelo, "Nossa escolha", ficha em verde escuro).
+- Abertura, antes: "Origem, missão e objetivos do WattCerto, projeto acadêmico da Fatec São Caetano do Sul." (a página não fala de origem nem de missão). Depois: "O que o site faz, como ele chega em cada número, onde a estimativa pode errar e quem está por trás do projeto."
+- Modo avançado, antes: "Aparelhos com consumo variável, como o chuveiro, ganham perguntas próprias: potência, estação do ano, tempo de banho e frequência." Depois: "Aparelhos que gastam conforme o uso, como o chuveiro, ganham perguntas próprias: estação do ano, tempo de banho e quantas pessoas tomam banho."
+- Diagnóstico da conta, antes: "Comparação entre o valor estimado e o valor real da fatura, para mostrar se a conta veio acima do esperado." Depois: "Compara a estimativa com o valor da sua fatura e mostra se a conta veio acima do esperado."
+- Sugestão de troca, antes: "Quanto a casa economizaria por mês ao substituir um aparelho antigo por um modelo mais eficiente." Depois: "Mostra quanto a casa economiza por mês trocando um aparelho antigo por um mais eficiente."
+- Privacidade por padrão, antes: "Nenhum cadastro: os dados ficam salvos no navegador do usuário, com termo de consentimento que pode ser recusado." (estava errado: a simulação não é salva e não há termo de consentimento na calculadora). Depois: "Sem cadastro e sem login. O que você digita fica só no seu navegador e não é enviado para ninguém."
+- Resultado em minutos, antes: "O diagnóstico completo sai em poucos minutos, sem precisar entender de física ou ler a fatura inteira." Depois: "O diagnóstico sai em poucos minutos, sem precisar entender de física nem ler a fatura inteira."
+- Como o cálculo é feito, dois parágrafos juntados. Antes: "Cada número do resultado vem de uma das fórmulas abaixo. Não há estimativa escondida." e "A conta potência × horas só vale para quem fica ligado na potência cheia. Uma geladeira de 200 W contada como "ligada 24 horas" daria 144 kWh por mês, mas uma de 2 portas frost free gasta 56,9 kWh (Procel). Por isso cada aparelho usa a regra do seu tipo." Depois: "Cada número do resultado sai de uma das regras abaixo, escolhida pelo jeito que o aparelho gasta energia. A conta potência × horas só vale para quem fica ligado na potência cheia: uma geladeira de 200 W contada como "ligada 24 horas" daria 144 kWh por mês, mas uma de 2 portas frost free gasta 56,9 kWh (Procel)."
+- Chuveiro, antes: "O chuveiro é o primeiro aparelho com consumo que muda conforme o uso: depende da estação, do tempo de banho e de quantas pessoas tomam banho. Por isso ele tem uma fórmula própria." Depois: "O gasto do chuveiro muda com a estação, o tempo de banho e o número de pessoas. Por isso ele tem fórmula própria."
+- Fator da estação, antes: "O fator da estação é 1,0 na posição inverno e 0,7 na posição verão. É o valor adotado pelo projeto WattCerto." Depois: "O fator da estação é 1,0 na posição inverno e 0,7 na posição verão, valor adotado pelo WattCerto."
+- "Níveis de consumo" saiu de "O que a estimativa não sabe" (não é um limite da estimativa) e foi para dentro da regra "Custo, parte e economia". Texto antigo: "Cada aparelho é classificado pela sua participação no total: alto a partir de 30%, médio de 10% até menos de 30% e baixo abaixo de 10%. É uma regra do WattCerto para destacar o que pesa mais, e o nível aparece sempre em texto e em cor." Texto novo: "O nível de cada aparelho vem da parte dele na conta: alto a partir de 30%, médio de 10% até menos de 30% e baixo abaixo de 10%. O nível aparece sempre em texto e em cor."
+- Valores de partida, antes: "Os números que já vêm nos campos são pontos de partida editáveis. Alguns são da tabela de consumo da Procel; os outros são potências típicas de mercado, e cada aparelho diz de onde veio o seu. Quanto mais próximo da etiqueta e do seu hábito, melhor a estimativa." Depois: "Os números que já vêm nos campos são pontos de partida. Alguns são da tabela da Procel; os outros são potências típicas de mercado, e cada aparelho diz de onde veio o seu. Quanto mais perto da etiqueta e do seu hábito, melhor a estimativa."
+- Tarifa e fatura, antes: "A tarifa varia por distribuidora e por bandeira. No MVP os dados de tarifa estão validados apenas para o estado de São Paulo, e a tarifa usada é sempre exibida no resultado. A fatura pode incluir itens que a calculadora não considera, como a contribuição de iluminação pública." Depois: "A tarifa muda por distribuidora e por bandeira. Por enquanto, os dados de tarifa foram conferidos só para o estado de São Paulo, e a tarifa usada sempre aparece no resultado. A fatura também cobra itens que a calculadora não conta, como a iluminação pública."
+- Aparelhos que ficam de fora, antes: "Só entram na soma os aparelhos que estão na lista. Na calculadora, use "Adicionar aparelho" para incluir os que faltam, inclusive um com o nome escrito por você. Carregadores e aparelhos pequenos ficam de fora." Depois: "Só entra na soma o que está na lista. Na calculadora, use "Adicionar aparelho" para incluir o que falta, até com um nome escrito por você. Carregadores e aparelhos muito pequenos não estão na lista."
+- Ficha do fim, título: antes "Sobre o projeto" (repetia o topo); depois "Equipe e instituição" (igual ao índice "Nesta página").
+
+### Impacto
+- Cor e separação: a página inteira no mesmo fundo creme (antes: abertura creme, faixa verde escura de ponta a ponta, creme e branco). Os números do Brasil viraram um painel verde escuro com cantos arredondados, logo abaixo do título, na mesma seção. Menos espaço entre as seções.
+- Título, antes: "Quanto a energia pesa e quanto dá para economizar" (a página não mostra economia). Depois: "Quanto a energia de casa pesa no país e na conta".
+- Abertura, antes: "Tabelas de consumo, tarifas e economia possível com a troca de aparelhos." Depois: "A parte das casas no consumo do Brasil, quanto cada bandeira soma na conta e para onde vai a energia de uma casa típica."
+- Painel, título antes: "As residências respondem por quase um terço de toda a eletricidade do país." Depois: "Quase um terço da eletricidade do país vai para as casas".
+- Painel, legenda antes: "da eletricidade consumida no Brasil em 2025 foi para residências como a sua: 179.648 GWh em 84,5 milhões de unidades residenciais." Depois: "da eletricidade consumida no Brasil em 2025 ficou nas residências: 179.648 GWh, em 84,5 milhões de casas."
+- Fonte do painel: "Por residência" virou "Por casa".
+- Bandeiras, antes: "...Na verde não há nada a mais. Nas outras, cada 100 kWh consumidos ficam mais caros." Depois: "...Na verde não há nada a mais; nas outras, cada 100 kWh ficam mais caros."
+- Fonte das bandeiras, antes: "Os 177 kWh por mês são a média das residências do país, calculada com dados da EPE (veja acima)." Depois: "Os 177 kWh por mês são a média das casas do país, calculada acima com dados da EPE."
+- Consumo, antes: "Resultado da calculadora com os valores que já vêm nos campos: ..." Depois: "O que a calculadora mostra com os valores que já vêm nos campos: ..."
+- Fonte do consumo, antes: "Cálculo do próprio WattCerto, com as fórmulas da página Sobre. A geladeira usa o consumo do selo Procel de um modelo 2 portas frost free (56,9 kWh por mês). Quer ver quanto dá para economizar trocando hábitos e aparelhos? Veja o exemplo na página inicial ou faça a conta da sua casa." Depois: "Conta do próprio WattCerto, com as regras da página Sobre. A geladeira usa o selo Procel de um modelo 2 portas frost free (56,9 kWh por mês). Para ver quanto dá para economizar, faça a conta da sua casa."
+
+## 19/11/2026 | Sobre e Impacto | um esqueleto só para todas as seções
+Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e formato a cada bloco e a página parecia montada sem lógica. Regra aplicada, tirada da Home: abertura centralizada; depois dela, toda seção com o título à esquerda (linha pequena, título e uma frase) e o conteúdo à direita, separada da anterior por uma linha fina; no celular, empilha. Listas no estilo do "Como funciona" da Home (itens com linha, sem caixas). Cor forte só com propósito.
+
+### Sobre
+- Removida a caixa amarela "Calculadora de consumo" com o botão. O item virou o primeiro da lista de frentes e o botão "Abrir a calculadora" foi para a coluna do título.
+  - Texto antes: "Estimativa mensal em kWh e em reais para cada aparelho cadastrado, com a participação de cada um no total da casa."
+  - Texto depois: "Estimativa mensal em kWh e em reais para cada aparelho, com a parte de cada um no total da casa."
+- Frase nova sob "As frentes do projeto": "Tudo parte da calculadora: os outros recursos usam o mesmo cálculo."
+- "Como o cálculo é feito", antes: "Cada número do resultado sai de uma das regras abaixo, escolhida pelo jeito que o aparelho gasta energia. ..." Depois: "Cada número sai de uma regra, escolhida pelo jeito que o aparelho gasta energia. ..." (o resto igual).
+- Exemplo do chuveiro: continua no painel amarelo, agora em uma coluna (regra em cima, conta embaixo).
+- Frase nova sob "O que a estimativa não sabe": "É uma estimativa: chega perto da conta real quando os números são os da sua casa." Os três itens viraram lista em uma coluna.
+- "Orçamento e hospedagem", antes: "Comparativo de hospedagens e domínios para publicar o site." Depois: "Três hospedagens e três domínios comparados para publicar o site."
+- "Nossa escolha": tirada a tarja laranja do lado esquerdo; virou painel amarelo claro inteiro. Texto igual.
+- "Equipe e instituição": saiu o cartão verde escuro; os dados ficaram em duas colunas, no mesmo esqueleto das outras seções. Linha pequena nova: "Quem fez".
+- Sobra de CSS sem uso: as regras antigas de `.frente-destaque`, `.frentes`, `.ficha-projeto` e `.secao-ficha` continuam no style.css (não são mais usadas pela Sobre).
+
+### Impacto
+- A faixa verde dos números do Brasil voltou a ir de ponta a ponta, igual à faixa verde da Home (antes eu tinha feito um painel arredondado).
+- "Quanto cada bandeira soma na conta" e "Onde vai a energia de uma casa típica" no mesmo esqueleto: título e frase à esquerda, tabela e fonte à direita. Textos iguais.
+- Depois (a pedido): o título de cada seção (ex.: "O que o site entrega" e o botão "Abrir a calculadora") não acompanha mais a rolagem; fica no lugar dele.
+
+## 19/11/2026 | Sobre | outras cores da marca (a pedido: "tudo menos grifado ou linha em laranja")
+- Título: "WattCerto" escrito nas cores da marca (Watt em verde, Certo em laranja), como no logo.
+- Ícones das frentes alternando amarelo, terracota e verde (antes todos amarelos).
+- "O que a estimativa não sabe": itens numerados 1, 2, 3 na cor dourada dos passos do "Como funciona" da Home.
+- "As frentes do projeto" em faixa branca (como o "Como funciona" da Home) e "Equipe e instituição" em faixa amarela clara (como o "Alguma dúvida?" da Home).
+- Palavras e números que merecem destaque em laranja escuro e negrito (sem grifo): "56,9 kWh", "123,75 kWh por mês", "R$ 106,43", "Netlify, no plano Free", "20 publicações"; e "144 kWh por mês" (a conta errada da geladeira) em vermelho. Nenhum texto alterado.
+- Depois (a pedido): o índice "Nesta página" saiu da abertura e foi para dentro de "O que o site entrega", na coluna do título, abaixo do botão "Abrir a calculadora", com os links um embaixo do outro. Texto igual.
+- Removido do índice "Nesta página" o link "As frentes do projeto" (#frentes): o índice agora fica dentro dessa própria seção, então o link levava para onde a pessoa já está.
+- Depois (a pedido): na lista "As frentes do projeto", o círculo do ícone não gira, não cresce e não muda de cor ao passar o mouse, e o desenho dentro dele não repete o movimento. Fica só a entrada, uma vez, quando a lista aparece na tela. Corrigida também a cor de fundo das bolinhas do ícone "Modo avançado" no círculo terracota.
+
+## 19/11/2026 | Sobre | "As frentes do projeto"
+- Removido (a pedido) o item "Privacidade por padrão": "Sem cadastro e sem login. O que você digita fica só no seu navegador e não é enviado para ninguém." (ícone de escudo com check, círculo terracota).
+- Renomeado (a pedido): "Modo avançado" passou a se chamar "Aparelhos domésticos em detalhes". Texto do item igual.
+- Depois (a pedido): em "O que a estimativa não sabe", os números 1, 2, 3 foram trocados por uma bolinha vermelha antes de cada item.
+- Depois (a pedido, opção B): os ícones de "As frentes do projeto" perderam o círculo colorido; ficou só o desenho, pequeno e verde, ao lado do título.
+
+## 19/11/2026 | Sobre | "As frentes do projeto" (a pedido)
+- Removido o botão "Abrir a calculadora" (laranja com contorno verde) que ficava abaixo da frase "Tudo parte da calculadora: os outros recursos usam o mesmo cálculo."
+- Removida a animação de entrada dos ícones (antes eles se desenhavam um depois do outro quando a lista aparecia na tela). Agora ficam parados. O JavaScript que ligava essa animação também saiu de js/animacoes.js; as animações da Home (números, barra da fatura, grifo) continuam.
+
+## 19/11/2026 | Sobre | "Equipe e instituição" (a pedido)
+- A faixa "Quem fez" deixou de ser amarela clara e passou a ser verde escura (mesma faixa do Impacto). Rótulos em amarelo, dados em branco. Texto igual.
+
+## 19/11/2026 | Sobre | abertura (a pedido)
+- Removida a frase abaixo do título: "O que o site faz, como ele chega em cada número, onde a estimativa pode errar e quem está por trás do projeto."
+
+## 19/11/2026 | Sobre | "Como o cálculo é feito" e "Antes de confiar no número" (a pedido)
+- Removida a frase: "Toque em uma regra para ver a fórmula."
+- Removido o parágrafo sob o título "Como o cálculo é feito": "Cada número sai de uma regra, escolhida pelo jeito que o aparelho gasta energia. A conta potência × horas só vale para quem fica ligado na potência cheia: uma geladeira de 200 W contada como “ligada 24 horas” daria 144 kWh por mês, mas uma de 2 portas frost free gasta 56,9 kWh (Procel)."
+- A seção "Antes de confiar no número" / "O que a estimativa não sabe" passou a ter fundo branco (antes, creme).
+
+## 19/11/2026 | Sobre | abertura (a pedido)
+- Frase nova sob o título: "Entenda quanto sua casa gasta de energia, sem precisar entender termos técnicos." (no lugar da frase removida mais cedo).
+
+## 19/11/2026 | Sobre | título de "Antes de confiar no número" (a pedido)
+- Antes: "O que a estimativa não sabe". Depois: "O que a estimativa não sabe?" (pergunta, como os títulos da Home). O link do índice "Nesta página" continua "O que a estimativa não sabe", sem "?".
+
+## 19/11/2026 | Sobre | cor das frases em cima dos títulos (a pedido, opção A)
+- As frases pequenas em cima dos títulos passaram de verde para laranja escurecido (#b34c08): "Sobre o projeto", "O que o site entrega", "Transparência", "Antes de confiar no número", "Publicação do site". Na faixa verde escura, "Quem fez" continua amarela. Nenhum texto alterado. As outras páginas ficaram como estavam.
+
+## 19/11/2026 | Sobre e Impacto | grifo verde nos títulos das seções (a pedido)
+- Os títulos das seções claras ("As frentes do projeto", "Como o cálculo é feito", "O que a estimativa não sabe?", "Orçamento e hospedagem", "Quanto cada bandeira soma na conta", "Onde vai a energia de uma casa típica") ganharam grifo verde escuro embaixo da letra. O título do topo da página e o título da faixa verde escura ("Equipe e instituição") ficaram sem grifo. Nenhum texto alterado.
+
+## 19/11/2026 | Sobre e Impacto | grifo verde nos títulos das seções (a pedido, removido)
+- O grifo verde escuro dos títulos das seções foi removido logo depois de aplicado. Os títulos voltaram a ficar sem grifo e com o espaço entre linhas de antes.
+
+## 19/11/2026 | Acessibilidade | frase em cima do título (a pedido)
+- Antes: "Em primeiro lugar". Depois: "Acessibilidade".
+
+## 19/11/2026 | Impacto | faixa verde dos números do Brasil (a pedido)
+- A faixa verde ("A casa brasileira em números") passou a usar o mesmo esqueleto das outras seções: à esquerda a frase pequena, o título, o número "31,7%" e a legenda; à direita o gráfico "De cada 100 kWh consumidos no Brasil". Antes eram duas colunas centralizadas, com bordas diferentes das demais seções. A faixa continua verde escura e de ponta a ponta. Nenhum texto alterado. A Home não mudou.
+
+## 19/11/2026 | Impacto | título da faixa verde (a pedido)
+- Antes: "Quase um terço da eletricidade do país vai para as casas". Depois: "A conta de casa impacta também o Brasil". A frase "quase um terço" continua dita pelo número "31,7%" e pela legenda logo abaixo.
+
+## 19/11/2026 | Impacto | números do Brasil (a pedido: "mt grosseiro no começo da página")
+- A faixa verde escura (de ponta a ponta) logo abaixo da abertura deixou de existir. As mesmas informações ficaram no mesmo lugar, agora numa seção clara (fundo branco) no mesmo esqueleto das outras: à esquerda a frase pequena, o título, o "31,7%" (em laranja escurecido) e a legenda; à direita o gráfico, num cartão claro com barra verde para "Indústria, comércio e outros setores" e barra laranja para "Residências". Nenhum texto alterado.
+
+## 19/11/2026 | Impacto | fundos alternados (a pedido: "o verde dentro da caixa estava bom ... e vice versa nos próximos")
+- "A casa brasileira em números": fundo branco; o cartão do gráfico voltou a ser verde escuro (com texto claro, barra verde-clara e barra amarela, como era).
+- "Quanto cada bandeira soma na conta": passou a ter fundo verde escuro, com a tabela em cartão claro.
+- "Onde vai a energia de uma casa típica": fundo branco, tabela em cartão claro.
+- Nenhum texto alterado.
+
+## 19/11/2026 | Impacto | título do topo (a pedido)
+- "Quanto a energia de casa pesa no país e na conta" agora ocupa uma linha só, até onde couber; em telas estreitas quebra em mais linhas. Antes era sempre em duas linhas, equilibradas. Texto igual. A frase de apoio embaixo continua com largura de leitura.
+
+## 22/11/2026 | Acessibilidade, Calculadora, Galeria, Impacto e Notícias | frase em cima dos títulos (a pedido)
+- As frases pequenas em cima dos títulos passaram de verde para laranja escurecido (#b34c08), como na Sobre: "Acessibilidade", "Calculadora", "Galeria", "Mídia" (Galeria), "Impacto", "A casa brasileira em números", "Consumo" e "Últimas notícias". "Tarifas", na faixa verde escura do Impacto, continua amarela (contraste). Nenhum texto alterado. A Home ficou como estava.
+
+## 22/11/2026 | Sobre | frase de abertura (a pedido, com revisão)
+- Antes: "Entenda quanto sua casa gasta de energia, sem precisar entender termos técnicos."
+- Pedido: "Entenda onde sua casa gera gasto de energia e consiga economizar, sem precisar entender termos técnicos."
+- Depois (revisado): "Entenda onde sua casa mais gasta energia e como economizar, sem precisar saber termos técnicos." (tirei "gera gasto de energia", que ficava pesado, e a repetição de "entender".)
+
+## 22/11/2026 | Várias páginas | correções do validador W3C (sem mudança de texto visível)
+- Validador oficial (vnu, o mesmo do W3C) rodado nos arquivos das 10 páginas: 15 erros, agora 0.
+- Faixa de páginas ("reel") de Acessibilidade, Calculadora, Galeria, Impacto, Notícias e Sobre: ganhou role="group", porque aria-label não vale em div sem papel.
+- Calculadora: o aviso "A calculadora precisa de JavaScript" (só aparece sem JavaScript) passou de h3 para h2, para não pular nível de título.
+- Sobre, "Como o site calcula": os seis nomes de regra ("Por hora" e as outras) deixaram de ser h3 dentro de span (inválido) e viraram span com role="heading" aria-level="3". Mesma aparência e mesmo nível para leitor de tela.
+- Contato: "netlify-honeypot" virou "data-netlify-honeypot" (forma válida em HTML5).
+- Observação: o erro "Stray start tag script" que aparece ao validar o endereço do Netlify vem de um script que o próprio Netlify injeta depois do </html>. Não está nos nossos arquivos.
+
+## 22/11/2026 | Contato | mensagem depois de enviar (site fora do Netlify)
+- Novo texto, só quando o site não está no Netlify (Railway): "Tudo certo com os dados. Esta versão do site confere o formulário, mas não envia a mensagem para um servidor."
+- No Netlify, nada mudou: a mensagem continua sendo enviada e o texto de sucesso é o mesmo.

@@ -467,7 +467,10 @@
   var caixaOutro = document.getElementById("adicionar-outro");
   var avisoAdicionar = document.getElementById("adicionar-aviso");
   var campoOutro = document.getElementById("outro-nome");
-  var catalogo = window.CATALOGO_APARELHOS || [];
+  /* O catálogo vem de dados/catalogo.json, gerado pelo programa em Python a partir
+     do banco de dados (pasta sistema/). Enquanto ele não chega, a lista fica vazia. */
+  var catalogo = [];
+  var gruposCatalogo = [];
   var contador = 0;
 
   function textoFonte(item) {
@@ -613,7 +616,7 @@
 
   /* Monta o menu de seleção: um grupo (optgroup) por categoria. */
   function montarLista() {
-    var grupos = window.GRUPOS_APARELHOS || [];
+    var grupos = gruposCatalogo;
     var g;
     var i;
     var grupo;
@@ -723,9 +726,28 @@
     abrirLista(false);
   }
 
-  montarLista();
-  mostrarRegra();
-  areaAdicionar.hidden = false;
+  /* Busca o catálogo. Se não carregar (sem internet, arquivo aberto direto do
+     computador), a área "Adicionar aparelho" continua escondida e o resto da
+     calculadora funciona com os quatro aparelhos fixos da página. */
+  if (window.fetch) {
+    fetch("dados/catalogo.json")
+      .then(function (resposta) {
+        if (!resposta.ok) {
+          throw new Error("catálogo indisponível");
+        }
+        return resposta.json();
+      })
+      .then(function (dados) {
+        catalogo = dados.aparelhos || [];
+        gruposCatalogo = dados.grupos || [];
+        montarLista();
+        mostrarRegra();
+        areaAdicionar.hidden = false;
+      })
+      .catch(function () {
+        areaAdicionar.hidden = true;
+      });
+  }
 
   botaoAdicionar.addEventListener("click", function () {
     abrirLista(painelAdicionar.hidden);

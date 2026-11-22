@@ -4,3 +4,9 @@ node_modules/
 .env
 .vscode/
 CLAUDE.md
+
+__pycache__/
+*.pyc
+
+# credenciais do servidor da faculdade
+sistema/.env.banin

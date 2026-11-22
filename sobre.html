@@ -38,16 +38,27 @@
     </div>
   </header>
 
-  <main id="conteudo">
-    <div class="page-topo">
-      <div class="container page-hero">
-        <div class="page-hero-texto">
-          <h1>Sobre o projeto</h1>
-          <p class="lead">Origem, missão e objetivos do WattCerto, projeto acadêmico da Fatec São Caetano do Sul.</p>
-          <nav class="nesta-pagina" aria-label="Nesta página">
+  <main id="conteudo" class="pagina-continua">
+
+    <section class="section secao-abertura" aria-labelledby="titulo-sobre">
+      <div class="container">
+        <div class="section-head centro">
+          <p class="kicker kicker-laranja">Sobre o projeto</p>
+          <h1 id="titulo-sobre">Por que criamos o Watt<span class="brand-certo">Certo</span></h1>
+          <p>Entenda onde sua casa mais gasta energia e como economizar, sem precisar saber termos técnicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white secao-trilho" id="frentes" aria-labelledby="titulo-recursos">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">O que o site entrega</p>
+          <h2 id="titulo-recursos">As frentes do projeto</h2>
+            <p>Tudo parte da calculadora: os outros recursos usam o mesmo cálculo.</p>
+            <nav class="nesta-pagina nesta-pagina-coluna" aria-label="Nesta página">
             <p>Nesta página</p>
             <ul>
-              <li><a href="#frentes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>As frentes do projeto</a></li>
               <li><a href="#como-calcula"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Como o cálculo é feito</a></li>
               <li><a href="#limites"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>O que a estimativa não sabe</a></li>
               <li><a href="#hospedagem"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Orçamento e hospedagem</a></li>
@@ -55,67 +66,50 @@
             </ul>
           </nav>
         </div>
-      </div>
-    </div>
-
-    <section class="section" id="frentes" aria-labelledby="titulo-recursos">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">O que o site entrega</p>
-          <h2 id="titulo-recursos">As frentes do projeto</h2>
-        </div>
-        <div class="frentes">
-          <article class="frente-destaque">
-            <h3>Calculadora de consumo</h3>
-            <p>Estimativa mensal em kWh e em reais para cada aparelho cadastrado, com a participação de cada um no total da casa.</p>
-            <a class="btn btn-primary" href="calculadora.html">Abrir a calculadora <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </article>
+        <div class="trilho-conteudo">
           <ol class="frentes-lista">
             <li>
+              <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>
+              <h3>Calculadora de consumo</h3>
+              <p>Estimativa mensal em kWh e em reais para cada aparelho, com a parte de cada um no total da casa.</p>
+            </li>
+            <li>
               <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle class="fi-bola fi-bola-1" cx="15" cy="7" r="2"/><circle class="fi-bola fi-bola-2" cx="9" cy="17" r="2"/></svg></span>
-              <h3>Modo avançado</h3>
-              <p>Aparelhos com consumo variável, como o chuveiro, ganham perguntas próprias: potência, estação do ano, tempo de banho e frequência.</p>
+              <h3>Aparelhos domésticos em detalhes</h3>
+              <p>Aparelhos que gastam conforme o uso, como o chuveiro, ganham perguntas próprias: estação do ano, tempo de banho e quantas pessoas tomam banho.</p>
             </li>
             <li>
               <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path class="fi-pulso" pathLength="1" d="M3 12h4l3-7 4 14 3-7h4"/></svg></span>
               <h3>Diagnóstico da conta</h3>
-              <p>Comparação entre o valor estimado e o valor real da fatura, para mostrar se a conta veio acima do esperado.</p>
+              <p>Compara a estimativa com o valor da sua fatura e mostra se a conta veio acima do esperado.</p>
             </li>
             <li>
               <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path class="fi-seta fi-seta-1" d="M4 8h13l-3-3"/><path class="fi-seta fi-seta-2" d="M20 16H7l3 3"/></svg></span>
               <h3>Sugestão de troca</h3>
-              <p>Quanto a casa economizaria por mês ao substituir um aparelho antigo por um modelo mais eficiente.</p>
-            </li>
-            <li>
-              <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path class="fi-escudo" pathLength="1" d="M12 3l8 3v6c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V6z"/><path class="fi-ok" pathLength="1" d="M9 12l2 2 4-4"/></svg></span>
-              <h3>Privacidade por padrão</h3>
-              <p>Nenhum cadastro: os dados ficam salvos no navegador do usuário, com termo de consentimento que pode ser recusado.</p>
+              <p>Mostra quanto a casa economiza por mês trocando um aparelho antigo por um mais eficiente.</p>
             </li>
             <li>
               <span class="frente-icone"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path class="fi-ponteiro" d="M12 9v4l2.5 2"/><path d="M9.5 3h5"/></svg></span>
               <h3>Resultado em minutos</h3>
-              <p>O diagnóstico completo sai em poucos minutos, sem precisar entender de física ou ler a fatura inteira.</p>
+              <p>O diagnóstico sai em poucos minutos, sem precisar entender de física nem ler a fatura inteira.</p>
             </li>
           </ol>
         </div>
       </div>
     </section>
 
-    <section class="section section-white" id="como-calcula" aria-labelledby="titulo-formulas">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Transparência</p>
+    <section class="section secao-trilho" id="como-calcula" aria-labelledby="titulo-formulas">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Transparência</p>
           <h2 id="titulo-formulas">Como o cálculo é feito</h2>
-          <p>Cada número do resultado vem de uma das fórmulas abaixo. Não há estimativa escondida.</p>
-          <p>A conta potência × horas só vale para quem fica ligado na potência cheia. Uma geladeira de 200 W contada como &ldquo;ligada 24 horas&rdquo; daria 144 kWh por mês, mas uma de 2 portas frost free gasta 56,9 kWh (Procel). Por isso cada aparelho usa a regra do seu tipo.</p>
         </div>
-
-        <p class="regras-dica">Toque em uma regra para ver a fórmula.</p>
+        <div class="trilho-conteudo">
         <div class="regras">
           <details class="regra">
             <summary>
               <span class="regra-nome">
-                <h3>Por hora</h3>
+                <span class="regra-titulo" role="heading" aria-level="3">Por hora</span>
                 <span class="regra-desc">Lâmpadas, computador, notebook, bomba d&rsquo;água e o que você incluir como outro aparelho.</span>
               </span>
               <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -127,7 +121,7 @@
           <details class="regra">
             <summary>
               <span class="regra-nome">
-                <h3>Por hora, com espera</h3>
+                <span class="regra-titulo" role="heading" aria-level="3">Por hora, com espera</span>
                 <span class="regra-desc">Televisão, roteador e videogame ficam na tomada o dia todo. As horas paradas entram com a potência em espera.</span>
               </span>
               <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -139,7 +133,7 @@
           <details class="regra">
             <summary>
               <span class="regra-nome">
-                <h3>Por uso</h3>
+                <span class="regra-titulo" role="heading" aria-level="3">Por uso</span>
                 <span class="regra-desc">Máquina de lavar, lava-louças, micro-ondas, air fryer, ferro e secador. O que conta é cada uso, não as horas do dia.</span>
               </span>
               <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -151,7 +145,7 @@
           <details class="regra">
             <summary>
               <span class="regra-nome">
-                <h3>Por hora e meses de uso</h3>
+                <span class="regra-titulo" role="heading" aria-level="3">Por hora e meses de uso</span>
                 <span class="regra-desc">Ar-condicionado e ventilador. A potência é a média de funcionamento, não a de pico. Quem só liga no calor informa quantos meses usa, e o resultado vira a média de um mês do ano.</span>
               </span>
               <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -163,7 +157,7 @@
           <details class="regra">
             <summary>
               <span class="regra-nome">
-                <h3>Pela etiqueta</h3>
+                <span class="regra-titulo" role="heading" aria-level="3">Pela etiqueta</span>
                 <span class="regra-desc">Geladeira, freezer e bebedouro ligam e desligam sozinhos. Perguntar as horas daria sempre 24 e a conta sairia errada.</span>
               </span>
               <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -175,7 +169,7 @@
           <details class="regra">
             <summary>
               <span class="regra-nome">
-                <h3>Custo, parte e economia</h3>
+                <span class="regra-titulo" role="heading" aria-level="3">Custo, parte e economia</span>
               </span>
               <svg class="icon regra-seta" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </summary>
@@ -183,76 +177,77 @@
               <p class="formula">custo (R$) = kWh × tarifa</p>
               <p class="formula">parte (%) = kWh do aparelho ÷ kWh da casa × 100</p>
               <p class="formula">economia (R$) = (kWh atual − kWh do modelo eficiente) × tarifa</p>
+              <p class="regra-nota">O nível de cada aparelho vem da parte dele na conta: <strong>alto</strong> a partir de 30%, <strong>médio</strong> de 10% até menos de 30% e <strong>baixo</strong> abaixo de 10%. O nível aparece sempre em texto e em cor.</p>
             </div>
           </details>
         </div>
 
-        <div class="exemplo-chuveiro">
-          <div class="exemplo-chuveiro-regra">
+          <div class="exemplo-chuveiro">
+            <div class="exemplo-chuveiro-regra">
             <h3>Modo avançado do chuveiro elétrico</h3>
-            <p>O chuveiro é o primeiro aparelho com consumo que muda conforme o uso: depende da estação, do tempo de banho e de quantas pessoas tomam banho. Por isso ele tem uma fórmula própria.</p>
+            <p>O gasto do chuveiro muda com a estação, o tempo de banho e o número de pessoas. Por isso ele tem fórmula própria.</p>
             <p class="formula">consumo mensal (kWh) = potência (W) × fator da estação × (minutos de banho ÷ 60) × pessoas × banhos por pessoa por dia × 30 ÷ 1000</p>
-            <p>O fator da estação é 1,0 na posição inverno e 0,7 na posição verão. É o valor adotado pelo projeto WattCerto.</p>
+            <p>O fator da estação é 1,0 na posição inverno e 0,7 na posição verão, valor adotado pelo WattCerto.</p>
           </div>
-
-          <div class="exemplo-chuveiro-conta">
+            <div class="exemplo-chuveiro-conta">
             <h4>Exemplo com os dados da página inicial</h4>
             <ol class="conta-passos">
               <li>Chuveiro de 5500 W, na posição inverno (fator 1,0).</li>
               <li>Banho de 15 minutos: 15 ÷ 60 = 0,25 hora.</li>
               <li>3 pessoas, 1 banho por pessoa por dia: 3 banhos por dia.</li>
-              <li>5500 × 1,0 × 0,25 × 3 × 30 ÷ 1000 = <strong>123,75 kWh por mês</strong>, que aparece arredondado como 124 kWh.</li>
-              <li>Com a tarifa de R$ 0,86 por kWh: 123,75 × 0,86 = <strong>R$ 106,43</strong>.</li>
+              <li>5500 × 1,0 × 0,25 × 3 × 30 ÷ 1000 = <strong class="palavra-destaque">123,75 kWh por mês</strong>, que aparece arredondado como 124 kWh.</li>
+              <li>Com a tarifa de R$ 0,86 por kWh: 123,75 × 0,86 = <strong class="palavra-destaque">R$ 106,43</strong>.</li>
             </ol>
+          </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="limites" aria-labelledby="titulo-limites">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Antes de confiar no número</p>
-          <h2 id="titulo-limites">O que a estimativa não sabe</h2>
+    <section class="section section-white secao-trilho" id="limites" aria-labelledby="titulo-limites">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Antes de confiar no número</p>
+          <h2 id="titulo-limites">O que a estimativa não sabe?</h2>
+            <p>É uma estimativa: chega perto da conta real quando os números são os da sua casa.</p>
         </div>
-        <ul class="limites">
+        <div class="trilho-conteudo">
+          <ol class="limites limites-numerados">
           <li>
-            <div>
-              <h3>Níveis de consumo</h3>
-              <p>Cada aparelho é classificado pela sua participação no total: <strong>alto</strong> a partir de 30%, <strong>médio</strong> de 10% até menos de 30% e <strong>baixo</strong> abaixo de 10%. É uma regra do WattCerto para destacar o que pesa mais, e o nível aparece sempre em texto e em cor.</p>
-            </div>
-          </li>
-          <li>
+            <span class="limite-ponto" aria-hidden="true"></span>
             <div>
               <h3>Valores de partida</h3>
-              <p>Os números que já vêm nos campos são pontos de partida editáveis. Alguns são da tabela de consumo da Procel; os outros são potências típicas de mercado, e cada aparelho diz de onde veio o seu. Quanto mais próximo da etiqueta e do seu hábito, melhor a estimativa.</p>
+              <p>Os números que já vêm nos campos são pontos de partida. Alguns são da tabela da Procel; os outros são potências típicas de mercado, e cada aparelho diz de onde veio o seu. Quanto mais perto da etiqueta e do seu hábito, melhor a estimativa.</p>
             </div>
           </li>
           <li>
+            <span class="limite-ponto" aria-hidden="true"></span>
             <div>
               <h3>Tarifa e fatura</h3>
-              <p>A tarifa varia por distribuidora e por bandeira. No MVP os dados de tarifa estão validados apenas para o estado de São Paulo, e a tarifa usada é sempre exibida no resultado. A fatura pode incluir itens que a calculadora não considera, como a contribuição de iluminação pública.</p>
+              <p>A tarifa muda por distribuidora e por bandeira. Por enquanto, os dados de tarifa foram conferidos só para o estado de São Paulo, e a tarifa usada sempre aparece no resultado. A fatura também cobra itens que a calculadora não conta, como a iluminação pública.</p>
             </div>
           </li>
           <li>
+            <span class="limite-ponto" aria-hidden="true"></span>
             <div>
               <h3>Aparelhos que ficam de fora</h3>
-              <p>Só entram na soma os aparelhos que estão na lista. Na <a href="calculadora.html">calculadora</a>, use &ldquo;Adicionar aparelho&rdquo; para incluir os que faltam, inclusive um com o nome escrito por você. Carregadores e aparelhos pequenos ficam de fora.</p>
+              <p>Só entra na soma o que está na lista. Na <a href="calculadora.html">calculadora</a>, use &ldquo;Adicionar aparelho&rdquo; para incluir o que falta, até com um nome escrito por você. Carregadores e aparelhos muito pequenos não estão na lista.</p>
             </div>
           </li>
-        </ul>
+        </ol>
+        </div>
       </div>
     </section>
 
-    <section class="section section-white" id="hospedagem" aria-labelledby="titulo-hospedagem">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Publicação do site</p>
+    <section class="section secao-trilho" id="hospedagem" aria-labelledby="titulo-hospedagem">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Publicação do site</p>
           <h2 id="titulo-hospedagem">Orçamento e hospedagem</h2>
-          <p>Comparativo de hospedagens e domínios para publicar o site.</p>
+            <p>Três hospedagens e três domínios comparados para publicar o site.</p>
         </div>
-
-        <h3 class="tabela-titulo">Hospedagem</h3>
+        <div class="trilho-conteudo">
+          <h3 class="tabela-titulo">Hospedagem</h3>
         <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Comparativo de três hospedagens">
           <table class="tabela-simples">
             <caption class="visually-hidden">Comparativo de três hospedagens</caption>
@@ -280,7 +275,7 @@
               <tr>
                 <th scope="row">Netlify</th>
                 <td>Plano Free grátis; Pro a US$ 20 por mês</td>
-                <td>300 créditos por mês no plano Free</td>
+                <td>300 créditos por mês no plano Free; cada publicação gasta 15; formulário de contato não gasta</td>
                 <td>Se os créditos acabam, o site fica fora do ar até o mês virar</td>
               </tr>
             </tbody>
@@ -318,20 +313,26 @@
           </table>
         </div>
 
-        <p class="fonte-tabela">Preços consultados em novembro de 2026 e cobrados em dólar quando indicado: <a href="https://thesoftwarescout.com/railway-pricing-2026-plans-costs-is-it-worth-it/">Railway (The Software Scout, maio 2026)</a>, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">limites do GitHub Pages</a>, <a href="https://netli.fyi/blog/netlify-free-plan-limits-2026">plano Free da Netlify (jul. 2026)</a>, <a href="https://www.netlify.com/changelog/2026-04-14-pricing-updates-april-2026/">plano Pro da Netlify</a>, <a href="https://www.homehost.com.br/blog/dominio/registro-de-dominio-br/">Registro.br (HomeHost, nov. 2026)</a>, <a href="https://www.nuvemshop.com.br/blog/quanto-custa-dominio-de-site/">GoDaddy (Nuvemshop, jun. 2026)</a> e <a href="https://www.hostinger.com/br/tld/dominio-com">Hostinger</a>. Os preços mudam; confira antes de contratar.</p>
+        <p class="fonte-tabela">Preços consultados em novembro de 2026 e cobrados em dólar quando indicado: <a href="https://thesoftwarescout.com/railway-pricing-2026-plans-costs-is-it-worth-it/">Railway (The Software Scout, maio 2026)</a>, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">limites do GitHub Pages</a>, <a href="https://netli.fyi/blog/netlify-free-plan-limits-2026">plano Free da Netlify (jul. 2026)</a>, <a href="https://www.netlify.com/changelog/2026-04-14-pricing-updates-april-2026/">plano Pro e formulários da Netlify (abr. 2026)</a>, <a href="https://www.homehost.com.br/blog/dominio/registro-de-dominio-br/">Registro.br (HomeHost, nov. 2026)</a>, <a href="https://www.nuvemshop.com.br/blog/quanto-custa-dominio-de-site/">GoDaddy (Nuvemshop, jun. 2026)</a> e <a href="https://www.hostinger.com/br/tld/dominio-com">Hostinger</a>. Os preços mudam; confira antes de contratar.</p>
 
-        <div class="justificativa">
+          <div class="justificativa painel-claro">
           <h3>Nossa escolha</h3>
-          <p>A equipe vai publicar o site no Railway, como está no escopo do projeto: ele publica direto do repositório no GitHub. Para o domínio, a sugestão é o .com.br no Registro.br, que é o registro oficial dos domínios brasileiros e não tem preço promocional que sobe na renovação.</p>
+          <p>O site está publicado no <strong class="palavra-destaque">Netlify, no plano Free</strong>. O escopo previa o Railway, mas o crédito de teste da equipe acabou, e o plano pago do Railway custa US$ 5 por mês para hospedar um site que não precisa de servidor: o WattCerto é feito só de páginas prontas.</p>
+          <p>No Netlify, os 300 créditos do mês dão para <strong class="palavra-destaque">20 publicações</strong> (cada uma gasta 15), e o formulário de contato funciona sem gastar crédito. Para não estourar o limite, a equipe testa tudo no computador e publica de uma vez só. O banco de dados e o programa em Python rodam fora do site e não usam a hospedagem.</p>
+          <p>Para o domínio, a sugestão é o .com.br no Registro.br, que é o registro oficial dos domínios brasileiros e não tem preço promocional que sobe na renovação.</p>
+        </div>
         </div>
       </div>
     </section>
 
-    <section class="section secao-ficha" id="ficha" aria-labelledby="titulo-ficha">
-      <div class="container">
-        <div class="ficha-projeto">
-          <h2 id="titulo-ficha">Sobre o projeto</h2>
-          <dl>
+    <section class="section secao-trilho band-dark faixa-verde" id="ficha" aria-labelledby="titulo-ficha">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker">Quem fez</p>
+          <h2 id="titulo-ficha">Equipe e instituição</h2>
+        </div>
+        <div class="trilho-conteudo">
+          <dl class="ficha-lista">
             <div>
               <dt>Instituição</dt>
               <dd>Fatec Antônio Russo, São Caetano do Sul (SP)</dd>
@@ -359,7 +360,7 @@
           <p class="kicker kicker-laranja">Explore</p>
           <h2 id="titulo-explorar">Continue pelo site</h2>
         </div>
-        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+        <div class="reel" role="group" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
           <ul class="reel-lista">
             <li><a class="reel-item" href="calculadora.html">
               <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">

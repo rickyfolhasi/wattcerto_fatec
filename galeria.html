@@ -39,17 +39,13 @@
   </header>
 
   <main id="conteudo">
-    <div class="page-topo">
-      <div class="container page-hero">
-        <div class="page-hero-texto">
-          <h1>Galeria</h1>
-          <p class="lead">Telas do sistema e imagens dos aparelhos analisados, com legendas e fontes.</p>
-        </div>
-      </div>
-    </div>
-
-    <section class="section" aria-label="Imagens da galeria">
+    <section class="section galeria-secao" aria-labelledby="titulo-galeria">
       <div class="container">
+        <div class="section-head centro">
+          <p class="kicker kicker-laranja">Galeria</p>
+          <h1 id="titulo-galeria">O WattCerto em imagens</h1>
+          <p>Telas do sistema e imagens dos aparelhos analisados, com legendas e fontes.</p>
+        </div>
         <div class="galeria-janela">
           <div class="galeria-tiles">
             <div class="galeria-foto" aria-hidden="true"></div>
@@ -75,7 +71,7 @@
     <section class="section section-white" id="midia" aria-labelledby="titulo-midia">
       <div class="container midia-grid">
         <div class="section-head">
-          <p class="kicker">Mídia</p>
+          <p class="kicker kicker-laranja">Mídia</p>
           <h2 id="titulo-midia">A calculadora em 18 segundos</h2>
           <p>Vídeo curto, sem som, gravado na própria calculadora.</p>
           <p class="midia-descricao">O que acontece no vídeo: a casa passa de 3 para 4 pessoas, o banho cai de 15 para 8 minutos e o resultado mostra 160 kWh e R$ 137,77 por mês, com o chuveiro ainda como o maior responsável (55% da conta).</p>
@@ -95,7 +91,7 @@
           <p class="kicker kicker-laranja">Explore</p>
           <h2 id="titulo-explorar">Continue pelo site</h2>
         </div>
-        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+        <div class="reel" role="group" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
           <ul class="reel-lista">
             <li><a class="reel-item" href="calculadora.html">
               <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">

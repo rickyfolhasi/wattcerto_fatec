@@ -1,0 +1,7 @@
+cod_tipo;nome;formula
+tempo;Por tempo de uso;potência × horas por dia × quantidade × 30 ÷ 1000
+standby;Com modo de espera;(potência × horas de uso + potência em espera × horas parado) × quantidade × 30 ÷ 1000
+evento;Por uso;potência × (minutos por uso ÷ 60) × usos no mês ÷ 1000
+climatizacao;Climatização;potência × horas por dia × quantidade × 30 ÷ 1000 × (meses de uso por ano ÷ 12)
+ciclo;Pela etiqueta Inmetro;consumo da etiqueta (kWh/mês) × quantidade
+banho;Banho (chuveiro);potência × fator da estação × (minutos de banho ÷ 60) × pessoas × banhos por pessoa por dia × 30 ÷ 1000

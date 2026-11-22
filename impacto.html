@@ -37,24 +37,27 @@
     </div>
   </header>
 
-  <main id="conteudo">
-    <div class="page-topo">
-      <div class="container page-hero">
-        <div class="page-hero-texto">
-          <h1>Impacto</h1>
-          <p class="lead">Tabelas de consumo, tarifas e economia possível com a troca de aparelhos.</p>
+  <main id="conteudo" class="pagina-continua">
+
+    <section class="section secao-abertura" aria-labelledby="titulo-impacto">
+      <div class="container">
+        <div class="section-head centro largo">
+          <p class="kicker kicker-laranja">Impacto</p>
+          <h1 id="titulo-impacto">Quanto a energia de casa pesa no país e na conta</h1>
+          <p>A parte das casas no consumo do Brasil, quanto cada bandeira soma na conta e para onde vai a energia de uma casa típica.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <section class="section band-dark" aria-labelledby="titulo-brasil">
-      <div class="container stats-grid">
-        <div>
-          <p class="kicker">A casa brasileira em números</p>
-          <h2 id="titulo-brasil">As residências respondem por quase um terço de toda a eletricidade do país.</h2>
+    <section class="section section-white secao-trilho secao-numeros" aria-labelledby="titulo-brasil">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">A casa brasileira em números</p>
+          <h2 id="titulo-brasil">A conta de casa impacta também o Brasil</h2>
           <span class="stat-number">31,7%</span>
-          <p class="stat-caption">da eletricidade consumida no Brasil em 2025 foi para residências como a sua: 179.648 GWh em 84,5 milhões de unidades residenciais.</p>
+          <p class="stat-caption">da eletricidade consumida no Brasil em 2025 ficou nas residências: 179.648 GWh, em 84,5 milhões de casas.</p>
         </div>
+        <div class="trilho-conteudo">
         <figure class="compare">
           <figcaption>De cada 100 kWh consumidos no Brasil</figcaption>
           <div class="bar-row">
@@ -67,19 +70,21 @@
             <span class="bar-value">31,7 kWh</span>
             <div class="bar-track" aria-hidden="true"><div class="bar bar-brasil-casa"></div></div>
           </div>
-          <p class="fonte">O consumo total do país em 2025 foi de 567 TWh. Por residência, dá cerca de 177 kWh por mês, conta nossa: 179.648 GWh ÷ 84,5 milhões ÷ 12 meses. Fonte: EPE, Anuário Estatístico de Energia Elétrica 2026 (ano-base 2025).</p>
+          <p class="fonte">O consumo total do país em 2025 foi de 567 TWh. Por casa, dá cerca de 177 kWh por mês, conta nossa: 179.648 GWh ÷ 84,5 milhões ÷ 12 meses. Fonte: EPE, Anuário Estatístico de Energia Elétrica 2026 (ano-base 2025).</p>
         </figure>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="titulo-bandeiras">
-      <div class="container">
-        <div class="section-head">
+    <section class="section band-dark secao-trilho" aria-labelledby="titulo-bandeiras">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
           <p class="kicker">Tarifas</p>
           <h2 id="titulo-bandeiras">Quanto cada bandeira soma na conta</h2>
-          <p>A cor da bandeira muda todo mês e mostra quanto está custando gerar energia no país. Na verde não há nada a mais. Nas outras, cada 100 kWh consumidos ficam mais caros.</p>
+          <p>A cor da bandeira muda todo mês e mostra quanto está custando gerar energia no país. Na verde não há nada a mais; nas outras, cada 100 kWh ficam mais caros.</p>
         </div>
-        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Acréscimo de cada bandeira tarifária na conta de luz">
+        <div class="trilho-conteudo">
+          <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Acréscimo de cada bandeira tarifária na conta de luz">
           <table class="tabela-simples">
             <caption class="visually-hidden">Acréscimo de cada bandeira tarifária na conta de luz</caption>
             <thead>
@@ -113,18 +118,20 @@
             </tbody>
           </table>
         </div>
-        <p class="fonte-tabela">Valores por 100 kWh: <a href="https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias">ANEEL, bandeiras tarifárias</a>. A última coluna é conta nossa: 177 kWh ÷ 100 × o valor da bandeira. Os 177 kWh por mês são a média das residências do país, calculada com dados da EPE (veja acima). Em novembro de 2026 a bandeira é verde (<a href="https://sbtnews.sbt.com.br/noticia/economia/aneel-mantem-bandeira-verde-na-conta-de-luz-em-novembro">SBT News, 30 out. 2026</a>).</p>
+          <p class="fonte-tabela">Valores por 100 kWh: <a href="https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias">ANEEL, bandeiras tarifárias</a>. A última coluna é conta nossa: 177 kWh ÷ 100 × o valor da bandeira. Os 177 kWh por mês são a média das casas do país, calculada acima com dados da EPE. Em novembro de 2026 a bandeira é verde (<a href="https://sbtnews.sbt.com.br/noticia/economia/aneel-mantem-bandeira-verde-na-conta-de-luz-em-novembro">SBT News, 30 out. 2026</a>).</p>
+        </div>
       </div>
     </section>
 
-    <section class="section section-white" aria-labelledby="titulo-consumo">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Consumo</p>
+    <section class="section section-white secao-trilho" aria-labelledby="titulo-consumo">
+      <div class="container trilho">
+        <div class="trilho-cabeca">
+          <p class="kicker kicker-laranja">Consumo</p>
           <h2 id="titulo-consumo">Onde vai a energia de uma casa típica</h2>
-          <p>Resultado da calculadora com os valores que já vêm nos campos: casa de 3 pessoas, com chuveiro, geladeira, máquina de lavar e lâmpadas LED, e tarifa de R$ 0,86 por kWh.</p>
+          <p>O que a calculadora mostra com os valores que já vêm nos campos: casa de 3 pessoas, com chuveiro, geladeira, máquina de lavar e lâmpadas LED, e tarifa de R$ 0,86 por kWh.</p>
         </div>
-        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Consumo e custo mensal por aparelho numa casa de 3 pessoas">
+        <div class="trilho-conteudo">
+          <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Consumo e custo mensal por aparelho numa casa de 3 pessoas">
           <table class="tabela-simples">
             <caption class="visually-hidden">Consumo e custo mensal por aparelho numa casa de 3 pessoas</caption>
             <thead>
@@ -171,7 +178,8 @@
             </tfoot>
           </table>
         </div>
-        <p class="fonte-tabela">Cálculo do próprio WattCerto, com as fórmulas da página <a href="sobre.html#como-calcula">Sobre</a>. A geladeira usa o consumo do selo Procel de um modelo 2 portas frost free (56,9 kWh por mês). Quer ver quanto dá para economizar trocando hábitos e aparelhos? Veja o exemplo na <a href="index.html">página inicial</a> ou <a href="calculadora.html">faça a conta da sua casa</a>.</p>
+          <p class="fonte-tabela">Conta do próprio WattCerto, com as <a href="sobre.html#como-calcula">regras da página Sobre</a>. A geladeira usa o selo Procel de um modelo 2 portas frost free (56,9 kWh por mês). Para ver quanto dá para economizar, <a href="calculadora.html">faça a conta da sua casa</a>.</p>
+        </div>
       </div>
     </section>
 
@@ -181,7 +189,7 @@
           <p class="kicker kicker-laranja">Explore</p>
           <h2 id="titulo-explorar">Continue pelo site</h2>
         </div>
-        <div class="reel" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
+        <div class="reel" role="group" aria-label="Páginas do site. Passe o mouse, use Tab ou toque para abrir uma fatia.">
           <ul class="reel-lista">
             <li><a class="reel-item" href="calculadora.html">
               <img src="img/reel-calculadora.webp" srcset="img/reel-calculadora-480.webp 480w, img/reel-calculadora.webp 800w" sizes="(min-width: 52rem) 50vw, 100vw" alt="" width="800" height="993" loading="lazy" decoding="async">

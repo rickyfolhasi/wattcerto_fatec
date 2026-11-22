@@ -51,7 +51,11 @@
       <section class="section contato" aria-label="Formulário de contato">
         <div class="contato-form">
           <p class="dica">Campos com asterisco (*) são obrigatórios.</p>
-          <form id="form-contato" action="#" method="post">
+          <!-- O Netlify Forms recebe este formulário (data-netlify). O campo "robo" é uma armadilha
+               contra spam: fica escondido, gente não preenche, robô preenche e a mensagem é descartada. -->
+          <form id="form-contato" name="contato" action="contato.html?enviado=1" method="post" data-netlify="true" data-netlify-honeypot="robo">
+            <input type="hidden" name="form-name" value="contato">
+            <p hidden><label for="robo">Não preencha este campo</label><input id="robo" name="robo" tabindex="-1" autocomplete="off"></p>
             <div class="campo-duplo">
               <div class="campo">
                 <label for="nome">Nome completo *</label>

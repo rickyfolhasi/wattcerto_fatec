@@ -1,0 +1,6 @@
+nome,email,assunto,mensagem,consentimento,created_at
+Maria Exemplo,maria.exemplo@exemplo.com,Dúvida no cálculo,"Como faço para saber a potência do meu chuveiro?",on,2026-11-10T13:20:00Z
+João Exemplo,joao.exemplo@exemplo.com,Sugestão,"Seria bom ter a tarifa da minha cidade já preenchida, igual à da conta.",on,2026-11-12T18:02:00Z
+Ana Antiga,ana.antiga@exemplo.com,Erro na página,"A página de notícias demorou para abrir no celular.",on,2026-03-01T09:00:00Z
+Sem Consentimento,sem.consentimento@exemplo.com,Teste,"Esta mensagem não marcou a caixa de concordo.",,2026-11-13T10:00:00Z
+Bo,email-invalido,Oi,curta,on,2026-11-14T10:00:00Z

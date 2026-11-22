@@ -1,0 +1,36 @@
+[
+  {
+    "titulo": "Novembro segue com bandeira verde",
+    "categoria": "Bandeira tarifária",
+    "publicada_em": "2026-10-30",
+    "imagem": "img/noticias/bandeira-verde-novembro.webp",
+    "credito_imagem": "Foto: jplenio, Pixabay",
+    "fontes": [
+      "sbt_bandeira_nov"
+    ],
+    "resumo": "A Aneel decidiu manter a bandeira verde na conta de luz em novembro de 2026. Na bandeira verde não há cobrança extra: você paga só a tarifa normal."
+  },
+  {
+    "titulo": "Conta da Enel SP ficou 10,18% mais cara",
+    "categoria": "Reajuste",
+    "publicada_em": "2026-06-30",
+    "imagem": "img/noticias/torre-energia-enel.webp",
+    "credito_imagem": "Foto: Pexels",
+    "fontes": [
+      "cenario_enel",
+      "infra_enel"
+    ],
+    "resumo": "A Aneel aprovou o reajuste anual das tarifas da Enel São Paulo: alta média de 10,18% a partir de 4 de julho de 2026. Para as residências (classe B1), 9,02%."
+  },
+  {
+    "titulo": "Lâmpada LED vai ter eficiência mínima",
+    "categoria": "Eficiência energética",
+    "publicada_em": "2026-06-29",
+    "imagem": "img/noticias/lampadas-led-eficiencia.webp",
+    "credito_imagem": "Foto: analogicus, Pixabay",
+    "fontes": [
+      "dgabc_led"
+    ],
+    "resumo": "O governo federal criou a primeira regra nacional de eficiência para lâmpadas e luminárias de LED: mínimo de 120 lm/W em 2028 e de 140 lm/W em 2030."
+  }
+]

@@ -1,0 +1,101 @@
+erDiagram
+    GRUPO_APARELHO ||--o{ APARELHO : "agrupa"
+    TIPO_CALCULO ||--o{ APARELHO : "define o cálculo de"
+    FONTE |o--o{ APARELHO : "comprova o valor de"
+    DISTRIBUIDORA ||--o{ TARIFA : "cobra"
+    FONTE ||--o{ TARIFA : "comprova"
+    FONTE ||--o{ BANDEIRA : "comprova"
+    BANDEIRA ||--o{ BANDEIRA_MES : "vale em"
+    FONTE ||--o{ BANDEIRA_MES : "anuncia"
+    NOTICIA ||--|{ NOTICIA_FONTE : "cita"
+    FONTE ||--o{ NOTICIA_FONTE : "é citada em"
+
+    GRUPO_APARELHO {
+        tinyint id_grupo PK
+        varchar nome UK "NN"
+        tinyint ordem UK "NN"
+    }
+    TIPO_CALCULO {
+        varchar cod_tipo PK
+        varchar nome UK "NN"
+        varchar formula "NN"
+    }
+    APARELHO {
+        smallint id_aparelho PK
+        varchar codigo UK "NN"
+        varchar nome UK "NN"
+        tinyint id_grupo FK "NN"
+        varchar cod_tipo FK "NN"
+        decimal potencia_w
+        decimal horas_dia
+        decimal minutos_uso
+        smallint usos_mes
+        decimal usos_pessoa_dia
+        decimal espera_w
+        tinyint meses_ano
+        decimal etiqueta_kwh_mes
+        tinyint quantidade_padrao "NN"
+        enum origem_valor "NN"
+        varchar nota
+        varchar rotulo_potencia
+        varchar rotulo_quantidade
+        smallint id_fonte FK
+        boolean na_lista_adicionar "NN"
+        boolean ativo "NN"
+    }
+    FONTE {
+        smallint id_fonte PK
+        varchar titulo UK "NN"
+        varchar orgao "NN"
+        varchar url UK
+        date data_consulta "NN"
+    }
+    DISTRIBUIDORA {
+        smallint id_distribuidora PK
+        varchar nome UK "NN"
+        varchar sigla UK "NN"
+        char uf "NN"
+    }
+    TARIFA {
+        int id_tarifa PK
+        smallint id_distribuidora FK "NN, UK com vigencia_inicio"
+        decimal valor_kwh "NN"
+        date vigencia_inicio "NN"
+        date vigencia_fim
+        smallint id_fonte FK "NN"
+    }
+    BANDEIRA {
+        tinyint id_bandeira PK
+        varchar nome UK "NN"
+        decimal acrescimo_100kwh "NN"
+        smallint id_fonte FK "NN"
+    }
+    BANDEIRA_MES {
+        date mes_referencia PK
+        tinyint id_bandeira FK "NN"
+        smallint id_fonte FK "NN"
+    }
+    NOTICIA {
+        smallint id_noticia PK
+        varchar titulo UK "NN"
+        varchar categoria "NN"
+        varchar resumo "NN"
+        date publicada_em "NN"
+        varchar imagem
+        varchar credito_imagem
+    }
+    NOTICIA_FONTE {
+        smallint id_noticia PK, FK
+        smallint id_fonte PK, FK
+    }
+    MENSAGEM_CONTATO {
+        int id_mensagem PK
+        varchar nome "NN, dado pessoal"
+        varchar email "NN, dado pessoal"
+        varchar assunto "NN"
+        varchar texto "NN"
+        boolean consentimento "NN, sempre TRUE"
+        datetime recebida_em "NN"
+        date apagar_em "NN"
+        enum situacao "NN"
+    }

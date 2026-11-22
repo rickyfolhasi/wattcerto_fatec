@@ -1,11 +1,9 @@
 /* WattCerto: animações da Home (melhoria progressiva).
 
    O movimento em si é CSS. Este arquivo faz só o que CSS não faz:
-   1. avisa quando a lista "As frentes do projeto" apareceu na tela, para os
-      ícones entrarem na hora em que a pessoa os vê (classe "animar");
-   2. nas seções com números em destaque ([data-conta]), faz cada número
+   1. nas seções com números em destaque ([data-conta]), faz cada número
       crescer de 0 até o valor quando a seção aparece na tela;
-   3. avisa quando a barra da fatura apareceu, para ela crescer e esquentar.
+   2. avisa quando a barra da fatura apareceu, para ela crescer e esquentar.
 
    Sem JavaScript, ou para quem pede menos movimento, nada se mexe e o número
    já está escrito no HTML. */
@@ -16,30 +14,6 @@
 
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     return;
-  }
-
-  /* ---------- Ícones das frentes do projeto ---------- */
-  var lista = document.querySelector(".frentes-lista");
-
-  if (lista && "IntersectionObserver" in window) {
-    var vigia = new IntersectionObserver(
-      function (entradas) {
-        entradas.forEach(function (entrada) {
-          if (!entrada.isIntersecting) {
-            return;
-          }
-          lista.classList.add("animar");
-          vigia.disconnect();
-          /* Depois de entrar, a classe sai: assim o movimento do mouse por
-             cima de cada ícone pode tocar de novo. */
-          window.setTimeout(function () {
-            lista.classList.remove("animar");
-          }, 3200);
-        });
-      },
-      { threshold: 0.35 }
-    );
-    vigia.observe(lista);
   }
 
   /* ---------- Barra da fatura ("Por que isso importa?") ----------
@@ -192,10 +166,15 @@
 
   /* ---------- Grifo de "economizar?" e "?" de "casa?" ----------
      Os dois esperam escondidos e entram quando aparecem na tela (o movimento
-     está no CSS). */
+     está no CSS). O grifo de "economizar?" só é desenhado quando a palavra
+     já passou do meio e está chegando no topo: a 30% da altura da tela, de
+     cima para baixo (a área vigiada é só a faixa de cima, margem de -70%). */
+  var LINHA_GRIFO = 0.3;
   var entradaGrifo = [
-    { alvo: document.querySelector(".sublinha-laranja"), espera: "grifo-espera", entra: "desenhar", ponto: 0.9 },
-    { alvo: document.querySelector(".exemplo-chamada"), espera: "interrogacao-espera", entra: "aparecer", ponto: 0.9 }
+    { alvo: document.querySelector(".sublinha-laranja"), espera: "grifo-espera", entra: "desenhar",
+      opcoes: { threshold: 0, rootMargin: "0px 0px -" + (100 - LINHA_GRIFO * 100) + "% 0px" }, linha: LINHA_GRIFO },
+    { alvo: document.querySelector(".exemplo-chamada"), espera: "interrogacao-espera", entra: "aparecer",
+      opcoes: { threshold: 0.6, rootMargin: "0px 0px -12% 0px" } }
   ];
 
   if ("IntersectionObserver" in window) {
@@ -207,13 +186,16 @@
       var vigiaItem = new IntersectionObserver(
         function (entradas) {
           entradas.forEach(function (entrada) {
-            if (entrada.isIntersecting) {
+            /* Quem chega já com a palavra acima da linha (link direto, voltar
+               da página seguinte) também vê o grifo. */
+            var acimaDaLinha = item.linha && entrada.boundingClientRect.top < window.innerHeight * item.linha;
+            if (entrada.isIntersecting || acimaDaLinha) {
               item.alvo.classList.add(item.entra);
               vigiaItem.disconnect();
             }
           });
         },
-        { threshold: 0.6, rootMargin: "0px 0px -12% 0px" }
+        item.opcoes
       );
       vigiaItem.observe(item.alvo);
     });
