@@ -6100,3 +6100,9 @@ body:has(.noticia-dialogo[open]) {
     transform: translateY(1rem);
   }
 }
+
+/* Página 404: botões centralizados abaixo da abertura */
+.acoes-404 {
+  justify-content: center;
+  margin-top: 0.5rem;
+}

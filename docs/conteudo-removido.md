@@ -412,3 +412,8 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 - Ajuste: texto do botão ainda mais claro (cinza médio, contraste 4,7 para 1, mantém o nível AA) e fundo um pouco mais claro.
 - Ajuste: texto do botão mais um tom mais claro (cinza médio, contraste 4,56 para 1, ainda AA) e fundo mais claro para sustentar o contraste.
 - Adicionado ícone de recarregar (seta circular anti-horária, decorativo, `aria-hidden`) antes do texto do botão "Voltar aos valores iniciais". O texto não mudou.
+
+## Página 404 e prévia ao compartilhar o link
+
+- Novo arquivo `404.html`: "Essa página não existe", com botões para o início e para a calculadora. Usa o mesmo menu e rodapé das outras páginas, com endereços absolutos para funcionar em qualquer endereço errado.
+- Nas 11 páginas entraram as tags de prévia (Open Graph e Twitter): título, descrição, endereço e a imagem `img/previa-wattcerto.jpg` (1200 x 630, 80 KB). Os endereços apontam para `https://wattcertocalculadora.up.railway.app/`. Nenhum texto visível do site mudou.
