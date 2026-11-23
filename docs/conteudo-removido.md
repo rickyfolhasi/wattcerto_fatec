@@ -402,3 +402,6 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 - Saiu, abaixo do título "Calcule o consumo da sua casa": "Diga quantas pessoas moram na casa e quais aparelhos você usa. Você vê quanto cada um gasta, quem pesa mais na conta e quanto economiza trocando um aparelho."
 - Saiu a nota: "Os campos já vêm com valores de partida: troque pelos da etiqueta e pelo seu uso (de onde vem cada número). Tudo é calculado no seu navegador, nada é enviado." (o link "de onde vem cada número" levava a sobre.html#como-calcula)
 - Saiu do fim da dica do bloco "2. Seus aparelhos": "Cada um é calculado pela regra que combina com o jeito que ele gasta energia."
+
+## 23/11/2026 | Calculadora | "Banhos por pessoa por dia" só aceita número inteiro
+- Antes o campo aceitava frações (0,25 em 0,25). Agora vai de 1 a 10, de 1 em 1, com teclado numérico no celular; se a pessoa digitar 1,5, o campo e a conta passam a usar 2. Nenhum texto mudou.

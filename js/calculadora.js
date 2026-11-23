@@ -50,6 +50,16 @@
     return parseFloat(document.getElementById(id).value);
   }
 
+  /* Banho é contado inteiro: 1, 2, 3... Se a pessoa digitar 1,5, vale 2. */
+  function banhosPorPessoa() {
+    var campoBanhos = document.getElementById("banhos-chuveiro");
+    var banhos = Math.round(parseFloat(campoBanhos.value));
+    if (!isFinite(banhos) || banhos < 1) {
+      banhos = 1;
+    }
+    return Math.min(banhos, 10);
+  }
+
   function modoChuveiro() {
     return form.querySelector('input[name="modo-chuveiro"]:checked').value;
   }
@@ -117,7 +127,7 @@
         FATOR_ESTACAO[document.getElementById("estacao-chuveiro").value] *
         (valor("min-chuveiro") / 60) *
         pessoas *
-        valor("banhos-chuveiro") *
+        banhosPorPessoa() *
         DIAS_NO_MES / 1000;
     }
     return potencia * valor("hor-chuveiro") * DIAS_NO_MES / 1000;
@@ -778,6 +788,10 @@
   });
 
   /* ---------- Eventos de apoio ---------- */
+  /* Ao sair do campo de banhos, o número fica inteiro também na tela. */
+  document.getElementById("banhos-chuveiro").addEventListener("change", function () {
+    this.value = banhosPorPessoa();
+  });
   form.addEventListener("change", sincronizar);
   campoPessoas.addEventListener("input", sincronizar);
 
