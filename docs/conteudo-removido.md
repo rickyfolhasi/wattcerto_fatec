@@ -405,3 +405,7 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 
 ## 23/11/2026 | Calculadora | "Banhos por pessoa por dia" só aceita número inteiro
 - Antes o campo aceitava frações (0,25 em 0,25). Agora vai de 1 a 10, de 1 em 1, com teclado numérico no celular; se a pessoa digitar 1,5, o campo e a conta passam a usar 2. Nenhum texto mudou.
+
+## Calculadora: botão "Voltar aos valores iniciais"
+
+- Mudou só o estilo: em repouso fica cinza opaco (fundo, borda e texto cinzas); o verde clarinho aparece apenas com o mouse por cima ou com o foco do teclado. Nenhum texto foi removido.

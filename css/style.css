@@ -115,6 +115,9 @@
   --bg: #faf6ee;
   --card: #ffffff;
   --line: #e3dccb;
+  --cinza-botao: #e4e2dc;
+  --cinza-botao-borda: #c9c6bd;
+  --cinza-botao-texto: #4a4f4b;
   --foco: #1d4ed8;
 
   --raio: 1.125rem;
@@ -4071,6 +4074,23 @@ address {
 .form-acoes-calc .btn-ghost {
   order: -1;
   margin-right: auto;
+}
+
+/* "Voltar aos valores iniciais": cinza opaco em repouso; só ganha o verde
+   clarinho com o mouse por cima (ou o foco do teclado). Sem mover o botão. */
+.form-acoes-calc .btn-ghost {
+  border-color: var(--cinza-botao-borda);
+  background: var(--cinza-botao);
+  color: var(--cinza-botao-texto);
+}
+
+.form-acoes-calc .btn-ghost:hover,
+.form-acoes-calc .btn-ghost:focus-visible {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--verde-500);
+  background: var(--verde-100);
+  color: var(--verde-900);
 }
 
 /* Botão de calcular: amarelo do sol com texto e seta em verde escuro, mais
