@@ -4084,6 +4084,17 @@ address {
   color: var(--cinza-botao-texto);
 }
 
+.form-acoes-calc .btn-ghost .icon {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* A seta de recarregar dá uma volta curta para trás no hover (só se a pessoa não pediu menos movimento). */
+@media (prefers-reduced-motion: no-preference) {
+  .form-acoes-calc .btn-ghost:hover .icon {
+    transform: rotate(-180deg);
+  }
+}
+
 .form-acoes-calc .btn-ghost:hover,
 .form-acoes-calc .btn-ghost:focus-visible {
   transform: none;

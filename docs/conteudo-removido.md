@@ -411,3 +411,4 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 - Mudou só o estilo: em repouso fica cinza opaco (fundo, borda e texto cinzas); o verde clarinho aparece apenas com o mouse por cima ou com o foco do teclado. Nenhum texto foi removido.
 - Ajuste: texto do botão ainda mais claro (cinza médio, contraste 4,7 para 1, mantém o nível AA) e fundo um pouco mais claro.
 - Ajuste: texto do botão mais um tom mais claro (cinza médio, contraste 4,56 para 1, ainda AA) e fundo mais claro para sustentar o contraste.
+- Adicionado ícone de recarregar (seta circular anti-horária, decorativo, `aria-hidden`) antes do texto do botão "Voltar aos valores iniciais". O texto não mudou.
