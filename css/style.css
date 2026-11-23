@@ -6038,7 +6038,9 @@ body:has(.noticia-dialogo[open]) {
   }
 }
 
-.site-header {
+/* O nome só vale durante a troca: fora dela, o cabeçalho viraria uma camada
+   separada e o menu aberto ficaria atrás das imagens da página. */
+:root:active-view-transition .site-header {
   view-transition-name: cabecalho;
 }
 
