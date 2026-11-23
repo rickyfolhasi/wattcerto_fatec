@@ -380,3 +380,6 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 - O áudio gerado por computador foi trocado pela gravação de Henrique Folhasi (mesmo arquivo: audio/dicas-economia.mp3; 53 s, volume normalizado).
 - Legenda, antes: "Dicas de economia de energia, 45 segundos. Voz gerada por computador (Piper, voz "faber", licença CC0)." Agora: "Dicas de economia de energia, 53 segundos. Gravado por Henrique Folhasi, da equipe do WattCerto."
 - Transcrição ajustada ao que foi dito: "Três dicas rápidas" virou "E aqui vão três dicas rápidas"; "Primeira:", "Segunda:" e "Terceira:" viraram "Primeira dica:", "Segunda dica:" e "Terceira dica:".
+
+## 22/11/2026 | Mídia | legenda do áudio (a pedido)
+- Antes: "Dicas de economia de energia, 53 segundos. Gravado por Henrique Folhasi, da equipe do WattCerto." Agora: "Dicas de economia de energia, 53 segundos."
