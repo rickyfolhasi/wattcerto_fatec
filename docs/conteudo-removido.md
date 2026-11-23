@@ -409,3 +409,4 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 ## Calculadora: botão "Voltar aos valores iniciais"
 
 - Mudou só o estilo: em repouso fica cinza opaco (fundo, borda e texto cinzas); o verde clarinho aparece apenas com o mouse por cima ou com o foco do teclado. Nenhum texto foi removido.
+- Ajuste: texto do botão ainda mais claro (cinza médio, contraste 4,7 para 1, mantém o nível AA) e fundo um pouco mais claro.
