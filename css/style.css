@@ -6037,32 +6037,66 @@ body:has(.noticia-dialogo[open]) {
 }
 
 .vt-simular,
-.calc-app > .bloco:first-of-type {
+.vindo-de-simular .vt-cortina {
   view-transition-name: simular;
 }
 
+/* Cortina laranja: só existe para quem chegou pelo botão "Simular meu consumo". */
+.vt-cortina {
+  display: none;
+}
+
+.vindo-de-simular .vt-cortina {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--laranja-marca);
+  color: #fff;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 700;
+  pointer-events: none;
+  animation: cortina-sobe 0.7s 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes cortina-sobe {
+  to {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+
+/* O botão cresce até a tela inteira; a Home fica parada até ser coberta. */
 ::view-transition-group(simular) {
   overflow: hidden;
   border-radius: var(--raio);
   background: var(--laranja-marca);
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+::view-transition-old(simular),
+::view-transition-new(simular) {
+  object-fit: none;
 }
 
 ::view-transition-old(simular) {
-  animation: vt-some 0.15s ease-out both;
+  animation: vt-some 0.25s ease-out both;
 }
 
 ::view-transition-new(simular) {
-  animation: vt-surge 0.3s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: vt-surge 0.3s 0.3s ease-out both;
 }
 
 ::view-transition-old(root) {
-  animation: vt-some 0.2s ease-out both;
+  animation: none;
 }
 
 ::view-transition-new(root) {
-  animation: vt-surge 0.3s 0.1s ease-out both;
+  animation: vt-surge 0.01s 0.6s both;
 }
 
 @keyframes vt-some {

@@ -181,7 +181,8 @@
 })();
 
 /* Animação de "Simular meu consumo" até a calculadora (View Transition entre
-   páginas): o botão laranja cresce até virar o primeiro bloco da calculadora.
+   páginas): o botão laranja cresce até cobrir a tela e vira a cortina
+   "Calculadora", que sobe e revela a página (a cortina está no js/cortina.js).
    Só esse caminho anima; o menu e os outros links trocam de página como sempre.
    Navegador sem suporte (Firefox) ou "reduzir movimento" ligado: troca normal. */
 (function () {
@@ -203,6 +204,11 @@
     }
     limpar();
     link.classList.add(MARCA);
+    try {
+      window.sessionStorage.setItem("wattcerto-simular", "1");
+    } catch (erro) {
+      /* Sem sessionStorage: a calculadora abre sem cortina. */
+    }
   });
 
   window.addEventListener("pageswap", function (evento) {
