@@ -179,3 +179,42 @@
     }
   });
 })();
+
+/* Animação de "Simular meu consumo" até a calculadora (View Transition entre
+   páginas): o botão laranja cresce até virar o primeiro bloco da calculadora.
+   Só esse caminho anima; o menu e os outros links trocam de página como sempre.
+   Navegador sem suporte (Firefox) ou "reduzir movimento" ligado: troca normal. */
+(function () {
+  "use strict";
+
+  var MARCA = "vt-simular";
+
+  function limpar() {
+    var marcado = document.querySelector("." + MARCA);
+    if (marcado) {
+      marcado.classList.remove(MARCA);
+    }
+  }
+
+  document.addEventListener("click", function (evento) {
+    var link = evento.target.closest && evento.target.closest('a.btn-destaque[href="calculadora.html"]');
+    if (!link || evento.ctrlKey || evento.metaKey || evento.shiftKey) {
+      return;
+    }
+    limpar();
+    link.classList.add(MARCA);
+  });
+
+  window.addEventListener("pageswap", function (evento) {
+    if (!evento.viewTransition) {
+      return;
+    }
+    var destino = evento.activation && evento.activation.entry ? evento.activation.entry.url : "";
+    if (!document.querySelector("." + MARCA) || !/calculadora\.html/.test(destino)) {
+      evento.viewTransition.skipTransition();
+    }
+  });
+
+  /* Voltando para a Home pelo botão do navegador, o botão volta ao normal. */
+  window.addEventListener("pageshow", limpar);
+})();

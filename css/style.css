@@ -6027,3 +6027,48 @@ body:has(.noticia-dialogo[open]) {
   color: var(--muted);
   font-size: 0.82rem;
 }
+
+/* Transição "Simular meu consumo" → Calculadora (View Transition entre páginas).
+   O js/menu.js cancela a transição em qualquer outra navegação. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+.vt-simular,
+.calc-app > .bloco:first-of-type {
+  view-transition-name: simular;
+}
+
+::view-transition-group(simular) {
+  overflow: hidden;
+  border-radius: var(--raio);
+  background: var(--laranja-marca);
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(simular) {
+  animation: vt-some 0.15s ease-out both;
+}
+
+::view-transition-new(simular) {
+  animation: vt-surge 0.3s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+::view-transition-old(root) {
+  animation: vt-some 0.2s ease-out both;
+}
+
+::view-transition-new(root) {
+  animation: vt-surge 0.3s 0.1s ease-out both;
+}
+
+@keyframes vt-some {
+  to { opacity: 0; }
+}
+
+@keyframes vt-surge {
+  from { opacity: 0; }
+}
