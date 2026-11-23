@@ -383,3 +383,8 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 
 ## 22/11/2026 | Mídia | legenda do áudio (a pedido)
 - Antes: "Dicas de economia de energia, 53 segundos. Gravado por Henrique Folhasi, da equipe do WattCerto." Agora: "Dicas de economia de energia, 53 segundos."
+
+## 22/11/2026 | Contato | equipe só com nomes e formulário como antes (a pedido)
+- Título "Quem responde" virou "Equipe WattCerto". Saiu a parte de cada um: "Página inicial, visual do site e CSS" (Henrique Folhasi), "Sobre e Calculadora" (Guilherme Cerqueira), "Impacto e Galeria" (João Pedro), "Mídia, Notícias e documentação" (Miguel Essien) e "Contato, hospedagem e publicação" (Pedro Accorsi). Ficaram os cinco nomes.
+- Saíram do formulário os campos Telefone (tel), Pessoas na casa (number) e Data da última conta de luz (date), com as dicas "Opcional. DDD e número.", "Opcional. De 1 a 20." e "Opcional. Ajuda quando a dúvida é sobre uma conta específica." O formulário voltou a ter nome, e-mail, assunto, mensagem e consentimento.
+- Atenção registrada: a rubrica da A06 (critério 4) cita tel, date e number.

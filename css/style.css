@@ -5994,3 +5994,8 @@ body:has(.noticia-dialogo[open]) {
     gap: 0.25rem;
   }
 }
+
+.equipe-lista li {
+  color: var(--verde-900);
+  font-weight: 700;
+}

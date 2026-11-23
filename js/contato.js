@@ -9,15 +9,6 @@
   if (!form) return;
   botao = form.querySelector('button[type="submit"]');
 
-  /* A data da última conta não pode ser no futuro: o limite é hoje. */
-  var dataConta = document.getElementById("data-conta");
-  if (dataConta) {
-    var hoje = new Date();
-    var mes = String(hoje.getMonth() + 1);
-    var dia = String(hoje.getDate());
-    dataConta.max = hoje.getFullYear() + "-" + (mes.length < 2 ? "0" + mes : mes) + "-" + (dia.length < 2 ? "0" + dia : dia);
-  }
-
   function avisar(classe, texto) {
     status.className = "form-status" + (classe ? " " + classe : "");
     status.textContent = texto;
