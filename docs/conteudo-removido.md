@@ -392,3 +392,6 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 ## 22/11/2026 | Galeria | imagens reais no lugar dos quadros cinza (A06: "imagens com legendas e fontes")
 - Saíram os 15 quadros cinza (rascunho, sem imagem e sem texto).
 - Entraram 7 imagens, cada uma com legenda e fonte: 4 telas da calculadora (resultado, simular troca, chuveiro em detalhe e primeiro passo), capturadas pela equipe, e as 3 fotos que já estavam nas Notícias (linhas de transmissão, de jplenio no Pixabay; lâmpadas, de analogicus no Pixabay; torre de transmissão, do Pexels). A grade, a animação ao rolar e o desfoque das bordas continuam iguais.
+
+## 23/11/2026 | Home → Calculadora | animação do botão "Simular meu consumo"
+- Nada saiu. Entrou uma cortina de chegada na Calculadora, só para quem clica em "Simular meu consumo" na Home: o botão cresce até cobrir a tela (fundo bege), o check laranja da marca se desenha, aparece "Calculadora" (texto decorativo, escondido de leitor de tela) e a cortina sobe. Quem chega pelo menu ou pede menos movimento não vê a cortina.
