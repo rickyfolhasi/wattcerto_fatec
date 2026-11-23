@@ -395,3 +395,4 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 
 ## 23/11/2026 | Home → Calculadora | animação do botão "Simular meu consumo"
 - Nada saiu. Entrou uma cortina de chegada na Calculadora, só para quem clica em "Simular meu consumo" na Home: o botão cresce até cobrir a tela (fundo bege), o check laranja da marca se desenha, aparece "Calculadora" (texto decorativo, escondido de leitor de tela) e a cortina sobe. Quem chega pelo menu ou pede menos movimento não vê a cortina.
+- Atualização (23/11): a cortina bege com o check e o texto "Calculadora" saiu. No lugar: ao clicar, a seta do botão vira o check da marca e a Calculadora se espalha num círculo de borda macia que nasce no botão. Nenhum texto novo.

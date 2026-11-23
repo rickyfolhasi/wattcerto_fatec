@@ -181,34 +181,68 @@
 })();
 
 /* Animação de "Simular meu consumo" até a calculadora (View Transition entre
-   páginas): o botão laranja cresce até cobrir a tela e vira a cortina
-   "Calculadora", que sobe e revela a página (a cortina está no js/cortina.js).
+   páginas): a seta do botão vira o check da marca e a calculadora se espalha
+   num círculo que nasce no botão (o CSS está no fim do style.css; o ponto de
+   origem chega à calculadora pelo js/transicao.js).
    Só esse caminho anima; o menu e os outros links trocam de página como sempre.
    Navegador sem suporte (Firefox) ou "reduzir movimento" ligado: troca normal. */
 (function () {
   "use strict";
 
   var MARCA = "vt-simular";
+  var ESPERA_CHECK = 380;
+  var menos = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var temTransicao = "onpageswap" in window;
 
   function limpar() {
     var marcado = document.querySelector("." + MARCA);
     if (marcado) {
-      marcado.classList.remove(MARCA);
+      marcado.classList.remove(MARCA, "confirmando");
     }
+  }
+
+  function colocarCheck(link) {
+    if (link.querySelector(".vt-check-botao")) {
+      return;
+    }
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "icon vt-check-botao");
+    svg.setAttribute("width", "20");
+    svg.setAttribute("height", "20");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("aria-hidden", "true");
+    var risco = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    risco.setAttribute("d", "M5 12.5l4.5 4.5L19 7.5");
+    svg.appendChild(risco);
+    link.appendChild(svg);
   }
 
   document.addEventListener("click", function (evento) {
     var link = evento.target.closest && evento.target.closest('a.btn-destaque[href="calculadora.html"]');
-    if (!link || evento.ctrlKey || evento.metaKey || evento.shiftKey) {
+    if (!link || menos || !temTransicao || evento.defaultPrevented ||
+        evento.button !== 0 || evento.ctrlKey || evento.metaKey || evento.shiftKey || evento.altKey) {
       return;
     }
+    evento.preventDefault();
     limpar();
-    link.classList.add(MARCA);
+
+    /* De onde o círculo nasce: o centro do botão, em % da tela. */
+    var r = link.getBoundingClientRect();
+    var origem = {
+      x: ((r.left + r.width / 2) / window.innerWidth * 100).toFixed(1) + "%",
+      y: ((r.top + r.height / 2) / window.innerHeight * 100).toFixed(1) + "%"
+    };
     try {
-      window.sessionStorage.setItem("wattcerto-simular", "1");
+      window.sessionStorage.setItem("wattcerto-simular", JSON.stringify(origem));
     } catch (erro) {
-      /* Sem sessionStorage: a calculadora abre sem cortina. */
+      /* Sem sessionStorage: o círculo nasce no centro da tela. */
     }
+
+    colocarCheck(link);
+    link.classList.add(MARCA, "confirmando");
+    window.setTimeout(function () {
+      window.location.href = link.href;
+    }, ESPERA_CHECK);
   });
 
   window.addEventListener("pageswap", function (evento) {
