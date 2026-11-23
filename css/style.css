@@ -6100,6 +6100,7 @@ body:has(.noticia-dialogo[open]) {
   overflow: hidden;
   border-radius: var(--raio);
   background: var(--bg);
+  box-shadow: 0 1rem 2.5rem -0.75rem rgba(17, 57, 43, 0.35);
   animation-duration: 0.6s;
   animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -6110,7 +6111,7 @@ body:has(.noticia-dialogo[open]) {
 }
 
 ::view-transition-old(simular) {
-  animation: vt-some 0.35s ease-out both;
+  animation: vt-some 0.1s linear both;
 }
 
 ::view-transition-new(simular) {
