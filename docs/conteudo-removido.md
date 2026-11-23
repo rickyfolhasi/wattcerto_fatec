@@ -388,3 +388,7 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 - Título "Quem responde" virou "Equipe WattCerto". Saiu a parte de cada um: "Página inicial, visual do site e CSS" (Henrique Folhasi), "Sobre e Calculadora" (Guilherme Cerqueira), "Impacto e Galeria" (João Pedro), "Mídia, Notícias e documentação" (Miguel Essien) e "Contato, hospedagem e publicação" (Pedro Accorsi). Ficaram os cinco nomes.
 - Saíram do formulário os campos Telefone (tel), Pessoas na casa (number) e Data da última conta de luz (date), com as dicas "Opcional. DDD e número.", "Opcional. De 1 a 20." e "Opcional. Ajuda quando a dúvida é sobre uma conta específica." O formulário voltou a ter nome, e-mail, assunto, mensagem e consentimento.
 - Atenção registrada: a rubrica da A06 (critério 4) cita tel, date e number.
+
+## 22/11/2026 | Galeria | imagens reais no lugar dos quadros cinza (A06: "imagens com legendas e fontes")
+- Saíram os 15 quadros cinza (rascunho, sem imagem e sem texto).
+- Entraram 7 imagens, cada uma com legenda e fonte: 4 telas da calculadora (resultado, simular troca, chuveiro em detalhe e primeiro passo), capturadas pela equipe, e as 3 fotos que já estavam nas Notícias (linhas de transmissão, de jplenio no Pixabay; lâmpadas, de analogicus no Pixabay; torre de transmissão, do Pexels). A grade, a animação ao rolar e o desfoque das bordas continuam iguais.

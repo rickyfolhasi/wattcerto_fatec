@@ -5999,3 +5999,31 @@ body:has(.noticia-dialogo[open]) {
   color: var(--verde-900);
   font-weight: 700;
 }
+
+/* Galeria: imagens reais com legenda e fonte (no lugar dos quadros cinza) */
+.galeria-foto.galeria-item {
+  aspect-ratio: auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+
+.galeria-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.galeria-item figcaption {
+  padding: 0.75rem 0.9rem 0.9rem;
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.galeria-fonte {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}

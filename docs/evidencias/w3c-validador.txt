@@ -1,0 +1,6 @@
+Validador: vnu (Nu Html Checker), o mesmo motor do validator.w3.org/nu
+Data: 22/11/2026
+Arquivos: acessibilidade.html calculadora.html contato.html galeria.html impacto.html index.html midia.html noticias.html orcamento_hospedagem.html projetos.html sobre.html 
+
+Document checking completed. No errors found.
+Resultado: 0 erros em 11 páginas (nenhuma mensagem de erro acima).
