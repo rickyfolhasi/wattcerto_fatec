@@ -6029,71 +6029,41 @@ body:has(.noticia-dialogo[open]) {
 }
 
 /* Transição "Simular meu consumo" → Calculadora (View Transition entre páginas).
-   1. No clique, a seta do botão vira o check da marca (js/menu.js).
-   2. A Calculadora se espalha num círculo de borda macia que nasce no botão,
-      como tinta na água; a Home recua um pouco por trás.
-   O js/menu.js cancela a transição em qualquer outra navegação, e o
-   js/transicao.js passa para a Calculadora o ponto de onde o círculo nasce. */
+   Discreta, no tom do menu: o topo do site fica parado; o conteúdo da Home
+   sobe um pouco e some, e o da Calculadora entra subindo de leve.
+   O js/menu.js cancela a transição em qualquer outra navegação. */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
     navigation: auto;
   }
 }
 
-/* Botão: a seta some e o check se desenha; o botão afunda como apertado. */
-.btn-destaque .vt-check-botao {
-  display: none;
+.site-header {
+  view-transition-name: cabecalho;
 }
 
-.btn-destaque.confirmando {
-  transform: translate(2px, 3px);
-  box-shadow: 2px 2px 0 var(--verde-900);
-  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
-}
-
-.btn-destaque.confirmando .icon:not(.vt-check-botao) {
-  display: none;
-}
-
-.btn-destaque.confirmando .vt-check-botao {
-  display: inline-block;
-}
-
-.btn-destaque.confirmando .vt-check-botao path {
-  stroke-dasharray: 24;
-  stroke-dashoffset: 24;
-  animation: check-botao 0.3s 0.05s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-}
-
-@keyframes check-botao {
-  to { stroke-dashoffset: 0; }
-}
-
-/* Página nova: círculo de borda macia que cresce a partir do botão. */
-@property --vt-raio {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0px;
-}
-
-::view-transition-new(root) {
-  -webkit-mask-image: radial-gradient(circle at var(--vt-x, 50%) var(--vt-y, 50%), #000 calc(var(--vt-raio) - 6rem), transparent var(--vt-raio));
-  mask-image: radial-gradient(circle at var(--vt-x, 50%) var(--vt-y, 50%), #000 calc(var(--vt-raio) - 6rem), transparent var(--vt-raio));
-  animation: vt-espalha 1.1s cubic-bezier(0.6, 0, 0.3, 1) both;
+::view-transition-group(cabecalho) {
+  animation: none;
 }
 
 ::view-transition-old(root) {
-  animation: vt-recua 1.1s cubic-bezier(0.6, 0, 0.3, 1) both;
+  animation: vt-sai 0.25s cubic-bezier(0.4, 0, 1, 1) both;
 }
 
-@keyframes vt-espalha {
-  from { --vt-raio: 0px; }
-  to { --vt-raio: 135vmax; }
+::view-transition-new(root) {
+  animation: vt-entra 0.45s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@keyframes vt-recua {
+@keyframes vt-sai {
   to {
-    transform: scale(0.96);
-    filter: brightness(0.92);
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+}
+
+@keyframes vt-entra {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
   }
 }
