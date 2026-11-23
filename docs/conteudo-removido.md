@@ -375,3 +375,8 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 ## 22/11/2026 | Projetos | página nova (A06, lista de páginas)
 - Nada saiu. Página nova projetos.html, "Projetos que ajudam a pagar menos luz": Tarifa Social de Energia Elétrica (Lei nº 15.235/2025), troca de geladeira de graça da Enel São Paulo (Programa de Eficiência Energética da ANEEL), Procel e Selo Procel (23,91 bilhões de kWh evitados em 2023, MME) e o próprio WattCerto. Cada um com fonte.
 - Menu e rodapé de todas as páginas ganharam "Projetos", depois de "Sobre". O site passou a ter 11 páginas.
+
+## 22/11/2026 | Mídia | áudio gravado pela equipe
+- O áudio gerado por computador foi trocado pela gravação de Henrique Folhasi (mesmo arquivo: audio/dicas-economia.mp3; 53 s, volume normalizado).
+- Legenda, antes: "Dicas de economia de energia, 45 segundos. Voz gerada por computador (Piper, voz "faber", licença CC0)." Agora: "Dicas de economia de energia, 53 segundos. Gravado por Henrique Folhasi, da equipe do WattCerto."
+- Transcrição ajustada ao que foi dito: "Três dicas rápidas" virou "E aqui vão três dicas rápidas"; "Primeira:", "Segunda:" e "Terceira:" viraram "Primeira dica:", "Segunda dica:" e "Terceira dica:".
