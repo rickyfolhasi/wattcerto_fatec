@@ -47,7 +47,7 @@ Segue o roteiro da A05 (seções 5.1 a 5.13). As mudanças desde o MVP estão ma
 - projetos.html: Tarifa Social, troca de geladeiras da Enel SP, Procel e o WattCerto
 - impacto.html: dados do Brasil, bandeiras tarifárias e consumo por aparelho, com fontes
 - acessibilidade.html: medidas por tipo de deficiência e atalhos de teclado
-- galeria.html: telas e fotos com legendas e fontes, e vídeo de uso
+- galeria.html: telas e fotos com legendas e fontes (o vídeo de uso fica na Mídia)
 - midia.html: vídeo com poster, áudio com transcrição e iframe da ANEEL
 - noticias.html: três notícias com fonte
 - contato.html: formulário validado, equipe e dados fictícios

@@ -422,3 +422,7 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 
 - Texto novo: avisos de erro embaixo do campo E-mail, em português ("Falta o @ no e-mail. Exemplo: voce@exemplo.com", "Falta o final do domínio, como .com ou .com.br.", "O e-mail não pode ter espaços." e outros). Nada foi removido.
 - O campo também ganhou `pattern`, `maxlength="120"`, `inputmode="email"` e `aria-describedby`.
+
+## Galeria: vídeo repetido
+
+- Saiu da Galeria o bloco "Mídia", com o título "A calculadora em 18 segundos", o texto "Vídeo curto, sem som, gravado na própria calculadora.", a descrição "O que acontece no vídeo: a casa passa de 3 para 4 pessoas, o banho cai de 15 para 8 minutos e o resultado mostra 160 kWh e R$ 137,77 por mês, com o chuveiro ainda como o maior responsável (55% da conta)." e o vídeo `video/uso-calculadora.mp4`. Motivo: o mesmo vídeo aparecia duas vezes no site. Ele continua na página Mídia, que é a página de vídeo, áudio e iframe.
