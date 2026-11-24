@@ -11,7 +11,7 @@ Testes feitos em 22/11/2026 nas 11 páginas, com os arquivos da versão final (`
 | Contraste de cores | Fórmula do WCAG 2.2 sobre as cores do CSS | **14 de 14 combinações passam no AA** | [contraste.md](evidencias/contraste.md) |
 | Navegação por teclado | Playwright (Tab, Enter, Esc) e teste manual | Tudo alcançável, foco sempre visível | prints `teclado-*.png` |
 | Celular (390 px) | Playwright, tela de iPhone 12/13/14 | **Nenhuma página rola para o lado** | prints `celular-*.png` |
-| Formulário | Validação do próprio navegador (HTML5) | Bloqueia envio vazio e e-mail errado | `teclado-formulario-erro.png` |
+| Formulário | Validação do navegador (HTML5) e conferência de e-mail em JavaScript | Bloqueia envio vazio e e-mail inválido, com aviso em português | `teclado-formulario-erro.png` |
 
 ## 1. Validador W3C
 
@@ -60,7 +60,7 @@ Prints das 11 páginas em 390 px de largura: `evidencias/celular-<página>.png`.
 ## 6. Formulário de contato
 
 - Nome: `required`, `minlength="3"`, `pattern` só com letras e espaços, `label for`/`id`.
-- E-mail: `type="email"` e `required`.
+- E-mail: `type="email"`, `required`, `pattern` (exige nome, @ e domínio terminado em 2 letras ou mais) e conferência em JavaScript que mostra embaixo do campo o que está errado (falta o @, falta o final do domínio, espaço, ponto no lugar errado, mais de um @). O campo recebe `aria-invalid` e o aviso fica ligado a ele por `aria-describedby`. Teste automático com 16 e-mails (12 inválidos, 4 válidos): todos corretos; o envio com e-mail inválido é bloqueado e o foco vai para o campo. axe-core: 0 problemas com o aviso aberto, no computador e no celular. Limite: confere só o formato; saber se a caixa existe exigiria enviar uma mensagem de confirmação.
 - Assunto e mensagem: `required`, com mínimo e máximo de caracteres.
 - Consentimento: caixa de seleção obrigatória.
 

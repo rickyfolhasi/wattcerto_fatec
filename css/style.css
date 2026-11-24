@@ -6106,3 +6106,20 @@ body:has(.noticia-dialogo[open]) {
   justify-content: center;
   margin-top: 0.5rem;
 }
+
+/* Contato: aviso de e-mail inválido embaixo do campo (texto, não só cor) */
+.contato-form .erro-campo {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--nivel-alto-texto);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.contato-form .erro-campo:empty {
+  display: none;
+}
+
+.contato-form [aria-invalid="true"] {
+  border-color: var(--nivel-alto-texto);
+}

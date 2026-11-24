@@ -417,3 +417,8 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 
 - Novo arquivo `404.html`: "Essa página não existe", com botões para o início e para a calculadora. Usa o mesmo menu e rodapé das outras páginas, com endereços absolutos para funcionar em qualquer endereço errado.
 - Nas 11 páginas entraram as tags de prévia (Open Graph e Twitter): título, descrição, endereço e a imagem `img/previa-wattcerto.jpg` (1200 x 630, 80 KB). Os endereços apontam para `https://wattcertocalculadora.up.railway.app/`. Nenhum texto visível do site mudou.
+
+## Contato: validação do e-mail
+
+- Texto novo: avisos de erro embaixo do campo E-mail, em português ("Falta o @ no e-mail. Exemplo: voce@exemplo.com", "Falta o final do domínio, como .com ou .com.br.", "O e-mail não pode ter espaços." e outros). Nada foi removido.
+- O campo também ganhou `pattern`, `maxlength="120"`, `inputmode="email"` e `aria-describedby`.
