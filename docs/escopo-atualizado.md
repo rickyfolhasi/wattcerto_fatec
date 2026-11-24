@@ -138,7 +138,7 @@ Responsáveis: ver a divisão de funções no [README](README.md).
 | W3C sem erros | Atingido (0 erros nas 11 páginas) |
 | Responsivo em celular, tablet e computador | Atingido |
 | Documentação em /docs | Atingido |
-| Publicado no Railway com HTTPS | Pendente (no ar no Netlify com HTTPS) |
+| Publicado no Railway com HTTPS | Atingido (https://wattcertocalculadora.up.railway.app/, conferido em 24/11/2026; plano B no Netlify) |
 
 ## 5.13 Aprovação
 
