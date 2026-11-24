@@ -426,3 +426,7 @@ Motivo (pedido do usuário): as seções mudavam de alinhamento, largura e forma
 ## Galeria: vídeo repetido
 
 - Saiu da Galeria o bloco "Mídia", com o título "A calculadora em 18 segundos", o texto "Vídeo curto, sem som, gravado na própria calculadora.", a descrição "O que acontece no vídeo: a casa passa de 3 para 4 pessoas, o banho cai de 15 para 8 minutos e o resultado mostra 160 kWh e R$ 137,77 por mês, com o chuveiro ainda como o maior responsável (55% da conta)." e o vídeo `video/uso-calculadora.mp4`. Motivo: o mesmo vídeo aparecia duas vezes no site. Ele continua na página Mídia, que é a página de vídeo, áudio e iframe.
+
+## Contato: sugestão para e-mail digitado errado
+
+- Texto novo, embaixo do campo E-mail, quando o domínio parece digitado errado: "Você quis dizer ricky@gmail.com?" com o botão "Corrigir"; depois de corrigir, "E-mail corrigido para ricky@gmail.com.". Nada foi removido.

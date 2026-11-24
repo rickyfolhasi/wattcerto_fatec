@@ -52,13 +52,87 @@
     return texto === "";
   }
 
+  /* Erro de digitação no domínio (gmial.com, hotmal.com, gmail.con...): o formato está certo,
+     então o envio não é bloqueado, mas a página sugere o domínio parecido e oferece um botão
+     para corrigir. Tudo roda aqui no navegador; o e-mail não é enviado para lugar nenhum. */
+  var caixaSugestao = document.getElementById("sugestao-email");
+  var dominiosComuns = [
+    "gmail.com", "hotmail.com", "hotmail.com.br", "outlook.com", "outlook.com.br", "live.com",
+    "msn.com", "yahoo.com", "yahoo.com.br", "ymail.com", "icloud.com", "me.com", "mail.com",
+    "aol.com", "uol.com.br", "bol.com.br", "terra.com.br", "ig.com.br", "globo.com",
+    "globomail.com", "r7.com", "protonmail.com", "proton.me", "fatec.sp.gov.br", "etec.sp.gov.br"
+  ];
+
+  /* Quantas letras precisam mudar para uma palavra virar a outra (trocar duas letras de lugar conta 1). */
+  function distancia(a, b) {
+    var d = [], i, j, custo;
+    for (i = 0; i <= a.length; i++) { d[i] = [i]; }
+    for (j = 0; j <= b.length; j++) { d[0][j] = j; }
+    for (i = 1; i <= a.length; i++) {
+      for (j = 1; j <= b.length; j++) {
+        custo = a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1;
+        d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + custo);
+        if (i > 1 && j > 1 && a.charAt(i - 1) === b.charAt(j - 2) && a.charAt(i - 2) === b.charAt(j - 1)) {
+          d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+        }
+      }
+    }
+    return d[a.length][b.length];
+  }
+
+  function dominioParecido(dominio) {
+    var melhor = "", menor = 99, limite, i, dist;
+    dominio = dominio.toLowerCase();
+    if (dominiosComuns.indexOf(dominio) !== -1) { return ""; }
+    limite = dominio.length >= 8 ? 2 : 1;
+    for (i = 0; i < dominiosComuns.length; i++) {
+      dist = distancia(dominio, dominiosComuns[i]);
+      if (dist < menor) { menor = dist; melhor = dominiosComuns[i]; }
+    }
+    return menor <= limite ? melhor : "";
+  }
+
+  function limparSugestao() {
+    if (caixaSugestao) { caixaSugestao.textContent = ""; }
+  }
+
+  function sugerirEmail() {
+    var valor = campoEmail.value.trim(), partes, sugerido, novo, frase, botao;
+    limparSugestao();
+    if (!caixaSugestao || mensagemEmail(valor) !== "") { return; }
+    partes = valor.split("@");
+    sugerido = dominioParecido(partes[1]);
+    if (!sugerido) { return; }
+    novo = partes[0] + "@" + sugerido;
+    frase = document.createElement("span");
+    frase.textContent = "Você quis dizer " + novo + "?";
+    botao = document.createElement("button");
+    botao.type = "button";
+    botao.className = "sugestao-botao";
+    botao.textContent = "Corrigir";
+    botao.addEventListener("click", function () {
+      campoEmail.value = novo;
+      conferirEmail(true);
+      limparSugestao();
+      caixaSugestao.textContent = "E-mail corrigido para " + novo + ".";
+      campoEmail.focus();
+    });
+    caixaSugestao.appendChild(frase);
+    caixaSugestao.appendChild(document.createTextNode(" "));
+    caixaSugestao.appendChild(botao);
+  }
+
   if (campoEmail && erroEmail) {
     conferirEmail(false);
-    campoEmail.addEventListener("input", function () { conferirEmail(emailTocado); });
+    campoEmail.addEventListener("input", function () {
+      conferirEmail(emailTocado);
+      limparSugestao();
+    });
     campoEmail.addEventListener("blur", function () {
       campoEmail.value = campoEmail.value.trim();
       emailTocado = true;
       conferirEmail(true);
+      sugerirEmail();
     });
     /* Ao tentar enviar com o e-mail errado, o navegador dispara "invalid" e mostra o aviso. */
     campoEmail.addEventListener("invalid", function () {
@@ -121,6 +195,7 @@
         erroEmail.textContent = "";
         campoEmail.removeAttribute("aria-invalid");
         conferirEmail(false);
+        limparSugestao();
       }
       if (status.className.indexOf("ok") === -1) {
         avisar("", "");

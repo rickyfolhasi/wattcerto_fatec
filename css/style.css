@@ -6123,3 +6123,31 @@ body:has(.noticia-dialogo[open]) {
 .contato-form [aria-invalid="true"] {
   border-color: var(--nivel-alto-texto);
 }
+
+/* Contato: sugestão quando o domínio do e-mail parece digitado errado (aviso, não erro) */
+.contato-form .sugestao-email {
+  margin-top: 0.4rem;
+  color: var(--verde-900);
+  font-size: 0.95rem;
+}
+
+.contato-form .sugestao-email:empty {
+  display: none;
+}
+
+.contato-form .sugestao-botao {
+  margin-left: 0.15rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--verde-700);
+  border-radius: 999px;
+  background: var(--verde-100);
+  color: var(--verde-900);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contato-form .sugestao-botao:hover {
+  background: var(--verde-700);
+  color: #fff;
+}
