@@ -5,7 +5,8 @@
 **Atividade:** A06, Conclusão e Apresentação de Projeto de Site (entrega final; a A05 foi o MVP)
 **Tema:** sustentabilidade e impacto social, com foco em consumo consciente de energia elétrica
 
-- **Site publicado:** https://wattcertocalculadora.netlify.app/ (Netlify, plano Free). A publicação final é no Railway; quando o endereço do Railway sair, ele entra aqui.
+- **Site publicado:** https://wattcertocalculadora.up.railway.app/ (Railway, publicação final)
+- **Plano B:** https://wattcertocalculadora.netlify.app/ (Netlify, plano Free)
 - **Repositório:** https://github.com/rickyfolhasi/wattcerto_fatec
 
 ## O que é
@@ -78,6 +79,7 @@ HTML5, CSS3 e JavaScript puro (sem framework). Git e GitHub para versão. Valida
 | [relatorio-de-melhorias.md](relatorio-de-melhorias.md) | Do MVP ao site final, com prints de antes e depois |
 | [escopo-atualizado.md](escopo-atualizado.md) | Escopo da A05 atualizado, com os critérios de aceitação e o status de cada um |
 | [conteudo-removido.md](conteudo-removido.md) | Registro de cada texto que saiu ou mudou no site |
+| [apresentacao/](apresentacao/) | Slides da A06 (PowerPoint e PDF, 22 slides) e o roteiro de quem fala em cada slide |
 | [pi2/](pi2/) | Entregas do Projeto Integrador 2, que usa o mesmo site |
 
 ## Como abrir no computador
